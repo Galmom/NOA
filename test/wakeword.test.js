@@ -27,6 +27,11 @@ test('detects NOA variants at the start of sentence', () => {
     addressed: true,
     cleanText: 'hola',
   });
+
+  assert.deepEqual(extractWakeWord('Hola, Noah. ¿Me escuchás?'), {
+    addressed: true,
+    cleanText: '¿Me escuchás?',
+  });
 });
 
 test('ignores ambient conversation not addressing NOA', () => {
@@ -44,5 +49,24 @@ test('ignores ambient conversation not addressing NOA', () => {
     addressed: false,
     cleanText: 'ahora',
   });
-});
 
+  assert.deepEqual(extractWakeWord('a que hora es'), {
+    addressed: false,
+    cleanText: 'a que hora es',
+  });
+
+  assert.deepEqual(extractWakeWord('Gracias, Noah.'), {
+    addressed: false,
+    cleanText: 'Gracias, Noah.',
+  });
+
+  assert.deepEqual(extractWakeWord('La Noa llegó temprano.'), {
+    addressed: false,
+    cleanText: 'La Noa llegó temprano.',
+  });
+
+  assert.deepEqual(extractWakeWord('Estábamos hablando de Nova.'), {
+    addressed: false,
+    cleanText: 'Estábamos hablando de Nova.',
+  });
+});
