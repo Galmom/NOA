@@ -1,0 +1,7 @@
+# Credenciales fuera de git a proposito.
+providers.txt
+# Estado de ejecucion del A03
+data/
+node_modules/
+*.log
+brain.pid

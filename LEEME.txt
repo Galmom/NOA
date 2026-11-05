@@ -1,0 +1,49 @@
+BACKUP CEREBRO — NOA
+====================
+
+Fecha:     2026-11-05
+Origen:    A03 (R8MT507LA4E), /data/data/com.termux/files/home/brain
+Método:    tar extraído por Termux y transferido por adb reverse (curl -> receptor local)
+Estado:    verificado byte a byte (MD5) contra C:\Users\lord_\wall-e\brain
+
+RESULTADO DE LA VERIFICACIÓN
+----------------------------
+39 archivos comparados entre el A03 y el PC: 39 idénticos, 0 distintos.
+providers.txt: idéntico.
+Única diferencia encontrada: el A03 tenía tools/test-client.js y el PC no.
+Ya se restauró en el PC, así que ambas copias quedaron iguales.
+
+No hay nada obsoleto en el PC ni en el A03. No se borró nada.
+
+
+QUÉ CONTIENE ESTE BACKUP
+------------------------
+src\        Código del cerebro (incluye server.js, stt.js, wakeword.js, pipeline.js)
+test\       Suite de pruebas
+tools\      Clientes de prueba
+package.json, package-lock.json
+providers.txt        Claves de proveedores (SENSIBLE: no compartir)
+daemon.sh            Supervisor: nohup + termux-wake-lock + reinicio automático
+boot-start-brain.sh  Arranque en el boot del teléfono
+stop.sh              Parada limpia
+
+
+QUÉ NO ESTÁ ACÁ (y por qué)
+---------------------------
+node_modules\   Se regenera con: npm install
+data\           Estado de ejecución (memoria e historial). Vive solo en el A03.
+
+
+CÓMO RESTAURAR EN EL A03
+------------------------
+Desde el PC, en la raíz del repo:
+  powershell -File tools\deploy-brain.ps1
+
+Ese script empaqueta brain\, lo sirve en 127.0.0.1:9101, el teléfono lo baja,
+lo extrae en ~/brain y reinicia el proceso verificando que corra el código nuevo.
+
+CÓMO RESTAURAR DESDE ESTE BACKUP
+--------------------------------
+1. Copiar el contenido de esta carpeta sobre C:\Users\lord_\wall-e\brain\
+2. npm install    (dentro de brain\)
+3. powershell -File tools\deploy-brain.ps1

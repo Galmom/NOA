@@ -1,0 +1,18 @@
+{
+  "name": "wall-e-brain",
+  "version": "0.1.0",
+  "description": "Cognitive brain for the Wall-E robot: local-first routing between a small local LLM and a cloud model.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "client": "node tools/client.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
