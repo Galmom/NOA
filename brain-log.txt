@@ -1,0 +1,2481 @@
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/v1: fetch failed
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] admin on 127.0.0.1:8766
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: not configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.35
+[brain] client disconnected: ::ffff:192.168.1.35
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 69888 bytes
+[brain] audio transcribed: "Oh."
+[brain] audio packet received: 75136 bytes
+[brain] audio transcribed: "Close your eyes"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Ah, bien, me estás escuchando."
+[brain] audio packet received: 31360 bytes
+[brain] audio transcribed: "Bien."
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 37632 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 29056 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 75392 bytes
+[brain] audio transcribed: "¿Tenés memoria para las cosas que hacemos?"
+[brain] audio packet received: 45824 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 124672 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 65024 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 59904 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 44928 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 39168 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 68480 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 56320 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 44672 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 93568 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 55424 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 101504 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 65024 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 125312 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 50432 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 68736 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 50304 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 64896 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 74624 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 44544 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 90496 bytes
+[brain] audio transcribed: "No, eso que escuchaste recién estaba tosiendo."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 49280 bytes
+[brain] audio transcribed: "¿Sabes lo que es tu ser?"
+[brain] audio packet received: 35200 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 92032 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 25216 bytes
+[brain] audio transcribed: "Así que es lo que..."
+[brain] audio packet received: 51328 bytes
+[brain] audio transcribed: "para poder enfrentar a soldados."
+[brain] audio packet received: 69120 bytes
+[brain] audio transcribed: "Bueno, pues la verdad es que hay miles de herramientas."
+[brain] audio packet received: 31616 bytes
+[brain] audio transcribed: "Vamos a ver."
+[brain] audio packet received: 24448 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 52096 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 71552 bytes
+[brain] audio transcribed: "un licenciador de justa, un servicio."
+[brain] audio packet received: 26112 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24576 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 25088 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 89600 bytes
+[brain] audio transcribed: "el elemento clave de la soltadura fue el abanço."
+[brain] audio packet received: 24576 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: "que se ha dado a la ciencia."
+[brain] audio packet received: 33920 bytes
+[brain] audio transcribed: "en cualquier tipo de información."
+[brain] audio packet received: 47488 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 60800 bytes
+[brain] audio transcribed: "por la noche de temperatura"
+[brain] audio packet received: 25216 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 68096 bytes
+[brain] audio transcribed: "y en el mundo de la vida."
+[brain] audio packet received: 26112 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 26112 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 43264 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 36096 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias por el soldado."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 91136 bytes
+[brain] audio transcribed: "vamos a empezar a preparar el soldado que..."
+[brain] audio packet received: 30464 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24448 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 40192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 114432 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "La pregunta que te recomendamos utilizar es esta que tiene formas bonitas que..."
+[brain] audio packet received: 38784 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24960 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "ya cuando pongo mi experiencia ya la pobre espacial para empezar a soltar"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "para que se pongan más espacio. Para ustedes, ¿cómo es lo que vamos?"
+[brain] audio packet received: 24192 bytes
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio transcribed: "Gracias."
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio packet received: 24448 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 34560 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: "Gracias."
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio packet received: 24448 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: "Gracias."
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio packet received: 97152 bytes
+[brain] audio transcribed: "Exactamente igual, si está frío o si está dentro."
+[brain] audio packet received: 26624 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 39936 bytes
+[brain] audio transcribed: "La pregunta que te recomendamos."
+[brain] audio packet received: 24320 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 70784 bytes
+[brain] audio transcribed: "más poquito, que es la más genérica."
+[brain] audio packet received: 24192 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 25728 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 45184 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 50048 bytes
+[brain] audio transcribed: "para soldar primero."
+[brain] audio packet received: 124288 bytes
+[brain] audio transcribed: "el soldado forestal para que luego te sea más fácil."
+[brain] audio packet received: 25216 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 76416 bytes
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio transcribed: "para que les cometen la Junta de Sol de Orte."
+[brain] audio packet received: 24576 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24064 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio packet received: 60288 bytes
+[brain] audio transcribed: "¿Por qué no se ha dado un momento que debo"
+[brain] audio packet received: 43776 bytes
+[brain] audio transcribed: "Así que si te pasa esto, que..."
+[brain] audio packet received: 75264 bytes
+[brain] audio transcribed: "..."
+[brain] audio packet received: 38016 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 27264 bytes
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 25216 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 62592 bytes
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio transcribed: "Vamos a ver que la punta ya está bien puliendo."
+[brain] audio packet received: 58240 bytes
+[brain] local tier failed: local model unreachable at http://127.0.0.1:8080/api/chat: The operation was aborted due to timeout
+[brain] audio transcribed: "cuando toda la punta se va"
+[brain] audio packet received: 24960 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 25856 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 25088 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 29824 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 55680 bytes
+[brain] audio transcribed: "que el soldador está demasiado caliente"
+[brain] audio packet received: 54144 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 29568 bytes
+[brain] audio transcribed: "Gracias."
+[brain] audio packet received: 24192 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24704 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 79872 bytes
+[brain] audio transcribed: "..."
+[brain] audio packet received: 32256 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 59136 bytes
+[brain] audio transcribed: "¿Dónde estamos en contra de ese punto?"
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 32512 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 50944 bytes
+[brain] audio transcribed: "...tenga una capa de seguridad."
+[brain] audio packet received: 50432 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24192 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 68352 bytes
+[brain] audio transcribed: "La liciaba no puede explicar la duda."
+[brain] audio packet received: 24448 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 47104 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35456 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24320 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 46208 bytes
+[brain] audio transcribed: "como hemos dicho para que siga."
+[brain] audio packet received: 35200 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24832 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 31872 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24064 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 31872 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 44928 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 54912 bytes
+[brain] audio transcribed: "una excelente almas."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 49152 bytes
+[brain] audio transcribed: "...y los mismos pasareños de la Comisión."
+[brain] audio packet received: 24576 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 44160 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 40320 bytes
+[brain] audio transcribed: "¿Qué es la acción por los óperos?"
+[brain] audio packet received: 45440 bytes
+[brain] audio transcribed: "La temperatura elevada."
+[brain] audio packet received: 65408 bytes
+[brain] audio transcribed: "que no se llegará con los dos casos el próximo."
+[brain] audio packet received: 46976 bytes
+[brain] audio transcribed: "y ahora ya tocaría sol."
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 32768 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 29440 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24832 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 25088 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 26624 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24576 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 25088 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 34048 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 31616 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 25472 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 25984 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 25472 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 26112 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37888 bytes
+[brain] audio transcribed: "provocar a su corte un fin."
+[brain] audio packet received: 50176 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 29952 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 44928 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 33152 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38016 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 24704 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 24192 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 26112 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35072 bytes
+[brain] stt failed: STT failed with 429: {"error":{"message":"Rate limit reached for model `whisper-large-v3-turbo` in organization `org_01m6f4djdxehabnj1nxd5g74
+[brain] audio packet received: 48000 bytes
+[brain] audio transcribed: "que en el centro de la Cámara tengo"
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:52762
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 44416 bytes
+[brain] audio transcribed: "¿Qué tal ahora?"
+[brain] audio packet received: 56192 bytes
+[brain] audio transcribed: "¿Puede decir la hora actual?"
+[brain] audio packet received: 48000 bytes
+[brain] audio transcribed: "venía el Papa..."
+[brain] audio packet received: 75136 bytes
+[brain] audio transcribed: "¿Cuándo venía el Papa?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "si venía pero está por venir ahora ¿cuándo va a venir? ¿en qué fecha viene?"
+[brain] audio packet received: 116608 bytes
+[brain] audio transcribed: "Hoy es 3 de noviembre, pero ¿cuándo va a venir el Papa?"
+[brain] UDP discovery response sent to 192.168.1.34:53108
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 43904 bytes
+[brain] audio transcribed: "¿No viene el Papa?"
+[brain] UDP discovery response sent to 192.168.1.34:60683
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 44160 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 40832 bytes
+[brain] audio transcribed: "en el Papa."
+[brain] audio packet received: 97920 bytes
+[brain] audio transcribed: "Cuando viene el Papa."
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:59934
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] audio packet received: 49024 bytes
+[brain] audio transcribed: "bien el papa"
+[brain] audio packet received: 26496 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 85888 bytes
+[brain] audio transcribed: "¿En qué día va a venir el Papa?"
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 77184 bytes
+[brain] audio transcribed: "el Papa León"
+[brain] audio packet received: 25728 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 27520 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 95616 bytes
+[brain] audio transcribed: "de hecho tengo uno que tiene lente y el otro no tiene lente"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "los ojos que entre uno que ven bien y el otro no, entonces..."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Claro, entonces como tengo unos lentes viejos que el que tenga..."
+[brain] audio packet received: 90240 bytes
+[brain] audio transcribed: "bien, el otro no, le saqué el vidrio y listo."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "El otro que sí, que de lejos me sirve para ver de lejos. Bien."
+[brain] audio packet received: 123264 bytes
+[brain] audio transcribed: "estoy sin gestionar estoy"
+[brain] audio packet received: 27520 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 54656 bytes
+[brain] audio transcribed: "en pase boludo"
+[brain] audio packet received: 75904 bytes
+[brain] audio transcribed: "ahora tenés 92 paquetes en base"
+[brain] audio packet received: 28544 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Lo que me preocupa es que tenemos 381 paquetes hasta ahora de la aeropucia."
+[brain] audio packet received: 27520 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 71296 bytes
+[brain] audio transcribed: "Eso es lo que pasa, eso es lo que pasa todo eso."
+[brain] audio packet received: 101504 bytes
+[brain] audio transcribed: "que tengo acá no los encuentro."
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 46976 bytes
+[brain] audio transcribed: "lo van a entregar a los chicos."
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 29824 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 88960 bytes
+[brain] audio transcribed: "¿A cuánto subió el riesgo país hoy?"
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Sí, es cierto que depende del día, pero..."
+[brain] audio packet received: 35968 bytes
+[brain] audio transcribed: "ahora."
+[brain] audio packet received: 27008 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 58240 bytes
+[brain] audio transcribed: "¿Qué cosa?"
+[brain] audio packet received: 28544 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 29824 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:55250
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:52011
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:58242
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:55252
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:54959
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 110976 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 61056 bytes
+[brain] audio transcribed: "¿Me escuchas?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchas?"
+[brain] audio packet received: 73344 bytes
+[brain] audio transcribed: "¿Me escuchas?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchas?"
+[brain] audio packet received: 92032 bytes
+[brain] audio transcribed: "¿Escuchás todo lo que digo o no escuchás nada?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Escuchás todo lo que digo o no escuchás nada?"
+[brain] audio packet received: 55680 bytes
+[brain] audio transcribed: "escuchas"
+[brain] ignored ambient audio (not addressed to N.O.A.): "escuchas"
+[brain] UDP discovery response sent to 192.168.1.34:60741
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] UDP discovery response sent to 192.168.1.39:62047
+[brain] UDP discovery response sent to 192.168.1.39:62047
+[brain] UDP discovery response sent to 192.168.1.39:51787
+[brain] UDP discovery response sent to 192.168.1.39:52961
+[brain] UDP discovery response sent to 192.168.1.39:52016
+[brain] UDP discovery response sent to 192.168.1.39:55628
+[brain] UDP discovery response sent to 192.168.1.39:53504
+[brain] UDP discovery response sent to 192.168.1.39:59592
+[brain] client connected: ::ffff:192.168.1.39
+[brain] camera attached
+[brain] UDP discovery response sent to 192.168.1.39:49575
+[brain] client connected: ::ffff:192.168.1.39
+[brain] camera attached
+[brain] client disconnected: ::ffff:192.168.1.39
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] UDP discovery response sent to 192.168.1.34:59740
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:61119
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 55424 bytes
+[brain] audio transcribed: "¡Ule, le, le, le, le!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ule, le, le, le, le!"
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: "Hola, Noah."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hola, Noah."
+[brain] audio packet received: 48512 bytes
+[brain] audio transcribed: "¿A qué hora es?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿A qué hora es?"
+[brain] audio packet received: 43904 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Si me hubiese dicho que sí, si Pablo quiere a todos los..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Si me hubiese dicho que sí, si Pablo quiere a todos los..."
+[brain] audio packet received: 26496 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "es que yo sabés que creo que por eso te preguntó, boluda, vos dijo, mirá, este está como le"
+[brain] ignored ambient audio (not addressed to N.O.A.): "es que yo sabés que creo que por eso te preguntó, boluda, vos dijo, mirá, este está como le"
+[brain] audio packet received: 51072 bytes
+[brain] audio transcribed: "Reciben a todos."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Reciben a todos."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Mientras entrés en medio de la villa, lo que te damos, no hay ningún problema."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Mientras entrés en medio de la villa, lo que te damos, no hay ningún problema."
+[brain] audio packet received: 79744 bytes
+[brain] audio transcribed: "¡Ohhh!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ohhh!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "jajajaja y te lo llevas a tu casa y juegas"
+[brain] ignored ambient audio (not addressed to N.O.A.): "jajajaja y te lo llevas a tu casa y juegas"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "No seas hijo de puta No seas hijo de puta"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No seas hijo de puta No seas hijo de puta"
+[brain] audio packet received: 126080 bytes
+[brain] audio transcribed: "O sea, qué tipo hijo de puta que sos, eh"
+[brain] ignored ambient audio (not addressed to N.O.A.): "O sea, qué tipo hijo de puta que sos, eh"
+[brain] audio packet received: 86400 bytes
+[brain] audio transcribed: "que todo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "que todo"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Bueno, me voy a hacer una paja y voy a dormir. ¿Qué haces acá todavía?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Bueno, me voy a hacer una paja y voy a dormir. ¿Qué haces acá todavía?"
+[brain] audio packet received: 53376 bytes
+[brain] audio transcribed: "Ha ha ha ha."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ha ha ha ha."
+[brain] audio packet received: 98688 bytes
+[brain] audio transcribed: "Very difficult estuvo la última vez, eh."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Very difficult estuvo la última vez, eh."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Uy! Cuando reparta, cuando reparta los ahí los pan dulce, le están"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Uy! Cuando reparta, cuando reparta los ahí los pan dulce, le están"
+[brain] audio packet received: 45952 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 32640 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42112 bytes
+[brain] audio transcribed: "Sí, loco."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Sí, loco."
+[brain] audio packet received: 40576 bytes
+[brain] audio transcribed: "Pablo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Pablo"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Ah! ¡Claro, boludo! ¿Viste ese profesor que..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ah! ¡Claro, boludo! ¿Viste ese profesor que..."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "uno según la nota, hace etiquetas y pegale, toma, y cuando dice no, y"
+[brain] ignored ambient audio (not addressed to N.O.A.): "uno según la nota, hace etiquetas y pegale, toma, y cuando dice no, y"
+[brain] audio packet received: 65920 bytes
+[brain] audio transcribed: "Ha ha ha ha ha ha ha!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ha ha ha ha ha ha ha!"
+[brain] audio packet received: 58496 bytes
+[brain] audio transcribed: "Claro, brudo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Claro, brudo."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Claro Che, ¿por qué el gato este Me está mirando con mala onda? Si sos una mierda"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Claro Che, ¿por qué el gato este Me está mirando con mala onda? Si sos una mierda"
+[brain] audio packet received: 108416 bytes
+[brain] audio transcribed: "Mejora? Mejora? Mejora?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Mejora? Mejora? Mejora?"
+[brain] audio packet received: 59520 bytes
+[brain] audio transcribed: "boluda para que todo se ha complicado"
+[brain] ignored ambient audio (not addressed to N.O.A.): "boluda para que todo se ha complicado"
+[brain] audio packet received: 127872 bytes
+[brain] audio transcribed: "¿Sabés que escaneé ya los pedidos de Mega o Meta?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Sabés que escaneé ya los pedidos de Mega o Meta?"
+[brain] audio packet received: 53632 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 64384 bytes
+[brain] audio transcribed: "Nada, nada, yo como tarde hoy, anda, anda."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Nada, nada, yo como tarde hoy, anda, anda."
+[brain] audio packet received: 102016 bytes
+[brain] audio transcribed: "hacer un esfuerzo por no comer hoy temprano"
+[brain] ignored ambient audio (not addressed to N.O.A.): "hacer un esfuerzo por no comer hoy temprano"
+[brain] audio packet received: 32384 bytes
+[brain] audio transcribed: "voy a morir."
+[brain] ignored ambient audio (not addressed to N.O.A.): "voy a morir."
+[brain] audio packet received: 112256 bytes
+[brain] audio transcribed: "el Shaki este, ¿sabes que lo leí loco? Guaya."
+[brain] ignored ambient audio (not addressed to N.O.A.): "el Shaki este, ¿sabes que lo leí loco? Guaya."
+[brain] audio packet received: 67968 bytes
+[brain] audio transcribed: "Alejandro de Cava"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Alejandro de Cava"
+[brain] audio packet received: 50816 bytes
+[brain] audio transcribed: "un caballito"
+[brain] ignored ambient audio (not addressed to N.O.A.): "un caballito"
+[brain] audio packet received: 109696 bytes
+[brain] audio transcribed: "boludo no es del 13 para para para para"
+[brain] ignored ambient audio (not addressed to N.O.A.): "boludo no es del 13 para para para para"
+[brain] audio packet received: 29824 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35200 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 52864 bytes
+[brain] audio transcribed: "La verrea."
+[brain] ignored ambient audio (not addressed to N.O.A.): "La verrea."
+[brain] audio packet received: 30848 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 117376 bytes
+[brain] audio transcribed: "No, tenemos solamente del 3 de ese pedido."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, tenemos solamente del 3 de ese pedido."
+[brain] audio packet received: 29056 bytes
+[brain] audio transcribed: "Nada más."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Nada más."
+[brain] audio packet received: 41088 bytes
+[brain] audio transcribed: "de Cava."
+[brain] ignored ambient audio (not addressed to N.O.A.): "de Cava."
+[brain] audio packet received: 118144 bytes
+[brain] audio transcribed: "si lo tiene este Ale de Cava, el de 29 lo tiene que tener él, a ver"
+[brain] ignored ambient audio (not addressed to N.O.A.): "si lo tiene este Ale de Cava, el de 29 lo tiene que tener él, a ver"
+[brain] audio packet received: 26752 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 106624 bytes
+[brain] audio transcribed: "fue jueves de la semana pasada"
+[brain] ignored ambient audio (not addressed to N.O.A.): "fue jueves de la semana pasada"
+[brain] audio packet received: 40320 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 56704 bytes
+[brain] audio transcribed: "caballito"
+[brain] ignored ambient audio (not addressed to N.O.A.): "caballito"
+[brain] audio packet received: 76928 bytes
+[brain] audio transcribed: "Lo estoy buscando, lo estoy buscando en el día 29."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Lo estoy buscando, lo estoy buscando en el día 29."
+[brain] audio packet received: 62080 bytes
+[brain] audio transcribed: "No se lo encontré"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No se lo encontré"
+[brain] audio packet received: 57216 bytes
+[brain] audio transcribed: "No se lo encontré, boludo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No se lo encontré, boludo."
+[brain] audio packet received: 108928 bytes
+[brain] audio transcribed: "el paquete de ayer, sí, porque lo tiene asignado."
+[brain] ignored ambient audio (not addressed to N.O.A.): "el paquete de ayer, sí, porque lo tiene asignado."
+[brain] audio packet received: 91008 bytes
+[brain] audio transcribed: "El del 29 no, me fui al 29 y no lo encontré."
+[brain] ignored ambient audio (not addressed to N.O.A.): "El del 29 no, me fui al 29 y no lo encontré."
+[brain] audio packet received: 96128 bytes
+[brain] audio transcribed: "calle Guayaquil 65 de ayer"
+[brain] ignored ambient audio (not addressed to N.O.A.): "calle Guayaquil 65 de ayer"
+[brain] audio packet received: 86400 bytes
+[brain] audio transcribed: "bravo 552"
+[brain] ignored ambient audio (not addressed to N.O.A.): "bravo 552"
+[brain] audio packet received: 93568 bytes
+[brain] audio transcribed: "Sergio"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Sergio"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "es un normal parece, preguntó ahí suplementar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "es un normal parece, preguntó ahí suplementar"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "flex y 5 normales, los boludos pasan nada más que los normales, los flex"
+[brain] ignored ambient audio (not addressed to N.O.A.): "flex y 5 normales, los boludos pasan nada más que los normales, los flex"
+[brain] audio packet received: 89472 bytes
+[brain] audio transcribed: "es quien dije que lo tenía, Sergio."
+[brain] ignored ambient audio (not addressed to N.O.A.): "es quien dije que lo tenía, Sergio."
+[brain] audio packet received: 34432 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 105088 bytes
+[brain] audio transcribed: "No, no llegué, ahora en un toque ya lo llevó."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, no llegué, ahora en un toque ya lo llevó."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Hice todo lo de flex para que no queden colgado y lo colgamos."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hice todo lo de flex para que no queden colgado y lo colgamos."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "boludo, quien chota era esto, suplementar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "boludo, quien chota era esto, suplementar"
+[brain] audio packet received: 60800 bytes
+[brain] audio transcribed: "Piñeiro"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Piñeiro"
+[brain] audio packet received: 74880 bytes
+[brain] audio transcribed: "¡Hum!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Hum!"
+[brain] audio packet received: 28032 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 31360 bytes
+[brain] audio transcribed: "¡Hasta la aula!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Hasta la aula!"
+[brain] audio packet received: 95872 bytes
+[brain] audio transcribed: "Rector EW es Juan Piñero, 42 Lanús."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Rector EW es Juan Piñero, 42 Lanús."
+[brain] audio packet received: 28288 bytes
+[brain] audio transcribed: "¡Gracias por ver el video!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Gracias por ver el video!"
+[brain] audio packet received: 94336 bytes
+[brain] audio transcribed: "Eva Soledad, espero, ¿no?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Eva Soledad, espero, ¿no?"
+[brain] audio packet received: 75904 bytes
+[brain] audio transcribed: "soledad espero, si, acá está el Nahuel"
+[brain] ignored ambient audio (not addressed to N.O.A.): "soledad espero, si, acá está el Nahuel"
+[brain] audio packet received: 79232 bytes
+[brain] audio transcribed: "y tenía que sacar todo el sistema."
+[brain] ignored ambient audio (not addressed to N.O.A.): "y tenía que sacar todo el sistema."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Arrotea Alem Banfield Capicholi Sherly"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Arrotea Alem Banfield Capicholi Sherly"
+[brain] audio packet received: 51584 bytes
+[brain] audio transcribed: "Acá está este hombre."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Acá está este hombre."
+[brain] audio packet received: 32384 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 55936 bytes
+[brain] audio transcribed: "campichulo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "campichulo"
+[brain] audio packet received: 43136 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "y se la chica, así que ya está, se la hay que ver"
+[brain] ignored ambient audio (not addressed to N.O.A.): "y se la chica, así que ya está, se la hay que ver"
+[brain] audio packet received: 76928 bytes
+[brain] audio transcribed: "Listo, esto está cocinado."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Listo, esto está cocinado."
+[brain] audio packet received: 28544 bytes
+[brain] audio transcribed: "¡Adiós!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Adiós!"
+[brain] audio packet received: 71552 bytes
+[brain] audio transcribed: "Ah, pensé que lo estabas haciendo vos, Babilo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ah, pensé que lo estabas haciendo vos, Babilo."
+[brain] audio packet received: 34176 bytes
+[brain] audio transcribed: "listo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "listo"
+[brain] audio packet received: 31104 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "No, pero además, no, le pregunté hoy, boludo, eso Pará, pará, ahí me acordé, le pregunté hoy de eso"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, pero además, no, le pregunté hoy, boludo, eso Pará, pará, ahí me acordé, le pregunté hoy de eso"
+[brain] audio packet received: 67968 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 126592 bytes
+[brain] audio transcribed: "miro el de Lanús del 29 se le pregunté hoy 11 y media"
+[brain] ignored ambient audio (not addressed to N.O.A.): "miro el de Lanús del 29 se le pregunté hoy 11 y media"
+[brain] audio packet received: 63872 bytes
+[brain] audio transcribed: "la pregunta."
+[brain] ignored ambient audio (not addressed to N.O.A.): "la pregunta."
+[brain] audio packet received: 94080 bytes
+[brain] audio transcribed: "no se lo está manejando ahí jazmín pero bueno"
+[brain] ignored ambient audio (not addressed to N.O.A.): "no se lo está manejando ahí jazmín pero bueno"
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 58240 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 33408 bytes
+[brain] audio transcribed: "Un día."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Un día."
+[brain] audio packet received: 68992 bytes
+[brain] audio transcribed: "Ah, el de Bravo ya está listo sobre..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ah, el de Bravo ya está listo sobre..."
+[brain] audio packet received: 31872 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 71808 bytes
+[brain] audio transcribed: "de Saladillo, si pasan hoy"
+[brain] ignored ambient audio (not addressed to N.O.A.): "de Saladillo, si pasan hoy"
+[brain] audio packet received: 70272 bytes
+[brain] audio transcribed: "Ok, acá está, sí."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ok, acá está, sí."
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: "Chanoa."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Chanoa."
+[brain] audio packet received: 27776 bytes
+[brain] audio transcribed: "Más información www.mcd.org."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Más información www.mcd.org."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Es que... No es malo, boludo. No es malo. Porque no van..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Es que... No es malo, boludo. No es malo. Porque no van..."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Mío"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Mío"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "el mío yo le puse nueva porque..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "el mío yo le puse nueva porque..."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Núcleo Operativo Autónomo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Núcleo Operativo Autónomo"
+[brain] audio packet received: 50816 bytes
+[brain] audio transcribed: "llega la pantallita"
+[brain] ignored ambient audio (not addressed to N.O.A.): "llega la pantallita"
+[brain] audio packet received: 36480 bytes
+[brain] audio transcribed: "que"
+[brain] ignored ambient audio (not addressed to N.O.A.): "que"
+[brain] audio packet received: 77696 bytes
+[brain] audio transcribed: "Hay una verdulería ahora."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hay una verdulería ahora."
+[brain] audio packet received: 60288 bytes
+[brain] audio transcribed: "o contactarse con..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "o contactarse con..."
+[brain] audio packet received: 91264 bytes
+[brain] audio transcribed: "Escuchame esto que está preguntando acá en Claudio."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Escuchame esto que está preguntando acá en Claudio."
+[brain] audio packet received: 80256 bytes
+[brain] audio transcribed: "habías preguntado vos de claudia en pilar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "habías preguntado vos de claudia en pilar"
+[brain] audio packet received: 49280 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "otro contacto porque no consigue la gente boludo, no es, la foto que ves ahora"
+[brain] ignored ambient audio (not addressed to N.O.A.): "otro contacto porque no consigue la gente boludo, no es, la foto que ves ahora"
+[brain] audio packet received: 44160 bytes
+[brain] audio transcribed: "una verdulería."
+[brain] ignored ambient audio (not addressed to N.O.A.): "una verdulería."
+[brain] audio packet received: 59520 bytes
+[brain] audio transcribed: "ayer los pibes todos rodaron"
+[brain] ignored ambient audio (not addressed to N.O.A.): "ayer los pibes todos rodaron"
+[brain] audio packet received: 33408 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 44928 bytes
+[brain] audio transcribed: "a que hora es"
+[brain] ignored ambient audio (not addressed to N.O.A.): "a que hora es"
+[brain] audio packet received: 40832 bytes
+[brain] audio transcribed: "¡Hoy!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Hoy!"
+[brain] audio packet received: 24192 bytes
+[brain] audio transcribed: ""
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 28032 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37504 bytes
+[brain] audio transcribed: "Maricón"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Maricón"
+[brain] audio packet received: 32384 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 48768 bytes
+[brain] audio transcribed: "¡Noa!"
+[brain] audio packet received: 56960 bytes
+[brain] audio transcribed: "Decime qué hora es"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Decime qué hora es"
+[brain] audio packet received: 25216 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] UDP discovery response sent to 192.168.1.34:54062
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:51965
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:62270
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:55909
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 51328 bytes
+[brain] audio transcribed: "Hola, Noah."
+[brain] audio packet received: 72832 bytes
+[brain] audio transcribed: "Noa, ¿me decís la hora?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Noa, ¿hoy va a llover o va a ser un día lindo?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "No, estoy acá, ahí llegué, boludo. ¿Qué querés?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, estoy acá, ahí llegué, boludo. ¿Qué querés?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "y le hubiese dicho, y si flaca, si rompe las pelotas con el escaneo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "y le hubiese dicho, y si flaca, si rompe las pelotas con el escaneo"
+[brain] audio packet received: 51584 bytes
+[brain] audio transcribed: "¡Leamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Leamos!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Todo el mundo se hace loco y yo no me hago loco con vos. Así que va a empezar a cambiar la cosa esa."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Todo el mundo se hace loco y yo no me hago loco con vos. Así que va a empezar a cambiar la cosa esa."
+[brain] audio packet received: 40064 bytes
+[brain] audio transcribed: "¿Vale?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Vale?"
+[brain] audio packet received: 103808 bytes
+[brain] audio transcribed: "Claro, me llegó la pantalla y los parlantes."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Claro, me llegó la pantalla y los parlantes."
+[brain] audio packet received: 36224 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 118400 bytes
+[brain] audio transcribed: "estoy haciendo un robot ¿de qué estás hablando?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "estoy haciendo un robot ¿de qué estás hablando?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Sí, pero no había idea"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Sí, pero no había idea"
+[brain] audio packet received: 75648 bytes
+[brain] audio transcribed: "Hasta"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hasta"
+[brain] audio packet received: 46208 bytes
+[brain] audio transcribed: "bien"
+[brain] ignored ambient audio (not addressed to N.O.A.): "bien"
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35712 bytes
+[brain] audio transcribed: "Buenas tardes."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Buenas tardes."
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: "Buenas tardes."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Buenas tardes."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Por qué no vas al depósito a poner orden? Dejá de boludear."
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Por qué no vas al depósito a poner orden? Dejá de boludear."
+[brain] audio packet received: 36224 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 40064 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué es lo que se llama?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué es lo que se llama?"
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 69248 bytes
+[brain] audio transcribed: "¿Qué hora es?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué hora es?"
+[brain] audio packet received: 79232 bytes
+[brain] audio transcribed: "a que hora es"
+[brain] audio packet received: 91520 bytes
+[brain] audio transcribed: "Le estoy hablando el robot, boluda."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Le estoy hablando el robot, boluda."
+[brain] audio packet received: 59008 bytes
+[brain] audio transcribed: "No vale, puse, sí."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No vale, puse, sí."
+[brain] audio packet received: 49536 bytes
+[brain] audio transcribed: "porque es"
+[brain] ignored ambient audio (not addressed to N.O.A.): "porque es"
+[brain] audio packet received: 115328 bytes
+[brain] audio transcribed: "Núcleo Operativo Automata."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Núcleo Operativo Automata."
+[brain] audio packet received: 61056 bytes
+[brain] audio transcribed: "Mate esta mandarina."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Mate esta mandarina."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Es un robot gay"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Es un robot gay"
+[brain] audio packet received: 66688 bytes
+[brain] audio transcribed: "¡Qué puto!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Qué puto!"
+[brain] audio packet received: 89216 bytes
+[brain] audio transcribed: "hora ya me la dio. Bien, vamos bien."
+[brain] ignored ambient audio (not addressed to N.O.A.): "hora ya me la dio. Bien, vamos bien."
+[brain] audio packet received: 78208 bytes
+[brain] audio transcribed: "No, no, no, no."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, no, no, no."
+[brain] audio packet received: 66944 bytes
+[brain] audio transcribed: "siguen reteniendo ya."
+[brain] ignored ambient audio (not addressed to N.O.A.): "siguen reteniendo ya."
+[brain] audio packet received: 66688 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 68992 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39552 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "miércoles hoy no es día de gym"
+[brain] ignored ambient audio (not addressed to N.O.A.): "miércoles hoy no es día de gym"
+[brain] audio packet received: 53120 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "recién iban bien, hasta recién iban bien de decir, la vamos a ayudar, la vamos a ayudar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "recién iban bien, hasta recién iban bien de decir, la vamos a ayudar, la vamos a ayudar"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "es bueno, pero nos complica a nosotros. ¡Ahí la cagaron!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "es bueno, pero nos complica a nosotros. ¡Ahí la cagaron!"
+[brain] audio packet received: 81024 bytes
+[brain] audio transcribed: "La humanidad se fundó su..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "La humanidad se fundó su..."
+[brain] audio packet received: 81280 bytes
+[brain] audio transcribed: "No sé vos, no sé vos."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No sé vos, no sé vos."
+[brain] audio packet received: 69760 bytes
+[brain] audio transcribed: "Buenas noches, tío Pablo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Buenas noches, tío Pablo."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "A ver si lo agarro"
+[brain] ignored ambient audio (not addressed to N.O.A.): "A ver si lo agarro"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡No! ¡No! ¡No!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡No! ¡No! ¡No!"
+[brain] audio packet received: 40832 bytes
+[brain] audio transcribed: "Amén."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Amén."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Hehehehehehehehehehehehehe"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hehehehehehehehehehehehehe"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "a hacer varios días feriados al final. No solamente uno..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "a hacer varios días feriados al final. No solamente uno..."
+[brain] audio packet received: 62848 bytes
+[brain] audio transcribed: "Se une nada más."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Se une nada más."
+[brain] audio packet received: 103808 bytes
+[brain] audio transcribed: "No te pongas a verlo que tenés que salir en un rato."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No te pongas a verlo que tenés que salir en un rato."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "No, la movida de triunfilla"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, la movida de triunfilla"
+[brain] audio packet received: 42624 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Hehehehehehehe"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hehehehehehehe"
+[brain] audio packet received: 50816 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 121984 bytes
+[brain] audio transcribed: "10, decirle que hay 10"
+[brain] ignored ambient audio (not addressed to N.O.A.): "10, decirle que hay 10"
+[brain] audio packet received: 109696 bytes
+[brain] audio transcribed: "¡Helio!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Helio!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué le quiere comprar a... El..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué le quiere comprar a... El..."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Helos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Helos!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "que el que tiene autismo le quiere comprar una cajita feliz"
+[brain] ignored ambient audio (not addressed to N.O.A.): "que el que tiene autismo le quiere comprar una cajita feliz"
+[brain] audio packet received: 95360 bytes
+[brain] audio transcribed: "no no"
+[brain] ignored ambient audio (not addressed to N.O.A.): "no no"
+[brain] audio packet received: 81024 bytes
+[brain] audio transcribed: "No, no."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, no."
+[brain] audio packet received: 46720 bytes
+[brain] audio transcribed: "¡Gaga!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Gaga!"
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 107648 bytes
+[brain] audio transcribed: "¡No! ¡Qué amigo, boludo! ¡Si le están hablando ustedes!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡No! ¡Qué amigo, boludo! ¡Si le están hablando ustedes!"
+[brain] audio packet received: 116352 bytes
+[brain] audio transcribed: "Ustedes dos se están tirando en mierda entre ustedes dos. Yo estoy callado nada más."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ustedes dos se están tirando en mierda entre ustedes dos. Yo estoy callado nada más."
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 89728 bytes
+[brain] audio transcribed: "Hehehehe, es gay."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hehehehe, es gay."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "el fluido no binari"
+[brain] ignored ambient audio (not addressed to N.O.A.): "el fluido no binari"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "boliviano te vas a llamar boliviano"
+[brain] ignored ambient audio (not addressed to N.O.A.): "boliviano te vas a llamar boliviano"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Tené un poco más de imaginación, la concha de tu madre."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Tené un poco más de imaginación, la concha de tu madre."
+[brain] audio packet received: 80256 bytes
+[brain] audio transcribed: "de mi, de verdad"
+[brain] ignored ambient audio (not addressed to N.O.A.): "de mi, de verdad"
+[brain] audio packet received: 44928 bytes
+[brain] audio transcribed: "Roberto."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Roberto."
+[brain] audio packet received: 70016 bytes
+[brain] audio transcribed: "Y Liz había creado uno."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Y Liz había creado uno."
+[brain] audio packet received: 44416 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 109440 bytes
+[brain] audio transcribed: "algo distinto, claro, boludo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "algo distinto, claro, boludo."
+[brain] audio packet received: 75904 bytes
+[brain] audio transcribed: "¡Oh, chala! ¡Gad!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Oh, chala! ¡Gad!"
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42624 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: "4, 5, 6, 4, 6,"
+[brain] ignored ambient audio (not addressed to N.O.A.): "4, 5, 6, 4, 6,"
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39552 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 41600 bytes
+[brain] audio transcribed: "tanto mensajito"
+[brain] ignored ambient audio (not addressed to N.O.A.): "tanto mensajito"
+[brain] UDP discovery response sent to 192.168.1.34:58069
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 41600 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 41600 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:59436
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 44160 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42112 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 41344 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42624 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39552 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 115072 bytes
+[brain] audio transcribed: "Prestate atención y no choquees."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Prestate atención y no choquees."
+[brain] audio packet received: 78464 bytes
+[brain] audio transcribed: "¡Ahhh!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ahhh!"
+[brain] audio packet received: 41088 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Tiene down, tiene down"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Tiene down, tiene down"
+[brain] audio packet received: 53120 bytes
+[brain] audio transcribed: "¡Tú, tú, tú, tú!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Tú, tú, tú, tú!"
+[brain] audio packet received: 43136 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:53868
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 67200 bytes
+[brain] audio transcribed: "jajajajajajajaj"
+[brain] ignored ambient audio (not addressed to N.O.A.): "jajajajajajajaj"
+[brain] audio packet received: 95360 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 45184 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35456 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42624 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 46720 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 62848 bytes
+[brain] audio transcribed: "¿A qué hora es?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿A qué hora es?"
+[brain] UDP discovery response sent to 192.168.1.34:49226
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:53451
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:56027
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 39552 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:57274
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:52625
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:57121
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:53166
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:49208
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:52428
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Se cagó todo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Se cagó todo"
+[brain] audio packet received: 73856 bytes
+[brain] audio transcribed: "estás dando demasiadas vueltas"
+[brain] ignored ambient audio (not addressed to N.O.A.): "estás dando demasiadas vueltas"
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 36736 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 99200 bytes
+[brain] audio transcribed: "en depósito, recolectado y"
+[brain] ignored ambient audio (not addressed to N.O.A.): "en depósito, recolectado y"
+[brain] audio packet received: 70528 bytes
+[brain] audio transcribed: "y hasta todo lo que tenemos bien"
+[brain] ignored ambient audio (not addressed to N.O.A.): "y hasta todo lo que tenemos bien"
+[brain] UDP discovery response sent to 192.168.1.34:62432
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Vamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Vamos!"
+[brain] audio packet received: 57728 bytes
+[brain] audio transcribed: "no trabajo hoy"
+[brain] ignored ambient audio (not addressed to N.O.A.): "no trabajo hoy"
+[brain] audio packet received: 65408 bytes
+[brain] audio transcribed: "de trabajo Darío, cierto."
+[brain] ignored ambient audio (not addressed to N.O.A.): "de trabajo Darío, cierto."
+[brain] audio packet received: 43392 bytes
+[brain] audio transcribed: "con eso."
+[brain] ignored ambient audio (not addressed to N.O.A.): "con eso."
+[brain] audio packet received: 68992 bytes
+[brain] audio transcribed: "también tenemos que revisar los chicos"
+[brain] ignored ambient audio (not addressed to N.O.A.): "también tenemos que revisar los chicos"
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:63087
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:56357
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: "Chao."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Chao."
+[brain] audio packet received: 63872 bytes
+[brain] audio transcribed: "Noa, ¿me escuchás?"
+[brain] audio packet received: 66688 bytes
+[brain] audio transcribed: "a Medicina, ahora..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "a Medicina, ahora..."
+[brain] audio packet received: 88704 bytes
+[brain] audio transcribed: "Noa, me decís la hora."
+[brain] audio packet received: 56960 bytes
+[brain] audio transcribed: "Gracias, Noah."
+[brain] audio packet received: 63872 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Listo chicos, último viaje finalizado, nos vemos mañana."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Listo chicos, último viaje finalizado, nos vemos mañana."
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 61824 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 82560 bytes
+[brain] audio transcribed: "¡Ah, ya!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ah, ya!"
+[brain] audio packet received: 50048 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39808 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 47488 bytes
+[brain] audio transcribed: "Bebe."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Bebe."
+[brain] audio packet received: 82304 bytes
+[brain] audio transcribed: "¿Cuándo viene el Papa?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Cuándo viene el Papa?"
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38528 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 99968 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "1, 2, 3, a ver, salimiento..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "1, 2, 3, a ver, salimiento..."
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Escuchame, los que te hayan quedado, si son dos fieles, marcalos como nadie, no me lo haces abierto."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Escuchame, los que te hayan quedado, si son dos fieles, marcalos como nadie, no me lo haces abierto."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "pero no te ganan el área, si es necesario te vas a atallar pero amargalo como nadie"
+[brain] ignored ambient audio (not addressed to N.O.A.): "pero no te ganan el área, si es necesario te vas a atallar pero amargalo como nadie"
+[brain] audio packet received: 65152 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 36736 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 115584 bytes
+[brain] audio transcribed: "Muchas noches, ¿cómo va? Ahí paso, ahí paso a los chicos."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Muchas noches, ¿cómo va? Ahí paso, ahí paso a los chicos."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Vale?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Vale?"
+[brain] audio packet received: 45952 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37504 bytes
+[brain] audio transcribed: ""
+[brain] restart requested, exiting for the supervisor
+[supervisor] node exited with 0, restarting in 2s
+[brain] listening on ws://0.0.0.0:8765
+[brain] cloud tier: configured
+[brain] admin on 127.0.0.1:8766
+[brain] UDP discovery listening on port 8767
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 57472 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 66176 bytes
+[brain] audio transcribed: "¡Noa, que hora es!"
+[brain] audio packet received: 73344 bytes
+[brain] audio transcribed: "¿Esta semana va a venir el papa?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Esta semana va a venir el papa?"
+[brain] audio packet received: 100480 bytes
+[brain] audio transcribed: "Noah, ¿esta semana va a venir el Papa?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Noa, esta semana la Manchester League, ¿cómo salió?"
+[brain] audio packet received: 94080 bytes
+[brain] audio transcribed: "se puso picante ese partido, ¿no?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "se puso picante ese partido, ¿no?"
+[brain] audio packet received: 54400 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 83840 bytes
+[brain] audio transcribed: "Noah, saluda a nuestros amigos."
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35456 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Dani, ¿cómo andás? Te hago una consulta, vos que andás con los seres acondicionados, estoy buscando..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Dani, ¿cómo andás? Te hago una consulta, vos que andás con los seres acondicionados, estoy buscando..."
+[brain] audio packet received: 41600 bytes
+[brain] audio transcribed: "pobre."
+[brain] ignored ambient audio (not addressed to N.O.A.): "pobre."
+[brain] audio packet received: 43648 bytes
+[brain] audio transcribed: "No, no."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No, no."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "1.5 si es 1.5 mejor entre 1.5"
+[brain] ignored ambient audio (not addressed to N.O.A.): "1.5 si es 1.5 mejor entre 1.5"
+[brain] audio packet received: 68480 bytes
+[brain] audio transcribed: "mandas danita, es una consulta"
+[brain] ignored ambient audio (not addressed to N.O.A.): "mandas danita, es una consulta"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Hola Daniel, ¿cómo andás? Te hago una consulta Vos que andás con los aire acondicionados, ¿sabes dónde?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hola Daniel, ¿cómo andás? Te hago una consulta Vos que andás con los aire acondicionados, ¿sabes dónde?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "de 1.2, 1.3..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "de 1.2, 1.3..."
+[brain] audio packet received: 44928 bytes
+[brain] audio transcribed: "el filómetro"
+[brain] ignored ambient audio (not addressed to N.O.A.): "el filómetro"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Porque no consigo por ningún lado, ¿no?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Porque no consigo por ningún lado, ¿no?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "comprate, compré rollo y me rompe en el orto y no tiene sentido, yo necesito..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "comprate, compré rollo y me rompe en el orto y no tiene sentido, yo necesito..."
+[brain] audio packet received: 48256 bytes
+[brain] audio transcribed: "más de un metro."
+[brain] ignored ambient audio (not addressed to N.O.A.): "más de un metro."
+[brain] audio packet received: 120960 bytes
+[brain] audio transcribed: "no manometro, necesito algo así. ¿Sabes dónde puedo conseguir?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "no manometro, necesito algo así. ¿Sabes dónde puedo conseguir?"
+[brain] audio packet received: 40832 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 45440 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 69248 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37504 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 46976 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 73600 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 36480 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 71040 bytes
+[brain] audio transcribed: "¡Vamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Vamos!"
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 48768 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 93568 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42368 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 58240 bytes
+[brain] audio transcribed: "¡Clap!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Clap!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 57216 bytes
+[brain] audio transcribed: "busco, a ver si..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "busco, a ver si..."
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 50816 bytes
+[brain] audio transcribed: "¿Qué ha razón, André?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué ha razón, André?"
+[brain] audio packet received: 39296 bytes
+[brain] audio transcribed: "Chao."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Chao."
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 65920 bytes
+[brain] audio transcribed: "¡BOOM!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡BOOM!"
+[brain] audio packet received: 87936 bytes
+[brain] audio transcribed: "¡Branco de mierda!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Branco de mierda!"
+[brain] audio packet received: 50304 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 48512 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 117632 bytes
+[brain] audio transcribed: "¿Qué son estos? 11.04 y 11.40. ¿Esto es Tomás? No, tengo miedo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué son estos? 11.04 y 11.40. ¿Esto es Tomás? No, tengo miedo."
+[brain] audio packet received: 39808 bytes
+[brain] audio transcribed: "Lucas, ¿eh?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Lucas, ¿eh?"
+[brain] audio packet received: 53120 bytes
+[brain] audio transcribed: "¡I will, tío!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡I will, tío!"
+[brain] audio packet received: 48256 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 76416 bytes
+[brain] audio transcribed: "aquí"
+[brain] ignored ambient audio (not addressed to N.O.A.): "aquí"
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 40320 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 43136 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 55680 bytes
+[brain] audio transcribed: "28 lo tiene Alejandro"
+[brain] ignored ambient audio (not addressed to N.O.A.): "28 lo tiene Alejandro"
+[brain] audio packet received: 119168 bytes
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: "¿Cómo va a ser?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Cómo va a ser?"
+[brain] audio transcribed: ""
+[brain] audio packet received: 38784 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35712 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 35456 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Fijate si ya quedó el otro sistema limpio"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Fijate si ya quedó el otro sistema limpio"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "quedaba uno y ahora quedan cuatro. No entiendo esa verga. Fijate a ver si ya quedan"
+[brain] ignored ambient audio (not addressed to N.O.A.): "quedaba uno y ahora quedan cuatro. No entiendo esa verga. Fijate a ver si ya quedan"
+[brain] audio packet received: 125568 bytes
+[brain] audio transcribed: "actualizé lista"
+[brain] ignored ambient audio (not addressed to N.O.A.): "actualizé lista"
+[brain] audio packet received: 36992 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 57984 bytes
+[brain] audio transcribed: "¿Qué pasó con esto?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué pasó con esto?"
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 59264 bytes
+[brain] audio transcribed: "¡Vamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Vamos!"
+[brain] audio packet received: 97920 bytes
+[brain] audio transcribed: "me cago en tu puta fucking vida"
+[brain] ignored ambient audio (not addressed to N.O.A.): "me cago en tu puta fucking vida"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "No me vengo a ir en la calle, no me llevo Tengo media hora para llegar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No me vengo a ir en la calle, no me llevo Tengo media hora para llegar"
+[brain] audio packet received: 40576 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Cómo discernos los tres en camino?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Cómo discernos los tres en camino?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "mejor"
+[brain] ignored ambient audio (not addressed to N.O.A.): "mejor"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 49536 bytes
+[brain] audio transcribed: "Adiós."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Adiós."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Esto es NASA Sergio, esto es NASA"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Esto es NASA Sergio, esto es NASA"
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 64640 bytes
+[brain] audio transcribed: "y Alejandro"
+[brain] ignored ambient audio (not addressed to N.O.A.): "y Alejandro"
+[brain] audio packet received: 39808 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 86912 bytes
+[brain] audio transcribed: "Estos son los de las a mi vida, no más."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Estos son los de las a mi vida, no más."
+[brain] audio packet received: 85632 bytes
+[brain] audio transcribed: "que llegó, parece que son las de NASA."
+[brain] ignored ambient audio (not addressed to N.O.A.): "que llegó, parece que son las de NASA."
+[brain] audio packet received: 55680 bytes
+[brain] audio transcribed: "Y Sergio..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Y Sergio..."
+[brain] audio packet received: 64128 bytes
+[brain] audio transcribed: "uno de NASA y uno de Sergio."
+[brain] ignored ambient audio (not addressed to N.O.A.): "uno de NASA y uno de Sergio."
+[brain] audio packet received: 44160 bytes
+[brain] audio transcribed: "¡Vamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Vamos!"
+[brain] audio packet received: 38272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 49536 bytes
+[brain] audio transcribed: "No cold."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No cold."
+[brain] audio packet received: 43136 bytes
+[brain] audio transcribed: "¡Ah, girl!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ah, girl!"
+[brain] audio packet received: 87680 bytes
+[brain] audio transcribed: "MOTHERFUCKER"
+[brain] ignored ambient audio (not addressed to N.O.A.): "MOTHERFUCKER"
+[brain] audio packet received: 87680 bytes
+[brain] audio transcribed: "¡Bah! ¡Bah! ¡Bah!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Bah! ¡Bah! ¡Bah!"
+[brain] audio packet received: 40832 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "ese creo que lo tiene este pibe, como se llama, el Tarrengo"
+[brain] ignored ambient audio (not addressed to N.O.A.): "ese creo que lo tiene este pibe, como se llama, el Tarrengo"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Yo era a Puerto Madero, no sé por qué me aparece a mí."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Yo era a Puerto Madero, no sé por qué me aparece a mí."
+[brain] audio packet received: 67968 bytes
+[brain] audio transcribed: "¿Qué es lo que pasa?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué es lo que pasa?"
+[brain] audio packet received: 41344 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 94848 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 39552 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 72064 bytes
+[brain] audio transcribed: "si te escucha"
+[brain] ignored ambient audio (not addressed to N.O.A.): "si te escucha"
+[brain] audio packet received: 72320 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Psss!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Psss!"
+[brain] audio packet received: 39808 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 71040 bytes
+[brain] audio transcribed: "pero no te escucho, boludo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "pero no te escucho, boludo."
+[brain] audio packet received: 52096 bytes
+[brain] audio transcribed: "hola hola"
+[brain] ignored ambient audio (not addressed to N.O.A.): "hola hola"
+[brain] audio packet received: 113792 bytes
+[brain] audio transcribed: "pero estaba en cozo, condicionado"
+[brain] ignored ambient audio (not addressed to N.O.A.): "pero estaba en cozo, condicionado"
+[brain] audio packet received: 46208 bytes
+[brain] audio transcribed: "¿Qué es el Mercolio?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué es el Mercolio?"
+[brain] audio packet received: 102528 bytes
+[brain] audio transcribed: "No apareciste vos, boludo Te fuiste a dormir"
+[brain] ignored ambient audio (not addressed to N.O.A.): "No apareciste vos, boludo Te fuiste a dormir"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "estábamos acá, qué sé yo, y era las 11 y no aparecías y bueno"
+[brain] ignored ambient audio (not addressed to N.O.A.): "estábamos acá, qué sé yo, y era las 11 y no aparecías y bueno"
+[brain] audio packet received: 99968 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 120704 bytes
+[brain] audio transcribed: "Acá está."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Acá está."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¿Qué? Él te escribió, bol*** Se tembrarse por igual"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué? Él te escribió, bol*** Se tembrarse por igual"
+[brain] audio packet received: 48768 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 78208 bytes
+[brain] audio transcribed: "toma cuando no está condicionado."
+[brain] ignored ambient audio (not addressed to N.O.A.): "toma cuando no está condicionado."
+[brain] audio packet received: 67200 bytes
+[brain] audio transcribed: "Bien"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Bien"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "la jazmín se fue, se fueron todos"
+[brain] ignored ambient audio (not addressed to N.O.A.): "la jazmín se fue, se fueron todos"
+[brain] audio packet received: 55680 bytes
+[brain] audio transcribed: "¡Vamos!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Vamos!"
+[brain] audio packet received: 39808 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 37760 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 79232 bytes
+[brain] audio transcribed: "de Bolivia."
+[brain] ignored ambient audio (not addressed to N.O.A.): "de Bolivia."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "¡Ahhh!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Ahhh!"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "es un local tiene el número fijo, lo tiene para llamar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "es un local tiene el número fijo, lo tiene para llamar"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "para decirle que voy mañana temprano. La Cinco se robó sin local."
+[brain] ignored ambient audio (not addressed to N.O.A.): "para decirle que voy mañana temprano. La Cinco se robó sin local."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Si tiene el número fijo, lo quiere para llamar por teléfono, para decirle que voy mañana temprano."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Si tiene el número fijo, lo quiere para llamar por teléfono, para decirle que voy mañana temprano."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "cerró, es un local tiene el número fijo, lo tiene para llamar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "cerró, es un local tiene el número fijo, lo tiene para llamar"
+[brain] audio packet received: 93568 bytes
+[brain] audio transcribed: "para decirle que hoy mañana temprano"
+[brain] ignored ambient audio (not addressed to N.O.A.): "para decirle que hoy mañana temprano"
+[brain] audio packet received: 73856 bytes
+[brain] audio transcribed: "Gracias, me late."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Gracias, me late."
+[brain] audio packet received: 51072 bytes
+[brain] audio transcribed: "Colombia."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Colombia."
+[brain] audio packet received: 60544 bytes
+[brain] audio transcribed: "En Colombia."
+[brain] ignored ambient audio (not addressed to N.O.A.): "En Colombia."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Porque la de México es toda igual, o sea, toda parecida."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Porque la de México es toda igual, o sea, toda parecida."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "La de Venezuela es así, pero sin explicación."
+[brain] ignored ambient audio (not addressed to N.O.A.): "La de Venezuela es así, pero sin explicación."
+[brain] audio packet received: 39040 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42112 bytes
+[brain] audio transcribed: "Colombia."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Colombia."
+[brain] audio packet received: 47488 bytes
+[brain] audio transcribed: "Chao."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Chao."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "La puta que lo parió, boludo Tiene o no tiene cáncer? 60B"
+[brain] ignored ambient audio (not addressed to N.O.A.): "La puta que lo parió, boludo Tiene o no tiene cáncer? 60B"
+[brain] audio packet received: 118144 bytes
+[brain] audio transcribed: "con... los boludeando"
+[brain] ignored ambient audio (not addressed to N.O.A.): "con... los boludeando"
+[brain] audio packet received: 37248 bytes
+[brain] audio transcribed: "minimamente."
+[brain] ignored ambient audio (not addressed to N.O.A.): "minimamente."
+[brain] audio packet received: 51072 bytes
+[brain] audio transcribed: "queja le diría"
+[brain] ignored ambient audio (not addressed to N.O.A.): "queja le diría"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Esa es de Cuba?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Esa es de Cuba?"
+[brain] audio packet received: 42880 bytes
+[brain] audio transcribed: "¡No, no, no!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡No, no, no!"
+[brain] audio packet received: 48256 bytes
+[brain] audio transcribed: "Aurelio."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Aurelio."
+[brain] audio packet received: 36224 bytes
+[brain] audio transcribed: "¿Qué?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Qué?"
+[brain] audio packet received: 40064 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 42880 bytes
+[brain] audio transcribed: "al resto."
+[brain] ignored ambient audio (not addressed to N.O.A.): "al resto."
+[brain] audio packet received: 42112 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 121984 bytes
+[brain] audio transcribed: "encima que llegué y me pasó al lado de nuevo."
+[brain] ignored ambient audio (not addressed to N.O.A.): "encima que llegué y me pasó al lado de nuevo."
+[brain] audio packet received: 127360 bytes
+[brain] audio transcribed: "Por revículo no"
+[brain] ignored ambient audio (not addressed to N.O.A.): "Por revículo no"
+[brain] audio packet received: 70528 bytes
+[brain] audio transcribed: "el triplete"
+[brain] ignored ambient audio (not addressed to N.O.A.): "el triplete"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "jajaja a ver si lo puedo saltar"
+[brain] ignored ambient audio (not addressed to N.O.A.): "jajaja a ver si lo puedo saltar"
+[brain] audio packet received: 119936 bytes
+[brain] audio transcribed: "dale, salete, queda poco, vamos"
+[brain] ignored ambient audio (not addressed to N.O.A.): "dale, salete, queda poco, vamos"
+[brain] audio packet received: 35968 bytes
+[brain] audio transcribed: "¡Hasta la próxima!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Hasta la próxima!"
+[brain] UDP discovery response sent to 192.168.1.34:58575
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] UDP discovery response sent to 192.168.1.34:60954
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:50964
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] client disconnected: ::ffff:192.168.1.34
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 36224 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:50800
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 63360 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 76416 bytes
+[brain] audio transcribed: "Ahora no a mi Dios."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Ahora no a mi Dios."
+[brain] audio packet received: 74880 bytes
+[brain] audio transcribed: "Hola."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hola."
+[brain] audio packet received: 120448 bytes
+[brain] audio transcribed: "¿Puedo responder alguna corona y sonido no hay nada?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Puedo responder alguna corona y sonido no hay nada?"
+[brain] UDP discovery response sent to 192.168.1.34:53818
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:55524
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 51584 bytes
+[brain] audio transcribed: "¿Se escucha?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Se escucha?"
+[brain] audio packet received: 59776 bytes
+[brain] audio transcribed: "Noa, ¿me escuchás?"
+[brain] UDP discovery response sent to 192.168.1.34:61079
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:50601
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 57472 bytes
+[brain] audio transcribed: ""
+[brain] UDP discovery response sent to 192.168.1.34:61615
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] UDP discovery response sent to 192.168.1.34:56414
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
+[brain] audio packet received: 110976 bytes
+[brain] audio transcribed: "Noah, ¿me podés decir si la pantalla está conectada?"
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "Noa, ¿me podés decir qué es lo que podés hacer y lo que no podés hacer?"
+[brain] audio packet received: 113792 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 70272 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 50048 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 55936 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 63872 bytes
+[brain] audio transcribed: "¡Cajaja!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Cajaja!"
+[brain] audio packet received: 51072 bytes
+[brain] audio transcribed: "¿Me escuchás?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchás?"
+[brain] audio packet received: 49536 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 50048 bytes
+[brain] audio transcribed: "¡Suscríbete al canal!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Suscríbete al canal!"
+[brain] audio packet received: 63360 bytes
+[brain] audio transcribed: "¿me escuchás?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿me escuchás?"
+[brain] audio packet received: 64384 bytes
+[brain] audio transcribed: "¿Me escuchás?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchás?"
+[brain] audio packet received: 48768 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 67968 bytes
+[brain] audio transcribed: "¿Me escuchás?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchás?"
+[brain] audio packet received: 62080 bytes
+[brain] audio transcribed: "¿Me escuchás?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchás?"
+[brain] audio packet received: 60800 bytes
+[brain] audio transcribed: "¿Me escuchas?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchas?"
+[brain] audio packet received: 75648 bytes
+[brain] audio transcribed: "¿Me escuchas?"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¿Me escuchas?"
+[brain] audio packet received: 68480 bytes
+[brain] audio transcribed: "Hola, no, no."
+[brain] ignored ambient audio (not addressed to N.O.A.): "Hola, no, no."
+[brain] audio packet received: 82048 bytes
+[brain] audio transcribed: "Noah, ¿estás?"
+[brain] audio packet received: 99712 bytes
+[brain] audio transcribed: "No basta, hablé mucho y nunca respondiste."
+[brain] ignored ambient audio (not addressed to N.O.A.): "No basta, hablé mucho y nunca respondiste."
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 128000 bytes
+[brain] audio transcribed: "que necesito ver son..."
+[brain] ignored ambient audio (not addressed to N.O.A.): "que necesito ver son..."
+[brain] audio packet received: 38016 bytes
+[brain] audio transcribed: ""
+[brain] audio packet received: 84352 bytes
+[brain] audio transcribed: "hecho compartir directamente."
+[brain] ignored ambient audio (not addressed to N.O.A.): "hecho compartir directamente."
+[brain] audio packet received: 67200 bytes
+[brain] audio transcribed: "¡Loco, dale!"
+[brain] ignored ambient audio (not addressed to N.O.A.): "¡Loco, dale!"
+[brain] UDP discovery response sent to 192.168.1.34:51787
+[brain] client connected: ::ffff:192.168.1.34
+[brain] body attached
