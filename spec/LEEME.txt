@@ -1,0 +1,58 @@
+TROKO · Firmware para ESP32-S3 (versión en español)
+===================================================
+
+Archivo: troko-wk-esp32s3-dev-es.bin  (imagen completa, se graba en la dirección 0x0)
+
+HARDWARE NECESARIO
+------------------
+- ESP32-S3 con 16 MB de flash y 8 MB de PSRAM (ESP32-S3-N16R8)
+- Pantalla ST7789 de 240x240 (SPI, 7 pines)
+- Micrófono I2S (tipo INMP441) y amplificador I2S (tipo MAX98357A) con altavoz
+
+Conexiones (GPIO del ESP32-S3):
+
+  Pantalla    MOSI/SDA 8 · CLK/SCL 9 · CS 11 · DC 12 · RST 13 · BLK 10 · VCC 3.3V · GND
+  Micrófono   SCK 42 · WS 40 · SD 41 · L/R a GND · VDD 3.3V · GND
+  Amplificador  BCLK 47 · LRC 48 · DIN 21 · VIN 5V · GND
+  Botones     BOOT 0 (hablar) · Volumen+ 38 · Volumen- 39 (a GND)
+  LED         14
+
+Si tu placa está cableada de otra forma, este firmware no funcionará.
+
+CÓMO INSTALARLO
+---------------
+1. Conecta el ESP32-S3 al computador por USB.
+2. Abre en Chrome o Edge: https://espressif.github.io/esptool-js/
+3. Pulsa "Connect" y elige el puerto de la placa.
+   (Si no aparece, mantén BOOT, pulsa RESET y suelta BOOT.)
+4. En "Flash Address" escribe 0x0 y elige el archivo troko-wk-esp32s3-dev-es.bin
+5. Recomendado la primera vez: pulsa "Erase Flash" y espera.
+6. Pulsa "Program" y espera a que termine. Luego pulsa RESET en la placa.
+
+Con esptool (línea de comandos):
+  esptool --chip esp32s3 -b 460800 write-flash 0x0 troko-wk-esp32s3-dev-es.bin
+
+PRIMER ARRANQUE
+---------------
+Paso 1 · WiFi
+  La pantalla muestra un QR. Escanéalo con la cámara del celular: se conectará a
+  la red "Xiaozhi-XXXX" y se abrirá la página de Troko. Si no se abre, entra a
+  http://192.168.4.1. Elige tu WiFi (2.4 GHz), escribe la contraseña y conecta.
+
+Paso 2 · Registro
+  Troko dirá y mostrará un código de 6 dígitos. Entra a https://xiaozhi.me,
+  inicia sesión, toca "Agregar dispositivo" y escribe el código.
+
+Después di "Troko" para hablarle.
+
+Para cambiar de red WiFi: pulsa RESET y enseguida BOOT mientras arranca.
+
+VERIFICAR EL ARCHIVO
+--------------------
+SHA256SUMS contiene la huella del .bin:
+  shasum -a 256 -c SHA256SUMS
+
+LICENCIA
+--------
+Basado en el proyecto XiaoZhi ESP32 (licencia MIT, ver LICENSE).
+El servicio de conversación lo presta el servidor xiaozhi.me, de terceros.

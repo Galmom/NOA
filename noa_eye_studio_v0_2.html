@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOA Eye Studio 0.2</title>
+<style>
+:root{color-scheme:dark;--bg:#101418;--panel:#192127;--line:#2c3a42;--cyan:#45B8CC;--muted:#9aabb3}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#e8f0f2;font:14px/1.45 system-ui,Segoe UI,sans-serif}
+header{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}
+h1{font-size:19px;margin:0}header small{color:var(--muted)}
+main{display:grid;grid-template-columns:minmax(300px,1.2fr) minmax(280px,.8fr);gap:16px;padding:16px;max-width:1200px;margin:auto}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+h2{font-size:14px;margin:0 0 12px;color:#d7e6ea}.stage{background:#050708;border:1px solid #26343a;border-radius:10px;overflow:hidden}
+svg{display:block;width:100%;height:auto;touch-action:none}
+.controls{display:grid;gap:13px}.group{border-top:1px solid var(--line);padding-top:12px}.group:first-child{border:0;padding:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0}
+label{color:#c7d4d8}input[type=range]{width:45%;accent-color:var(--cyan)}
+input[type=text]{background:#0e1519;color:#e8f0f2;border:1px solid var(--line);border-radius:6px;padding:8px;min-width:0}
+button{background:#22343b;color:#e8f0f2;border:1px solid #38525c;border-radius:7px;padding:8px 11px;cursor:pointer}
+button.primary{background:#176071;border-color:#23869a}button:hover{filter:brightness(1.15)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.hint{font-size:12px;color:var(--muted);margin:8px 0 0}
+textarea{width:100%;min-height:110px;background:#0e1519;color:#e8f0f2;border:1px solid var(--line);border-radius:6px;padding:8px;font:12px ui-monospace,monospace}
+.badge{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:3px 8px}
+@media(max-width:760px){main{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div><h1>NOA Eye Studio</h1><small>Prototipo 0.2 · Geometría neutral corregida</small></div><span class="badge">Editor independiente · no modifica firmware</span></header>
+<main>
+<section class="panel">
+<h2>Vista previa · pantalla 240 × 240</h2>
+<div class="stage"><svg id="preview" viewBox="0 0 240 240" aria-label="Vista previa de los ojos de NOA">
+<defs>
+  <clipPath id="clipLeft" clipPathUnits="userSpaceOnUse"><path id="clipLeftPath"/></clipPath>
+  <clipPath id="clipRight" clipPathUnits="userSpaceOnUse"><path id="clipRightPath"/></clipPath>
+</defs>
+<rect width="240" height="240" fill="#000"/>
+<g id="eyes"></g>
+</svg></div>
+<p class="hint">Arrastrá los círculos blancos (anclajes) y los cuadrados amarillos (controles Bézier). El ojo derecho replica el izquierdo.</p>
+<div class="actions">
+<button id="reset">Restablecer neutral NOA</button><button id="handles">Ocultar controles</button><button id="pause">Pausar animación</button>
+</div>
+</section>
+<section class="panel">
+<h2>Geometría y efectos</h2>
+<div class="controls">
+<div class="group">
+<div class="row"><label for="expression">Expresión</label><input id="expression" type="text" value="neutral" style="width:48%"></div>
+<div class="row"><label for="color">Color</label><input id="color" type="color" value="#45b8cc"></div>
+<div class="row"><label for="scale">Escala</label><input id="scale" type="range" min="75" max="115" value="100"><output id="scaleOut">100%</output></div>
+<div class="row"><label for="gap">Separación entre ojos</label><input id="gap" type="range" min="0" max="60" value="20"><output id="gapOut">20 px</output></div>
+<div class="row"><label for="radius">Radio de esquinas</label><input id="radius" type="range" min="5" max="40" value="22"><output id="radiusOut">22 px</output></div>
+</div>
+<div class="group">
+<strong>Bandas VHS</strong>
+<div class="row"><label><input id="bands" type="checkbox" checked> Activar bandas</label></div>
+<div class="row"><label for="bandOpacity">Opacidad</label><input id="bandOpacity" type="range" min="0" max="100" value="55"><output id="bandOpacityOut">55%</output></div>
+<div class="row"><label for="bandSpeed">Velocidad</label><input id="bandSpeed" type="range" min="0" max="40" value="10"><output id="bandSpeedOut">10</output></div>
+<div class="row"><label for="stripeCount">Franjas</label><input id="stripeCount" type="range" min="2" max="10" value="6"><output id="stripeCountOut">6</output></div>
+</div>
+<div class="group">
+<strong>Distorsión y movimiento</strong>
+<div class="row"><label><input id="flicker" type="checkbox" checked> Flicker visible</label><label><input id="vhs" type="checkbox" checked> Ruido VHS</label></div>
+<div class="row"><label for="flickerAmount">Intensidad flicker</label><input id="flickerAmount" type="range" min="0" max="100" value="45"><output id="flickerAmountOut">45%</output></div>
+<div class="row"><label for="blink">Apertura del ojo</label><input id="blink" type="range" min="5" max="100" value="100"><output id="blinkOut">100%</output></div>
+</div>
+</div>
+<div class="actions"><button class="primary" id="export">Exportar JSON</button><button id="import">Importar JSON</button></div>
+<textarea id="json" spellcheck="false" placeholder="La configuración JSON aparecerá acá…"></textarea>
+<p class="hint">JSON de trabajo del editor. Todavía no es el formato definitivo del firmware.</p>
+</section>
+</main>
+<script>
+(()=>{
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const clone=o=>JSON.parse(JSON.stringify(o));
+const initialRadius=22;
+// Ojo neutral NOA: 80x80 px, esquinas de radio 22 px.
+// Ocho anclajes: dos por lado y dos por cada transición curva.
+function roundedRectPoints(radiusPx){
+ const r=radiusPx/80*100;
+ const k=.5522847498, a=r, b=100-r, c=k*r;
+ return [
+  {x:a,y:0,in:{x:a-c,y:0},out:{x:a+(b-a)/3,y:0}},
+  {x:b,y:0,in:{x:b-(b-a)/3,y:0},out:{x:b+c,y:0}},
+  {x:100,y:a,in:{x:100,y:a-c},out:{x:100,y:a+(b-a)/3}},
+  {x:100,y:b,in:{x:100,y:b-(b-a)/3},out:{x:100,y:b+c}},
+  {x:b,y:100,in:{x:b+c,y:100},out:{x:b-(b-a)/3,y:100}},
+  {x:a,y:100,in:{x:a+(b-a)/3,y:100},out:{x:a-c,y:100}},
+  {x:0,y:b,in:{x:0,y:b+c},out:{x:0,y:b-(b-a)/3}},
+  {x:0,y:a,in:{x:0,y:a+(b-a)/3},out:{x:0,y:a-c}}
+ ];
+}
+let pts=roundedRectPoints(initialRadius),showHandles=true,running=true,phase=0,drag=null,last=performance.now();
+const make=(tag,attrs,parent)=>{const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs||{}))e.setAttribute(k,v);parent.appendChild(e);return e};
+function pathData(){
+ let d=`M ${pts[0].x} ${pts[0].y}`;
+ for(let i=0;i<pts.length;i++){const p=pts[i],n=pts[(i+1)%pts.length];d+=` C ${p.out.x} ${p.out.y} ${n.in.x} ${n.in.y} ${n.x} ${n.y}`;}
+ return d+' Z';
+}
+function draw(){
+ const eyes=$('eyes');eyes.innerHTML='';
+ const d=pathData(),color=$('color').value,scale=+$('scale').value/100;
+ const gap=+$('gap').value,blink=+$('blink').value/100;
+ const w=80*scale,h=80*scale*blink,cy=120,centers=[120-(w/2+gap/2),120+(w/2+gap/2)];
+ const count=+$('stripeCount').value,bandAlpha=+$('bandOpacity').value/100;
+ const speed=+$('bandSpeed').value,offset=(phase*speed*2.1)%115;
+ const transforms=[];
+ for(let side=0;side<2;side++){
+  const x=centers[side]-w/2,y=cy-h/2,mirror=side===1;
+  const transform=`translate(${x} ${y}) scale(${w/100} ${h/100})${mirror?' translate(100 0) scale(-1 1)':''}`;
+  transforms.push(transform);
+  const clipId=side?'clipRight':'clipLeft';
+  const clipPath=$(side?'clipRightPath':'clipLeftPath');clipPath.setAttribute('d',d);
+  const g=make('g',{transform},eyes);
+  make('path',{d,fill:color},g);
+  if($('bands').checked&&bandAlpha>0){
+   const stripeGroup=make('g',{'clip-path':`url(#${clipId})`},g);
+   for(let band=0;band<2;band++){
+    const y0=((22+band*42+offset)%118)-9;
+    for(let i=0;i<count;i++){
+     const yy=y0+i*2.25;
+     make('rect',{x:-2,y:yy,width:104,height:1.55,fill:'#23616b',opacity:bandAlpha*(.58+.42*(i+1)/count)},stripeGroup);
+    }
+   }
+  }
+ }
+ if(showHandles){
+  // Los controles se muestran sobre el ojo izquierdo y usan exactamente su transformación.
+  const overlay=make('g',{transform:transforms[0]},eyes);
+  pts.forEach((p,i)=>{
+   make('line',{x1:p.x,y1:p.y,x2:p.in.x,y2:p.in.y,stroke:'#d6edf2','stroke-dasharray':'2 2','stroke-width':.8},overlay);
+   make('line',{x1:p.x,y1:p.y,x2:p.out.x,y2:p.out.y,stroke:'#d6edf2','stroke-dasharray':'2 2','stroke-width':.8},overlay);
+   make('circle',{cx:p.x,cy:p.y,r:2.5,fill:'#fff',stroke:'#087f96','stroke-width':1,'data-type':'anchor','data-i':i},overlay);
+   make('rect',{x:p.in.x-1.8,y:p.in.y-1.8,width:3.6,height:3.6,fill:'#f5c76a','data-type':'in','data-i':i},overlay);
+   make('rect',{x:p.out.x-1.8,y:p.out.y-1.8,width:3.6,height:3.6,fill:'#f5c76a','data-type':'out','data-i':i},overlay);
+  });
+ }
+ // Ruido horizontal discreto y limitado al área de la pantalla.
+ if($('vhs').checked){
+  const noise=make('g',{opacity:.12},eyes);
+  for(let i=0;i<3;i++){const yy=30+((phase*23+i*67)%180);make('path',{d:`M 0 ${yy} H 240`,stroke:'#45b8cc','stroke-width':.45},noise);}
+ }
+}
+function updateOutputs(){
+ const map={scale:'%',gap:' px',radius:' px',bandOpacity:'%',bandSpeed:'',stripeCount:'',flickerAmount:'%',blink:'%'};
+ Object.keys(map).forEach(id=>$(id+'Out').textContent=$(id).value+map[id]);
+}
+function render(){updateOutputs();draw();}
+$('preview').addEventListener('pointerdown',e=>{
+ const el=e.target;if(!el.dataset.type)return;
+ const p=$('preview').createSVGPoint();p.x=e.clientX;p.y=e.clientY;
+ const q=p.matrixTransform($('preview').getScreenCTM().inverse());
+ const s=+$('scale').value/100,w=80*s,gap=+$('gap').value;
+ const x0=120-(w/2+gap/2)-w/2,y0=120-(80*s*+$('blink').value/100)/2;
+ const x=(q.x-x0)/(w/100),y=(q.y-y0)/(80*s*+$('blink').value/100)/100;
+ const i=+el.dataset.i,type=el.dataset.type,key=type==='anchor'?null:type;
+ const target=key?pts[i][key]:pts[i];
+ drag={i,type,dx:(key?target.x:target.x)-x,dy:target.y-y};
+ $('preview').setPointerCapture(e.pointerId);
+});
+$('preview').addEventListener('pointermove',e=>{
+ if(!drag)return;
+ const p=$('preview').createSVGPoint();p.x=e.clientX;p.y=e.clientY;
+ const q=p.matrixTransform($('preview').getScreenCTM().inverse());
+ const s=+$('scale').value/100,w=80*s,gap=+$('gap').value,h=80*s*+$('blink').value/100;
+ const x=(q.x-(120-(w/2+gap/2)-w/2))/(w/100),y=(q.y-(120-h/2))/(h/100);
+ const target=drag.type==='anchor'?pts[drag.i]:pts[drag.i][drag.type];
+ target.x=Math.max(-25,Math.min(125,x+drag.dx));target.y=Math.max(-25,Math.min(125,y+drag.dy));
+ draw();
+});
+['pointerup','pointercancel','lostpointercapture'].forEach(ev=>$('preview').addEventListener(ev,()=>drag=null));
+['scale','gap','radius','bandOpacity','bandSpeed','stripeCount','flickerAmount','blink'].forEach(id=>$(id).addEventListener('input',()=>{
+ if(id==='radius')pts=roundedRectPoints(+$('radius').value);
+ render();
+}));
+['color','bands','flicker','vhs'].forEach(id=>$(id).addEventListener('input',draw));
+$('reset').onclick=()=>{pts=roundedRectPoints(22);$('scale').value=100;$('gap').value=20;$('radius').value=22;$('color').value='#45b8cc';$('bands').checked=true;$('bandOpacity').value=55;$('bandSpeed').value=10;$('stripeCount').value=6;$('flicker').checked=true;$('flickerAmount').value=45;$('vhs').checked=true;$('blink').value=100;render();};
+$('handles').onclick=()=>{showHandles=!showHandles;$('handles').textContent=showHandles?'Ocultar controles':'Mostrar controles';draw();};
+$('pause').onclick=()=>{running=!running;$('pause').textContent=running?'Pausar animación':'Reanudar animación';};
+function config(){return {format:'noa-eye-config',version:2,name:$('expression').value||'sin_nombre',canvas:{width:240,height:240},geometry:{type:'closed-cubic-bezier',points:pts},appearance:{referenceWidth:80,referenceHeight:80,cornerRadius:+$('radius').value,color:$('color').value,scale:+$('scale').value,gap:+$('gap').value},effects:{bands:{enabled:$('bands').checked,opacity:+$('bandOpacity').value,speed:+$('bandSpeed').value,stripes:+$('stripeCount').value},flicker:{enabled:$('flicker').checked,intensity:+$('flickerAmount').value},vhsNoise:$('vhs').checked,blinkPreview:+$('blink').value}};}
+$('export').onclick=()=>{$('json').value=JSON.stringify(config(),null,2);};
+$('import').onclick=()=>{try{const c=JSON.parse($('json').value);if(c.format!=='noa-eye-config'||!Array.isArray(c.geometry?.points)||c.geometry.points.length!==8)throw Error('Se esperaba una geometría Bézier de 8 anclajes');pts=c.geometry.points;$('expression').value=c.name||'importada';$('color').value=c.appearance?.color||'#45b8cc';$('scale').value=c.appearance?.scale??100;$('gap').value=c.appearance?.gap??20;$('radius').value=c.appearance?.cornerRadius??22;$('bands').checked=!!c.effects?.bands?.enabled;$('bandOpacity').value=c.effects?.bands?.opacity??55;$('bandSpeed').value=c.effects?.bands?.speed??10;$('stripeCount').value=c.effects?.bands?.stripes??6;$('flicker').checked=!!c.effects?.flicker?.enabled;$('flickerAmount').value=c.effects?.flicker?.intensity??45;$('vhs').checked=!!c.effects?.vhsNoise;$('blink').value=c.effects?.blinkPreview??100;render();}catch(e){alert('No se pudo importar: '+e.message)}};
+function frame(t){
+ if(running){phase+=(t-last)/1000;last=t;}
+ if($('flicker').checked){
+  const intensity=+$('flickerAmount').value/100;
+  // Pulsos breves y notorios, con caída de brillo proporcional al control.
+  const pulse=Math.pow(Math.max(0,Math.sin(phase*17)+.15),12);
+  const irregular=Math.pow(Math.max(0,Math.sin(phase*5.3+1.2)),20)*.45;
+  $('eyes').setAttribute('opacity',1-intensity*Math.min(1,pulse+irregular));
+ }else $('eyes').setAttribute('opacity',1);
+ if(running)draw();
+ requestAnimationFrame(frame);
+}
+render();last=performance.now();requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

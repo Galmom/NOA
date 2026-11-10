@@ -1,0 +1,193 @@
+Te dejo el registro técnico listo para guardar como `NOA_FIX_PANTALLA_ST7789.txt`.
+
+# NOA – Solución de pantalla ST7789 240×240
+
+**Fecha:** 07/11/2026\
+**Placa:** WK-ESP32S3-DEV – ESP32-S3 N16R8\
+**Firmware:** NOA (basado en Xiaozhi AI 2.5.3)\
+**Pantalla:** ST7789 1.3" – 240×240
+
+## 1. Problema inicial
+
+La pantalla permanecía completamente negra al iniciar NOA.
+
+Se verificó que:
+
+- El ESP32-S3 arrancaba correctamente.
+- El firmware compilaba y se flasheaba sin errores.
+- El Wi-Fi y el audio funcionaban.
+- La inicialización del LCD terminaba con `ESP_OK`.
+- El backlight se restauraba, pero no aparecía imagen.
+- Con el firmware original de Troko, la pantalla funcionaba.
+
+## 2. Diagnóstico
+
+Se investigó la configuración del controlador ST7789 y se compararon las configuraciones de distintas placas del repositorio.
+
+Se encontró que existían dos variantes:
+
+- `CONFIG_LCD_ST7789_240X240`
+- `CONFIG_LCD_ST7789_240X240_7PIN`
+
+La diferencia relevante era el modo de comunicación SPI.
+
+En nuestra placa, `wk-esp32s3-dev/config.h`:
+
+| Variante            | Modo SPI |
+| ------------------- | -------- |
+| ST7789 240×240      | 0        |
+| ST7789 240×240 7PIN | 3        |
+
+Se comprobó que `DISPLAY_SPI_MODE` se utiliza directamente en `wk-esp32s3-dev.cc`:
+
+```
+io_config.spi_mode = DISPLAY_SPI_MODE;
+```
+
+Por lo tanto, el modo SPI configurado determina el modo utilizado por el controlador.
+
+## 3. Solución aplicada
+
+Archivo modificado:
+
+`main/boards/wk-esp32s3-dev/config.h`
+
+Dentro del bloque:
+
+```
+#ifdef CONFIG_LCD_ST7789_240X240
+```
+
+Se cambió:
+
+```
+#define DISPLAY_SPI_MODE 0
+```
+
+Por:
+
+```
+#define DISPLAY_SPI_MODE 3
+```
+
+No se modificó la variante de pantalla ni se activó `CONFIG_LCD_ST7789_240X240_7PIN`.
+
+**El único cambio funcional aplicado para solucionar la pantalla fue pasar SPI de modo 0 a modo 3.**
+
+## 4. Configuración de hardware conservada
+
+No se modificaron los GPIO:
+
+| Señal | GPIO |
+| ----- | ---- |
+| MOSI  | 8    |
+| CLK   | 9    |
+| CS    | 11   |
+| DC    | 12   |
+| RST   | 13   |
+| BLK   | 10   |
+
+Tampoco se modificaron:
+
+- Resolución: 240×240.
+- Orientación.
+- Inversión de color.
+- Orden RGB.
+- Offset X/Y.
+- Frecuencia SPI: 40 MHz.
+- Driver ST7789.
+- Secuencia de inicialización.
+
+## 5. Compilación y flasheo
+
+Desde:
+
+`C:\Users\lord_\Downloads\NOA\firmware`
+
+Compilación:
+
+```
+python scripts/build.py wk-esp32s3-dev --name noa --wake-word "noah:NOA" --language es-ES
+```
+
+Resultado: `Project build complete`.
+
+Flasheo por COM9:
+
+```
+python "$env:IDF_PATH\tools\idf.py" -p COM9 flash
+```
+
+Resultado: flasheo exitoso.
+
+## 6. Resultado final
+
+**PANTALLA FUNCIONANDO CORRECTAMENTE.**
+
+La pantalla ST7789 comenzó a mostrar imagen después de cambiar `DISPLAY_SPI_MODE` de 0 a 3.
+
+### Conclusión técnica
+
+El problema no estaba en los pines, el cableado, la resolución ni el controlador ST7789.
+
+La causa era una incompatibilidad entre el modo SPI configurado en el firmware y el requerido por nuestra pantalla.
+
+La solución fue utilizar SPI modo 3.
+
+## 7. Recomendaciones para futuras modificaciones
+
+- No volver a cambiar `DISPLAY_SPI_MODE` a 0.
+- No modificar los GPIO de la pantalla sin una razón comprobada.
+- Conservar esta configuración como referencia funcional.
+- Antes de modificar el driver LCD, verificar primero la configuración de hardware.
+- Mantener una copia de este estado funcional antes de experimentar con nuevas funciones.
+
+**Estado: PANTALLA ST7789 OPERATIVA EN NOA.**
+
+
+## Aclaración: variantes ST7789 y cantidad de pines
+
+Es importante distinguir entre la **variante de configuración del firmware** y la **conexión física de la pantalla**.
+
+### 1. Variantes del firmware
+
+En el código existen dos configuraciones para ST7789 240×240:
+
+| Configuración | Modo SPI | Qué significa |
+|---|---:|---|
+| `CONFIG_LCD_ST7789_240X240` | 0 (antes del arreglo) | Configuración estándar |
+| `CONFIG_LCD_ST7789_240X240_7PIN` | 3 en WK-ESP32S3-DEV | Variante específica denominada 7PIN |
+
+En nuestra placa, ambas variantes mantienen los mismos parámetros de resolución, orientación, RGB y offsets. La diferencia relevante es el modo SPI.
+
+**Importante:** la variante `7PIN` no agrega automáticamente un GPIO ni modifica el cableado. Es una selección de configuración del firmware.
+
+### 2. Conexiones físicas de nuestra pantalla
+
+Nuestra ST7789 utiliza estas seis señales de control y datos:
+
+| Señal | GPIO ESP32-S3 |
+|---|---:|
+| MOSI | GPIO 8 |
+| CLK / SCK | GPIO 9 |
+| CS | GPIO 11 |
+| DC | GPIO 12 |
+| RST | GPIO 13 |
+| BLK | GPIO 10 |
+
+Además, la pantalla necesita alimentación y GND.
+
+La denominación comercial de una pantalla como 7 pines puede incluir alimentación, tierra y señales adicionales. No debe confundirse con la cantidad de GPIO utilizados por nuestra configuración.
+
+### 3. Configuración definitiva de NOA
+
+Se conserva:
+
+```cpp
+#define CONFIG_LCD_ST7789_240X240
+#define DISPLAY_SPI_MODE 3
+```
+
+La variante seleccionada sigue siendo `CONFIG_LCD_ST7789_240X240`, no `CONFIG_LCD_ST7789_240X240_7PIN`.
+
+**Conclusión:** solucionamos el problema cambiando el modo SPI de la variante estándar a modo 3. No cambiamos la conexión física ni seleccionamos otra variante de pantalla.

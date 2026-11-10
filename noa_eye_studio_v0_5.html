@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOA Eye Studio 0.5</title>
+<style>
+:root{color-scheme:dark;--bg:#101418;--panel:#192127;--line:#2c3a42;--cyan:#45B8CC;--muted:#9aabb3}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#e8f0f2;font:14px/1.45 system-ui,Segoe UI,sans-serif}
+header{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}
+h1{font-size:19px;margin:0}header small{color:var(--muted)}main{display:grid;grid-template-columns:minmax(300px,1.2fr) minmax(280px,.8fr);gap:16px;padding:16px;max-width:1200px;margin:auto}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}h2{font-size:14px;margin:0 0 12px;color:#d7e6ea}
+.stage{background:#050708;border:1px solid #26343a;border-radius:10px;overflow:hidden}svg{display:block;width:100%;height:auto;touch-action:none}
+.controls{display:grid;gap:13px}.group{border-top:1px solid var(--line);padding-top:12px}.group:first-child{border:0;padding:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0}label{color:#c7d4d8}
+input[type=range]{width:44%;accent-color:var(--cyan)}input[type=text]{background:#0e1519;color:#e8f0f2;border:1px solid var(--line);border-radius:6px;padding:8px;min-width:0}
+button{background:#22343b;color:#e8f0f2;border:1px solid #38525c;border-radius:7px;padding:8px 11px;cursor:pointer}button.primary{background:#176071;border-color:#23869a}button:disabled{opacity:.35;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.hint{font-size:12px;color:var(--muted);margin:8px 0 0}
+textarea{width:100%;min-height:110px;background:#0e1519;color:#e8f0f2;border:1px solid var(--line);border-radius:6px;padding:8px;font:12px ui-monospace,monospace}
+.badge{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:3px 8px}
+.selected{stroke:#fff!important;stroke-width:1.5!important}
+@media(max-width:760px){main{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body>
+<header><div><h1>NOA Eye Studio</h1><small>Prototipo 0.5 · grosor real de banda y bucle VHS continuo</small></div><span class="badge">Editor independiente · no modifica firmware</span></header>
+<main>
+<section class="panel">
+<h2>Vista previa · pantalla 240 × 240</h2>
+<div class="stage"><svg id="preview" viewBox="0 0 240 240">
+<defs><clipPath id="clipLeft" clipPathUnits="userSpaceOnUse"><path id="clipLeftPath"/></clipPath><clipPath id="clipRight" clipPathUnits="userSpaceOnUse"><path id="clipRightPath"/></clipPath></defs>
+<rect width="240" height="240" fill="#000"/><g id="eyes"></g></svg></div>
+<p class="hint">Seleccioná un anclaje blanco para eliminarlo. Arrastrá anclajes blancos o controles amarillos para deformar. Mínimo: 2 anclajes.</p>
+<div class="actions"><button id="removePoint">Eliminar punto seleccionado</button><button id="reset">Restablecer neutral NOA</button><button id="handles">Ocultar controles</button><button id="pause">Pausar animación</button></div>
+<p class="hint" id="pointInfo">Ningún punto seleccionado.</p>
+</section>
+<section class="panel"><h2>Geometría y efectos</h2><div class="controls">
+<div class="group">
+<div class="row"><label for="expression">Expresión</label><input id="expression" type="text" value="neutral" style="width:48%"></div>
+<div class="row"><label for="color">Color</label><input id="color" type="color" value="#45b8cc"></div>
+<div class="row"><label for="scale">Escala</label><input id="scale" type="range" min="75" max="115" value="100"><output id="scaleOut"></output></div>
+<div class="row"><label for="gap">Separación</label><input id="gap" type="range" min="0" max="60" value="20"><output id="gapOut"></output></div>
+<div class="row"><label for="shape">Modelo de ojo</label><select id="shape"><option value="neutral">Neutral NOA · redondeado</option><option value="ring">Circular · con agujero</option></select></div>
+<div class="row" id="radiusRow"><label for="radius">Radio de esquinas (neutral)</label><input id="radius" type="range" min="5" max="35" value="22"><output id="radiusOut"></output></div>
+<div class="row" id="holeRow" style="display:none"><label for="hole">Agujero central</label><input id="hole" type="range" min="10" max="85" value="42"><output id="holeOut"></output></div>
+</div>
+<div class="group"><strong>Banda VHS</strong>
+<div class="row"><label><input id="bands" type="checkbox" checked> Activar banda</label></div>
+<div class="row"><label for="bandHeight">Grosor de franja</label><input id="bandHeight" type="range" min="0" max="100" value="40"><output id="bandHeightOut"></output></div>
+<div class="row"><label for="bandOpacity">Opacidad</label><input id="bandOpacity" type="range" min="0" max="100" value="55"><output id="bandOpacityOut"></output></div>
+<div class="row"><label for="bandSpeed">Velocidad</label><input id="bandSpeed" type="range" min="0" max="30" value="10"><output id="bandSpeedOut"></output></div>
+<div class="row"><label for="bandOverlap">Solapamiento VHS</label><input id="bandOverlap" type="range" min="0" max="90" value="45"><output id="bandOverlapOut"></output></div>
+<div class="row"><label for="bandColor">Color base</label><input id="bandColor" type="color" value="#23616b"></div>
+<div class="row"><label for="bandColor2">Color final / degradé</label><input id="bandColor2" type="color" value="#8ad4df"></div>
+<div class="row"><label><input id="bandGradient" type="checkbox" checked> Usar degradé</label></div>
+<div class="row"><label for="stripeCount">Líneas internas</label><input id="stripeCount" type="range" min="0" max="10" value="4"><output id="stripeCountOut"></output></div>
+<p class="hint">El grosor define la altura real de cada franja: 0 la desactiva y 100 cubre toda la altura del ojo. El solapamiento hace entrar la siguiente antes de que salga la anterior. Velocidad 0 congela el movimiento. El degradé mezcla ambos colores en sentido vertical.</p>
+</div>
+<div class="group"><strong>Flicker por desplazamiento</strong>
+<div class="row"><label><input id="flickerV" type="checkbox" checked> Flicker vertical</label><label><input id="flickerH" type="checkbox"> Flicker horizontal</label></div>
+<div class="row"><label for="flickerIntensity">Intensidad</label><input id="flickerIntensity" type="range" min="0" max="100" value="50"><output id="flickerIntensityOut"></output></div>
+<div class="row"><label for="flickerRate">Frecuencia</label><input id="flickerRate" type="range" min="1" max="20" value="8"><output id="flickerRateOut"></output></div>
+<p class="hint">El flicker desplaza el ojo bruscamente arriba/abajo o izquierda/derecha. No apaga ni cambia la opacidad del ojo.</p>
+</div>
+<div class="group"><strong>Parpadeo</strong>
+<div class="row"><label for="blink">Apertura de prueba</label><input id="blink" type="range" min="5" max="100" value="100"><output id="blinkOut"></output></div>
+</div></div>
+<div class="actions"><button class="primary" id="export">Exportar JSON</button><button id="import">Importar JSON</button></div>
+<textarea id="json" spellcheck="false" placeholder="Configuración JSON…"></textarea>
+<p class="hint">Formato experimental del editor; todavía no está conectado al firmware.</p>
+</section></main>
+<script>
+(()=>{
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+function rounded(rpx){const r=rpx/80*100,k=.5522847498,a=r,b=100-r,c=k*r;return[
+{x:a,y:0,in:{x:a-c,y:0},out:{x:a+(b-a)/3,y:0}},
+{x:b,y:0,in:{x:b-(b-a)/3,y:0},out:{x:b+c,y:0}},
+{x:100,y:a,in:{x:100,y:a-c},out:{x:100,y:a+(b-a)/3}},
+{x:100,y:b,in:{x:100,y:b-(b-a)/3},out:{x:100,y:b+c}},
+{x:b,y:100,in:{x:b+c,y:100},out:{x:b-(b-a)/3,y:100}},
+{x:a,y:100,in:{x:a+(b-a)/3,y:100},out:{x:a-c,y:100}},
+{x:0,y:b,in:{x:0,y:b+c},out:{x:0,y:b-(b-a)/3}},
+{x:0,y:a,in:{x:0,y:a+(b-a)/3},out:{x:0,y:a-c}}];}
+let pts=rounded(22),selected=null,showHandles=true,running=true,phase=0,last=performance.now(),drag=null;
+const make=(tag,attrs,parent)=>{const e=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>e.setAttribute(k,v));parent.appendChild(e);return e};
+function path(){let d=`M ${pts[0].x} ${pts[0].y}`;for(let i=0;i<pts.length;i++){const p=pts[i],n=pts[(i+1)%pts.length];d+=` C ${p.out.x} ${p.out.y} ${n.in.x} ${n.in.y} ${n.x} ${n.y}`;}return d+' Z';}
+function shapePath(){
+ if($('shape').value==='ring'){
+  const hole=+$('hole').value;
+  const r=hole/2;
+  return `M 50 0 A 50 50 0 1 1 49.99 0 Z M 50 ${50-r} A ${r} ${r} 0 1 0 50 ${50+r} A ${r} ${r} 0 1 0 50 ${50-r} Z`;
+ }
+ return path();
+}
+function draw(){
+ const root=$('eyes');root.innerHTML='';
+ const d=shapePath(),s=+$('scale').value/100,w=80*s,h=80*s*+$('blink').value/100,gap=+$('gap').value,cy=120;
+ const cx=[120-(w/2+gap/2),120+(w/2+gap/2)];
+ $('clipLeftPath').setAttribute('d',d);$('clipRightPath').setAttribute('d',d);
+ const defs=$('preview').querySelector('defs');
+ let grad=$('vhsGradient');if(!grad){grad=make('linearGradient',{id:'vhsGradient',x1:'0%',y1:'0%',x2:'0%',y2:'100%'},defs);}
+ grad.innerHTML='';
+ make('stop',{offset:'0%','stop-color':$('bandColor').value},grad);
+ make('stop',{offset:'100%','stop-color':$('bandGradient').checked?$('bandColor2').value:$('bandColor').value},grad);
+ const bandPaint=$('bandGradient').checked?'url(#vhsGradient)':$('bandColor').value;
+ const bandH=+$('bandHeight').value;
+ const overlap=+$('bandOverlap').value/100;
+ // Período menor que el recorrido total: la próxima banda entra antes de que salga la anterior.
+ const spacing=Math.max(1,(100+bandH)*(1-overlap));
+ const travel=(phase*+$('bandSpeed').value*3.2)%spacing;
+ for(let side=0;side<2;side++){
+  const x=cx[side]-w/2,y=cy-h/2,tr=`translate(${x} ${y}) scale(${w/100} ${h/100})${side?' translate(100 0) scale(-1 1)':''}`;
+  const eye=make('g',{transform:tr,'data-eye':side},root);
+  make('path',{d,fill:$('color').value,'fill-rule':'evenodd'},eye);
+  if($('bands').checked && bandH>0 && +$('bandOpacity').value>0){
+   const clip=make('g',{'clip-path':`url(#${side?'clipRight':'clipLeft'})`},eye);
+   for(let j=-Math.ceil((100+bandH)/spacing)-1;j<Math.ceil(100/spacing)+2;j++){
+    const yy=travel-bandH+j*spacing;
+    make('rect',{x:0,y:yy,width:100,height:bandH,fill:bandPaint,opacity:+$('bandOpacity').value/100},clip);
+    const lines=+$('stripeCount').value;
+    for(let i=1;i<=lines;i++){const ly=yy+bandH*i/(lines+1);make('rect',{x:0,y:ly,width:100,height:.65,fill:$('bandColor2').value,opacity:(+$('bandOpacity').value/100)*.45},clip);}
+   }
+  }
+ }
+ if(showHandles && $('shape').value==='neutral'){
+  const tr=`translate(${cx[0]-w/2} ${cy-h/2}) scale(${w/100} ${h/100})`;
+  const overlay=make('g',{transform:tr},root);
+  pts.forEach((p,i)=>{
+   make('line',{x1:p.x,y1:p.y,x2:p.in.x,y2:p.in.y,stroke:'#d6edf2','stroke-dasharray':'2 2','stroke-width':.8},overlay);
+   make('line',{x1:p.x,y1:p.y,x2:p.out.x,y2:p.out.y,stroke:'#d6edf2','stroke-dasharray':'2 2','stroke-width':.8},overlay);
+   make('circle',{cx:p.x,cy:p.y,r:2.7,fill:selected===i?'#45b8cc':'#fff',stroke:'#087f96','stroke-width':1,'data-type':'anchor','data-i':i},overlay);
+   make('rect',{x:p.in.x-1.8,y:p.in.y-1.8,width:3.6,height:3.6,fill:'#f5c76a','data-type':'in','data-i':i},overlay);
+   make('rect',{x:p.out.x-1.8,y:p.out.y-1.8,width:3.6,height:3.6,fill:'#f5c76a','data-type':'out','data-i':i},overlay);
+  });
+ }
+}
+function outputs(){const suffix={scale:'%',gap:' px',radius:' px',bandHeight:'/10',bandOpacity:'%',bandSpeed:'',bandOverlap:'%',stripeCount:'',flickerIntensity:'%',flickerRate:'',blink:'%',hole:'%'};Object.keys(suffix).forEach(id=>$(id+'Out').textContent=$(id).value+suffix[id]);$('removePoint').disabled=selected===null||pts.length<=2||$('shape').value!=='neutral';$('pointInfo').textContent=selected===null?'Ningún punto seleccionado.':`Punto seleccionado: ${selected+1} de ${pts.length}.`;}
+function render(){outputs();draw();}
+function local(e){const p=$('preview').createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform($('preview').getScreenCTM().inverse());}
+$('shape').addEventListener('change',()=>{$('radiusRow').style.display=$('shape').value==='neutral'?'flex':'none';$('holeRow').style.display=$('shape').value==='ring'?'flex':'none';render();});
+$('preview').addEventListener('pointerdown',e=>{
+ if($('shape').value!=='neutral')return;
+ const el=e.target;if(!el.dataset.type)return;const q=local(e),s=+$('scale').value/100,w=80*s,h=80*s*+$('blink').value/100,gap=+$('gap').value;
+ const x0=120-(w/2+gap/2)-w/2,y0=120-h/2,x=(q.x-x0)/(w/100),y=(q.y-y0)/(h/100),i=+el.dataset.i,type=el.dataset.type;
+ selected=i;const target=type==='anchor'?pts[i]:pts[i][type];drag={i,type,dx:target.x-x,dy:target.y-y};render();$('preview').setPointerCapture(e.pointerId);
+});
+$('preview').addEventListener('pointermove',e=>{if(!drag)return;const q=local(e),s=+$('scale').value/100,w=80*s,h=80*s*+$('blink').value/100,gap=+$('gap').value;
+ const x=(q.x-(120-(w/2+gap/2)-w/2))/(w/100),y=(q.y-(120-h/2))/(h/100),target=drag.type==='anchor'?pts[drag.i]:pts[drag.i][drag.type];
+ target.x=Math.max(-30,Math.min(130,x+drag.dx));target.y=Math.max(-30,Math.min(130,y+drag.dy));draw();});
+['pointerup','pointercancel','lostpointercapture'].forEach(ev=>$('preview').addEventListener(ev,()=>drag=null));
+$('removePoint').onclick=()=>{if(selected===null||pts.length<=2)return;pts.splice(selected,1);selected=null;render();};
+$('reset').onclick=()=>{pts=rounded(22);$('shape').value='neutral';$('hole').value=42;$('bandOverlap').value=45;$('bandColor').value='#23616b';$('bandColor2').value='#8ad4df';$('bandGradient').checked=true;selected=null;$('radius').value=22;$('scale').value=100;$('gap').value=20;$('color').value='#45b8cc';$('bands').checked=true;$('bandHeight').value=4;$('bandOpacity').value=55;$('bandSpeed').value=10;$('stripeCount').value=4;$('flickerV').checked=true;$('flickerH').checked=false;$('flickerIntensity').value=50;$('flickerRate').value=8;$('blink').value=100;render();};
+$('handles').onclick=()=>{showHandles=!showHandles;$('handles').textContent=showHandles?'Ocultar controles':'Mostrar controles';draw();};
+$('pause').onclick=()=>{running=!running;$('pause').textContent=running?'Pausar animación':'Reanudar animación';};
+['scale','gap','radius','hole','bandHeight','bandOpacity','bandSpeed','bandOverlap','stripeCount','flickerIntensity','flickerRate','blink'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='radius'&&pts.length===8)pts=rounded(+$('radius').value);render();}));
+['color','bands','flickerV','flickerH','bandColor','bandColor2','bandGradient'].forEach(id=>$(id).addEventListener('input',draw));
+function config(){return{format:'noa-eye-config',version:4,name:$('expression').value||'sin_nombre',canvas:{width:240,height:240},geometry:{type:$('shape').value==='ring'?'circular-ring':'closed-cubic-bezier',holePercent:+$('hole').value,points:pts},appearance:{referenceWidth:80,referenceHeight:80,cornerRadius:+$('radius').value,color:$('color').value,scale:+$('scale').value,gap:+$('gap').value},effects:{band:{enabled:$('bands').checked,height:+$('bandHeight').value,opacity:+$('bandOpacity').value,speed:+$('bandSpeed').value,overlap:+$('bandOverlap').value,color:$('bandColor').value,colorEnd:$('bandColor2').value,gradient:$('bandGradient').checked,internalLines:+$('stripeCount').value},flicker:{vertical:$('flickerV').checked,horizontal:$('flickerH').checked,intensity:+$('flickerIntensity').value,frequency:+$('flickerRate').value},blinkPreview:+$('blink').value}};}
+$('export').onclick=()=>$('json').value=JSON.stringify(config(),null,2);
+$('import').onclick=()=>{try{const c=JSON.parse($('json').value);if(c.format!=='noa-eye-config'||!Array.isArray(c.geometry?.points)||c.geometry.points.length<2)throw Error('Configuración no válida');pts=c.geometry.points;selected=null;$('shape').value=c.geometry.type==='circular-ring'?'ring':'neutral';$('hole').value=c.geometry.holePercent??42;$('expression').value=c.name||'importada';$('color').value=c.appearance?.color||'#45b8cc';$('scale').value=c.appearance?.scale??100;$('gap').value=c.appearance?.gap??20;$('radius').value=c.appearance?.cornerRadius??22;$('bands').checked=!!c.effects?.band?.enabled;$('bandHeight').value=c.effects?.band?.height??4;$('bandOpacity').value=c.effects?.band?.opacity??55;$('bandSpeed').value=c.effects?.band?.speed??10;$('bandOverlap').value=c.effects?.band?.overlap??45;$('bandColor').value=c.effects?.band?.color??'#23616b';$('bandColor2').value=c.effects?.band?.colorEnd??'#8ad4df';$('bandGradient').checked=c.effects?.band?.gradient??true;$('stripeCount').value=c.effects?.band?.internalLines??4;$('flickerV').checked=!!c.effects?.flicker?.vertical;$('flickerH').checked=!!c.effects?.flicker?.horizontal;$('flickerIntensity').value=c.effects?.flicker?.intensity??50;$('flickerRate').value=c.effects?.flicker?.frequency??8;$('blink').value=c.effects?.blinkPreview??100;render();}catch(e){alert('No se pudo importar: '+e.message)}};
+function frame(t){if(running){const dt=Math.min((t-last)/1000,.05);phase+=dt;last=t;}draw();
+ const root=$('eyes'),intensity=+$('flickerIntensity').value/100,rate=+$('flickerRate').value;
+ // Desplazamientos cortos y repentinos, independientes por eje; sin apagar el ojo.
+ const pulse=Math.sin(phase*rate*2*Math.PI),snap=Math.abs(Math.sin(phase*rate* Math.PI*1.73))>.91?1:0;
+ const dy=$('flickerV').checked?Math.round(pulse*intensity*5+snap*intensity*4):0;
+ const dx=$('flickerH').checked?Math.round(Math.sin(phase*rate*1.37*2*Math.PI)*intensity*4):0;
+ root.setAttribute('transform',`translate(${dx} ${dy})`);
+ requestAnimationFrame(frame);}
+$('radiusRow').style.display='flex';$('holeRow').style.display='none';render();requestAnimationFrame(frame);
+})();
+</script></body></html>

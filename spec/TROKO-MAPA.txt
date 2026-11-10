@@ -1,0 +1,313 @@
+TROKO / XIAOZHI FIRMWARE - MAPA DEL .BIN
+=========================================
+Archivo: C:\Users\lord_\Downloads\troko-firmware-es\troko-wk-esp32s3-dev-es.bin
+Tamaño: 16291292 bytes (15.54 MB)
+
+TABLA DE PARTICIONES (offset 0x8000)
+------------------------------------
+  #  tipo   subtipo     offset      tamaño       label
+   0 data   nvs         0x9000     0x4000       nvs
+   1 data   ota         0xd000     0x2000       otadata
+   2 data   phy         0xf000     0x1000       phy_init
+   3 app    ota_0       0x20000    0x5f0000     ota_0
+   4 app    ota_1       0x610000   0x5f0000     ota_1
+   5 data   spiffs      0xc00000   0x400000     assets
+
+APLICACIONES
+-------------
+  ota_0
+    proyecto : xiaozhi
+    version  : 2.5.3
+    compilado: Oct 29 2026 10:41:49
+    ESP-IDF  : v6.1
+  ota_1: sin esp_app_desc válido
+
+STRINGS UNICOS: 15405 ASCII, 67084 UTF-16LE
+
+== ENDPOINTS / URLs (4) ==
+   http://
+   https://
+   https://api.tenclass.net/xiaozhi/ota/
+   http://192.168.4.1
+
+== DOMINIOS / HOSTS (15) ==
+   Registra a Troko en xiaozhi.me
+   Entra a xiaozhi.me, toca Agregar dispositivo y escribe este c
+   I (%lu) %s: Please refer to https://pcn7cs20v8cr.feishu.cn/wiki/CpQjwQsCJiQSWSkYEvrcxcbVnwh to add custom wake word
+   lcd_panel.io
+   lcd_panel.io.spi
+       <li>Entra a <b>xiaozhi.me</b>, inicia sesi
+   SSL.com TLS ECC Root CA 20220v0
+   SSL.com TLS RSA Root CA 20220
+   (SSL.com Root Certification Authority ECC0v0
+   (SSL.com Root Certification Authority RSA0
+   +SSL.com EV Root Certification Authority ECC0v0
+   .SSL.com EV Root Certification Authority RSA R20
+   GoDaddy.com, Inc.110/
+   0www.entrust.net/CPS is incorporated by reference1
+   See www.entrust.net/legal-terms1907
+
+== OTA / VERSION (153) ==
+    is not bootable
+   E (%lu) %s: OTA app partition slot %d%s
+   E (%lu) %s: Error in write_otadata operation. err = 0x%x
+   I (%lu) %s: Set actual ota_seq=%lu in otadata[0]
+   E (%lu) %s: ota_info partition size %lu is too small (minimum %d bytes)
+   OTA app
+   OTA data
+   ota partition_table
+   ota bootloader
+   I (%lu) %s: No factory image, trying OTA 0
+   E (%lu) %s: ota data partition invalid, falling back to factory
+   E (%lu) %s: ota data partition invalid and no factory, will try all partitions
+   E (%lu) %s: No bootable test partition in the partition table
+   W (%lu) %s: Falling back to test app as only bootable partition
+   E (%lu) %s: No bootable app partitions in the partition table
+   otadata
+   I (%lu) %s: App version:      %s
+   ESP_ERR_INVALID_VERSION
+   ESP_ERR_NVS_NEW_VERSION_FOUND
+   ESP_ERR_OTA_BASE
+   ESP_ERR_OTA_PARTITION_CONFLICT
+   ESP_ERR_OTA_SELECT_INFO_INVALID
+   ESP_ERR_OTA_VALIDATE_FAILED
+   ESP_ERR_OTA_SMALL_SEC_VER
+   ESP_ERR_OTA_ROLLBACK_FAILED
+   ESP_ERR_OTA_ROLLBACK_INVALID_STATE
+   ESP_ERR_OTA_ALREADY_IN_PROGRESS
+   ESP_ERR_OTA_SPI_MODE_MISMATCH
+   W (%lu) %s: %s disabled multiple times!! (If this log appears only once after OTA upgrade, it can be ignored.)
+   E (%lu) %s: Invalid Ogg version: %d
+   W (%lu) %s: invalid version
+   Tiempo de espera agotado
+   Protocol-Version
+   I (%lu) %s: Connecting to websocket server: %s with version: %d
+   E (%lu) %s: Firmware upgrade failed
+   annotations
+   name must be 240, pelota, ovejas or descubre
+   E (%lu) %s: Invalid JSONRPC version: %s
+   {"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"wk-esp32s3-dev","version":"
+   self.upgrade_firmware
+   Upgrade firmware from a specific URL. This will download and install the firmware, then reboot the device.
+   The URL of the firmware binary file to download and install
+   I (%lu) %s: User requested firmware upgrade from URL: %s
+   n de Troko en la pantalla. name: '240' (cuando el usuario diga 'troko 240' o '240'), 'pelota', 'ovejas' (tambi
+   troko_pelota
+   W (%lu) %s: No protocol specified in the OTA config, using MQTT
+   (Manual upgrade)
+   I (%lu) %s: Closing audio channel before firmware upgrade
+   I (%lu) %s: Starting firmware upgrade from URL: %s
+   E (%lu) %s: Firmware upgrade failed, restarting audio service and continuing operation...
+   ... y 103 mas
+
+== BOARD / HARDWARE (168) ==
+   boot.esp32s3
+   //IDF/components/bootloader_support/src/esp32s3/bootloader_esp32s3.c
+   //IDF/components/esp_hw_support/port/esp32s3/rtc_clk.c
+   //IDF/components/esp_system/port/soc/esp32s3/clk.c
+   /IDF/components/esp_hal_gpio/esp32s3/include/hal/rtc_io_ll.h
+   //IDF/components/esp_hw_support/port/esp32s3/rtc_time.c
+   //IDF/components/esp_hw_support/port/esp32s3/esp_cpu_intr.c
+   LCD_CAM
+   /IDF/components/hal/esp32s3/include/hal/cache_ll.h
+   /IDF/components/esp_hal_gpspi/esp32s3/include/hal/spi_ll.h
+   I (%lu) %s: Audio codec started
+   opus_codec
+   W (%lu) %s: Opus codec task stopped
+   i2s_channel_disable(rx_handle_)
+   virtual NoAudioCodec::~NoAudioCodec()
+   ./main/audio/codecs/no_audio_codec.cc
+   i2s_channel_disable(tx_handle_)
+   NoAudioCodec
+   i2s_new_channel(&chan_cfg, &tx_handle_, &rx_handle_)
+   NoAudioCodecDuplex::NoAudioCodecDuplex(int, int, gpio_num_t, gpio_num_t, gpio_num_t, gpio_num_t)
+   i2s_channel_init_std_mode(tx_handle_, &std_cfg)
+   i2s_channel_init_std_mode(rx_handle_, &std_cfg)
+   i2s_new_channel(&chan_cfg, &tx_handle_, nullptr)
+   NoAudioCodecSimplex::NoAudioCodecSimplex(int, int, gpio_num_t, gpio_num_t, gpio_num_t, gpio_num_t, gpio_num_t, gpio_num_t)
+   i2s_new_channel(&chan_cfg, nullptr, &rx_handle_)
+   NoAudioCodecSimplex::NoAudioCodecSimplex(int, int, gpio_num_t, gpio_num_t, gpio_num_t, i2s_std_slot_mask_t, gpio_num_t, gpio_num_t, gpio_num_t, i2s_st
+   i2s_channel_write(tx_handle_, buffer.data(), samples * sizeof(int32_t), &bytes_written, portMAX_DELAY)
+   virtual int NoAudioCodec::Write(const int16_t*, int)
+   i2s_channel_enable(rx_handle_)
+   virtual void NoAudioCodec::EnableInput(bool)
+   i2s_channel_enable(tx_handle_)
+   virtual void NoAudioCodec::EnableOutput(bool)
+   display
+   E (%lu) %s: Failed to lock display
+   LcdDisplay
+   I (%lu) %s: Adding LCD display
+   E (%lu) %s: Failed to add display
+   I (%lu) %s: Turning display on
+   SpiLcdDisplay::SpiLcdDisplay(esp_lcd_panel_io_handle_t, esp_lcd_panel_handle_t, int, int, int, int, bool, bool, bool)
+   ./main/display/lcd_display.cc
+   W (%lu) %s: SetEmotion('%s') called before SetupUI() - emotion will not be displayed!
+   virtual void LvglDisplay::ShowNotification(const char*, int)
+   ./main/display/lvgl_display/lvgl_display.cc
+   LvglDisplay::LvglDisplay()
+   display_update
+   ----ESP32_SCREEN_SNAPSHOT_BOUNDARY
+   Show and display the full-screen list of habits (cards with icons, title, detail/goal, time and checkboxes). ALWAYS call this tool when the user says:
+   esp32s3
+   wk-esp32s3-dev/
+   wk-esp32s3-dev
+   ... y 118 mas
+
+== WIFI / PROVISIONING (65) ==
+   ESP_ERR_WIFI_SSID
+   "ssid":"
+   remember_bssid
+   I (%lu) %s: SSID: %s, RSSI: %d, Authmode: %d
+   {"ssid":"%s","rssi":%d,"authmode":%d}
+   esp_read_mac(mac, ESP_MAC_WIFI_SOFTAP)
+   std::string WifiConfigurationAp::GetSsid()
+   E (%lu) %s: SSID cannot be empty
+   E (%lu) %s: SSID too long
+   I (%lu) %s: Save SSID %s channel %u
+   {"success":false,"error":"Invalid SSID"}
+   E (%lu) %s: Failed to save remember_bssid: %d
+   I (%lu) %s: Access Point started with SSID %s
+   I (%lu) %s: Found AP: %s, BSSID: %02x:%02x:%02x:%02x:%02x:%02x, RSSI: %d, Channel: %d, Authmode: %d
+   void SsidManager::SaveToNvs()
+   ./managed_components/78__esp-wifi-connect/ssid_manager.cc
+   SsidManager
+   W (%lu) %s: SSID %s already exists, overwrite it
+   W (%lu) %s: SSID list is full, pop one
+   smartconfig
+   E (%lu) %s: Send smartconfig ACK error: %d
+   E (%lu) %s: Register smartconfig default event handler fail!
+   E (%lu) %s: Create sending smartconfig ACK task fail
+   sta.ssid
+   bssid.set
+   sta.bssid
+   ap.ssid
+   W (%d) %s: smartconfig never started
+   W (%d) %s: smartconfig already stopped
+   smartconfig errno %d@%s %u
+         <label for="ssid">Nombre de la red</label>
+         <input type="text" id="ssid" maxlength="32" autocapitalize="off" spellcheck="false">
+       <div class="row"><span>Recordar el punto de acceso (BSSID)</span><input type="checkbox" id="remember_bssid"></div>
+     const name = manual ? $('ssid').value.trim() : selected;
+     selected = ap.ssid; selectedSecure = ap.authmode !== 0;
+       const aps = data.aps.filter(ap => ap.ssid && !seen.has(ap.ssid) && seen.add(ap.ssid))
+           li.innerHTML = '<span class="name">' + esc(ap.ssid) + '</span>' +
+       $('remember_bssid').checked = !!cfg.remember_bssid;
+     $('ssid').focus();
+   $('ssid').oninput = updateForm;
+     const ssid = manual ? $('ssid').value.trim() : selected;
+     if (!ssid) return;
+         body: JSON.stringify({ssid: ssid, password: $('password').value})
+       location.href = '/done.html?ssid=' + encodeURIComponent(ssid);
+       $('error').textContent = /SSID/.test(err.message)
+         : 'No pude conectarme a "' + ssid + '". Revisa la contrase
+           remember_bssid: $('remember_bssid').checked,
+   const ssid = new URLSearchParams(location.search).get('ssid');
+   if (ssid) document.getElementById('net').textContent = 'Se conect
+    a "' + ssid + '".';
+   ... y 15 mas
+
+== PROTOCOLO (227) ==
+   I (%lu) %s: segment %d: paddr=%08lx vaddr=%08x size=%05lxh (%6lu) %s
+   E (%lu) %s: vaddr not valid
+   E (%lu) %s: Memprot feature locked after the system reset! Potential safety corruption, rebooting.
+   EXCVADDR
+   ESP_ERR_WIFI_WAKE_FAIL
+   rtcio_num >= 0 && rtcio_num < SOC_RTCIO_PIN_COUNT && "io does not support deep sleep wake-up function"
+   s_psram_ctx.regions_to_heap[PSRAM_MEM_32BIT_ALIGNED].vaddr_start
+   I (%lu) %s: %s device AEC
+   I (%lu) %s: Deferring AEC change until the audio engine is initialized
+   OpusHead
+   E (%lu) %s: Only mono Ogg Opus streams are supported
+   OpusTags
+   E (%lu) %s: Unsupported Opus packet duration
+   W (%lu) %s: Dropping Ogg packet before OpusHead/OpusTags
+   ,"reason":"wake_word_detected"
+   ","type":"mcp","payload":
+   websocket
+   I (%lu) %s: Websocket disconnected
+   E (%lu) %s: Failed to create websocket
+   E (%lu) %s: Failed to connect to websocket server: %s
+   MCP property value type does not match its declaration
+   MCP property lookup failed because the property was not declared
+   MCP property range is only valid for integer properties
+   MCP property default value is outside its declared range
+   E (%lu) %s: Failed to allocate MCP error message
+   E (%lu) %s: Failed to serialize MCP error message
+   Failed to allocate MCP result
+   MCP tool returned an empty image
+   Failed to allocate MCP image result
+   Failed to create MCP image result
+   Failed to allocate MCP text result
+   Failed to create MCP text result
+   Failed to create MCP result
+   Failed to serialize MCP result
+   mcp_tool
+   Failed to allocate MCP tool task
+   Failed to create MCP tool task
+   self.audio.enter_wake_only_mode
+   Put the device into standby. Stop normal listening and voice activity detection; only the configured wake word can reactivate listening. Use this when
+   I (%lu) %s: Wake-only mode enabled; waiting for the wake word
+   I (%lu) %s: Wake word detected: %s
+   I (%lu) %s: Ignoring toggle while waiting for the wake word
+   I (%lu) %s: Ignoring start listening while waiting for the wake word
+   I (%lu) %s: Wake word detected: %s (state: %d)
+   I (%lu) %s: Startup wake word hint skipped (state=%d, wake word running=%d, error=%d)
+   W (%lu) %s: Startup wake word hint skipped: no available wake words
+   E (%lu) %s: Startup wake word hint skipped: invalid message template
+   esp_timer_create(&timer_args, &startup_wake_word_hint_timer_)
+   void Application::ShowStartupWakeWordHint()
+   I (%lu) %s: Startup wake word hint: %s
+   ... y 177 mas
+
+== PANTALLA / OJOS (111) ==
+   ESP_ERR_MESH_INTERFACE
+   I (%lu) %s: Initialize LVGL library
+   I (%lu) %s: Initialize LVGL port
+   E (%lu) %s: Failed to add %uKB LVGL PSRAM pool (added %uKB)
+   I (%lu) %s: Added %uKB LVGL pool in PSRAM
+   W (%lu) %s: SetEmotion('%s') failed: emoji_image_ is nullptr (SetupUI() was called but emoji image not created)
+   E (%lu) %s: Failed to load GIF for emotion: %s
+   W (%lu) %s: Failed to decode embedded %s.gif
+   EmojiCollection
+   W (%lu) %s: Emoji not found: %s
+   LvglImage
+   LvglGif
+   W (%lu) %s: GIF not loaded, cannot resume
+   E (%lu) %s: Failed to open GIF from image descriptor
+   W (%lu) %s: GIF not loaded, cannot start
+   Content-Disposition: form-data; name="file"; filename="screenshot.jpg"
+   Close and dismiss the habits interface or tracking panel immediately on screen. ALWAYS call this when the user says 'cerrar h
+   self.screen.show_animation
+   Muestra una animaci
+   emoji_collection
+   E (%lu) %s: Emoji %s image file %s is not found
+   eyeglasses
+   E (%lu) %s: %s(%d): Create LVGL mutex fail!
+   E (%lu) %s: %s(%d): Create LVGL Event Group fail!
+   taskLVGL
+   E (%lu) %s: %s(%d): Create LVGL task fail!
+   lvgl_port_ctx.lvgl_mux && "lvgl_port_init must be called first"
+   /./managed_components/espressif__esp_lvgl_port/src/lvgl9/esp_lvgl_port.c
+   LVGL tick
+   E (%lu) %s: %s(%d): Creating LVGL timer filed!
+   I (%lu) %s: Starting LVGL task
+   I (%lu) %s: Stopped LVGL task
+   /./managed_components/espressif__esp_lvgl_port/src/lvgl9/esp_lvgl_port_disp.c
+   E (%lu) %s: %s(%d): Not enough memory for LVGL buffer (buf1) allocation!
+   E (%lu) %s: %s(%d): Not enough memory for LVGL buffer (buf2) allocation!
+   E (%lu) %s: %s(%d): Not enough memory for LVGL buffer (OLED buffer) allocation!
+   LvglPsramPool
+   LODEPNG
+   I (%lu) %s: DHCP server started on interface %s with IP: %d.%d.%d.%d
+   E (%lu) %s: Bind [sock=%d] to interface %s fail
+   E (%lu) %s: Failed to create wifi interface handle
+   E (%lu) %s: No memory to create a wifi interface handle
+   E (%lu) %s: Invalid argument: supplied netif=%p does not equal to interface netif=%p
+   E (%lu) %s: Unknown wifi interface id if=%d
+   I (%lu) %s: %s: Binding server to interface: %s
+   E (%lu) %s: %s: Failed to bind to interface %s (%d)
+   Network interface is not configured
+   GIF89a
+   .face i{width:10px;height:18px;background:var(--lime);border-radius:6px;animation:blink 4s infinite}
+   .scan{width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--lime);border-radius:50%;animation:spin 1s linear infinite}
+   ... y 61 mas

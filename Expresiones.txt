@@ -1,0 +1,26 @@
+NOA — Estado actualizado
+
+
+#	Expresión----Estado
+1	Neutral----	HECHA
+2	Sonrisa (Happy)	----HECHA
+3	Risa (Funny)	----HECHA
+4	Risa a carcajadas (Laughing)	----HECHA
+5	Tristeza (Sad)----	HECHA
+6	Enojo (Angry)----	HECHA
+7	Llanto (Crying → Sad)----	HECHA
+8	Enamorada	PENDIENTE
+9	Sorpresa (Surprised)----	HECHA
+10	Asombro (Shocked → Surprised)----	HECHA
+11	Miedo	PENDIENTE
+12	Pensativa	PENDIENTE
+13	Guiño----	HECHA
+14	Con lentes de sol (Confident)----	HECHA
+15	Tranquila (Relaxed → Neutral)----	HECHA
+16	Saboreando algo rico (Delicious → Happy)----	HECHA
+17	Beso	PENDIENTE
+18	Pícara (Silly → Funny)----	HECHA
+19	Adormilada (Sleepy)----	HECHA
+20	Lengua afuera	PENDIENTE
+21	Confundida (Confused)----	HECHA
+22	Vergüenza (Embarrassed)----	HECHA

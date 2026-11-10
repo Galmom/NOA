@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOA · Configuración</title>
+<style>
+  :root {
+    --bg: #0B0F12;
+    --panel: #121A1F;
+    --panel-2: #162127;
+    --line: #1E2A31;
+    --text: #E6F1F4;
+    --muted: #7A9199;
+    --accent: #45B8CC;
+    --accent-dim: #23616B;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 268px;
+    gap: 28px;
+    align-items: start;
+  }
+
+  @media (max-width: 740px) {
+    .wrap { grid-template-columns: minmax(0, 1fr); }
+    .device-col { order: -1; }
+  }
+
+  /* ---------- header ---------- */
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+
+  .eye {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px rgba(69, 184, 204, .55);
+  }
+
+  .brand h1 { font-size: 20px; letter-spacing: .14em; font-weight: 600; margin: 0; }
+  .brand span { color: var(--muted); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+
+  /* ---------- status ---------- */
+  .status { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 24px; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--panel); font-size: 12.5px; color: var(--muted);
+  }
+
+  .chip b { color: var(--text); font-weight: 600; }
+
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .dot.off { background: var(--muted); }
+
+  /* ---------- cards ---------- */
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 4px 0; margin-bottom: 18px; overflow: hidden;
+  }
+
+  .card-title {
+    padding: 16px 20px 12px; font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted);
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  }
+
+  .card-title em {
+    font-style: normal; letter-spacing: .02em; text-transform: none;
+    font-size: 11.5px; color: #4E6B74;
+  }
+
+  .row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 15px 20px; border-top: 1px solid var(--line);
+  }
+
+  .row:first-of-type { border-top: none; }
+
+  .row-text { min-width: 0; }
+  .row-label { font-size: 14.5px; font-weight: 500; }
+  .row-hint { font-size: 12.5px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+
+  .row.col { flex-direction: column; align-items: stretch; }
+  .row.col .row-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+  .legend {
+    margin: 10px 0 0; font-size: 11.5px; color: #4E6B74;
+    font-variant-numeric: tabular-nums; letter-spacing: .01em;
+  }
+
+  /* ---------- switch ---------- */
+  .switch { position: relative; flex: 0 0 auto; width: 46px; height: 26px; }
+  .switch input { position: absolute; opacity: 0; pointer-events: none; }
+
+  .switch label {
+    display: block; width: 100%; height: 100%;
+    background: #22313A; border: 1px solid var(--line); border-radius: 999px;
+    cursor: pointer; transition: background .18s ease, border-color .18s ease;
+  }
+
+  .switch label::after {
+    content: ""; position: absolute; top: 4px; left: 4px;
+    width: 16px; height: 16px; border-radius: 50%; background: #6D828A;
+    transition: transform .18s ease, background .18s ease;
+  }
+
+  .switch input:checked + label { background: var(--accent-dim); border-color: var(--accent); }
+  .switch input:checked + label::after { transform: translateX(20px); background: var(--accent); }
+  .switch input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- numeric field ---------- */
+  .field {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--panel-2); border: 1px solid var(--line);
+    border-radius: 9px; padding: 4px 10px;
+  }
+
+  .field input {
+    width: 62px; padding: 6px 0; border: 0; background: transparent;
+    color: var(--text); font-family: inherit; font-size: 14px;
+    font-variant-numeric: tabular-nums; text-align: right;
+  }
+
+  .field input:focus { outline: none; }
+  .field input:disabled { color: #55707A; }
+  .field span { color: var(--muted); font-size: 12.5px; }
+  .field:focus-within { border-color: var(--accent); }
+
+  /* ---------- stepper ---------- */
+  .stepper { display: inline-flex; align-items: center; gap: 2px; }
+
+  .stepper button {
+    width: 30px; height: 30px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--panel-2);
+    color: var(--muted); font-family: inherit; font-size: 16px; line-height: 1;
+    transition: all .15s ease;
+  }
+
+  .stepper button:hover { color: var(--text); border-color: #2F424C; }
+  .stepper output {
+    min-width: 44px; text-align: center; font-size: 13.5px;
+    color: var(--accent); font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- pair ---------- */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pair.triple { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .pair button {
+    appearance: none; font-family: inherit; font-size: 13.5px; padding: 11px 12px;
+    border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2);
+    color: var(--muted); cursor: pointer; transition: all .15s ease;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+
+  .pair button:hover { border-color: #2F424C; color: var(--text); }
+
+  .pair button[aria-pressed="true"] {
+    background: var(--accent-dim); border-color: var(--accent); color: #D6F6FD;
+  }
+
+  .pair button[aria-pressed="true"]::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    appearance: none; font-family: inherit; font-size: 13.5px; padding: 10px 16px;
+    border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2);
+    color: var(--text); cursor: pointer; transition: all .15s ease; white-space: nowrap;
+  }
+
+  .btn:hover { border-color: #2F424C; }
+
+  .btn.danger { border-color: #4A2A2E; color: #E8A0A8; }
+  .btn.danger:hover { border-color: #7A3B42; background: #221013; }
+  .btn.confirm { border-color: #7A3B42; background: #3A1519; color: #FFD9DD; }
+
+  .field.wide { display: flex; width: 100%; }
+  .field.wide input { flex: 1; width: auto; min-width: 0; text-align: left; }
+  .field.wide input::placeholder { color: #4E6B74; }
+
+  /* ---------- device frame ---------- */
+  .device-col { position: sticky; top: 32px; }
+
+  .device-cap {
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+
+  .device {
+    position: relative; width: 240px; height: 240px; border-radius: 18px;
+    background: #000; border: 1px solid #223038;
+    box-shadow: 0 0 0 6px #0F171B, 0 18px 40px rgba(0, 0, 0, .55);
+    overflow: hidden;
+  }
+
+  .screen { padding: 14px; height: 100%; display: flex; flex-direction: column; }
+
+  .d-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .d-title { font-size: 12px; letter-spacing: .12em; color: var(--accent); font-weight: 600; }
+
+  .d-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; padding: 10px 4px; border-top: 1px solid #142027;
+    font-size: 12.5px; color: #C6DCE2; cursor: pointer;
+  }
+
+  .d-row:last-of-type { border-bottom: 1px solid #142027; }
+  .d-row:hover { background: #0B1317; }
+  .d-row.static { cursor: default; }
+  .d-row.static:hover { background: none; }
+
+  .d-row .caret { color: #3D5A63; font-size: 12px; }
+
+  .d-chip {
+    font-size: 10.5px; padding: 2px 8px; border-radius: 999px;
+    border: 1px solid #24525C; color: #79D3E4; white-space: nowrap;
+  }
+
+  .d-chip.off { border-color: #2A3A42; color: #71909A; }
+
+  .d-back {
+    margin-top: auto; padding-top: 10px; border-top: 1px solid #142027;
+    font-size: 11.5px; color: #6F8C95; cursor: pointer;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .d-back:hover { color: #9FD9E6; }
+
+  /* Info: la única pantalla que scrollea, y lo hace sola y despacio. */
+  .d-body { flex: 1; min-height: 0; overflow: hidden; position: relative; }
+
+  .d-body::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000 80%);
+    pointer-events: none;
+  }
+
+  .d-scroll { animation: infoScroll 26s linear infinite; }
+
+  @keyframes infoScroll {
+    0%, 8% { transform: translateY(0); }
+    92%, 100% { transform: translateY(var(--scroll-by, 0px)); }
+  }
+
+  .d-chip.bad { border-color: #6B2F36; color: #E08A94; }
+
+  .eyes { flex: 1; display: flex; align-items: center; justify-content: center; gap: 26px; }
+
+  .d-eye {
+    width: 34px; height: 44px; border-radius: 17px; background: var(--accent);
+    box-shadow: 0 0 26px rgba(69, 184, 204, .5);
+  }
+
+  .d-hint {
+    text-align: center; font-size: 10.5px; color: #46646D; line-height: 1.5; padding-bottom: 4px;
+  }
+
+  .d-hint b { color: #79D3E4; font-weight: 500; }
+
+  .d-empty { color: #4E6B74; font-style: italic; }
+
+  .d-when {
+    color: #5C7A83; font-size: 11px; font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .d-check { color: #3D5A63; font-size: 13px; }
+  .d-check.done { color: var(--accent); }
+
+  .d-row.lead { justify-content: flex-start; gap: 10px; }
+
+  .d-lead { display: flex; align-items: center; gap: 8px; min-width: 0; }
+
+  .d-ico {
+    width: 12px; height: 12px; flex: none;
+    fill: none; stroke: currentColor; stroke-width: 1.3;
+    stroke-linecap: round; stroke-linejoin: round; opacity: .7;
+  }
+
+  .bars { display: flex; align-items: flex-end; gap: 2px; height: 12px; }
+  .bars b { width: 3px; background: #22343C; border-radius: 1px; }
+  .bars b:nth-child(1) { height: 4px; }
+  .bars b:nth-child(2) { height: 7px; }
+  .bars b:nth-child(3) { height: 10px; }
+  .bars b:nth-child(4) { height: 12px; }
+  .bars b.on { background: var(--accent); }
+
+  .d-big {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 6px;
+  }
+
+  .d-big output {
+    font-size: 34px; font-variant-numeric: tabular-nums;
+    color: var(--accent); letter-spacing: .04em;
+  }
+
+  .d-big small { font-size: 10.5px; color: #4E6B74; letter-spacing: .12em; text-transform: uppercase; }
+
+  /* ---------- guide ---------- */
+  .guide {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8px 20px 72px;
+  }
+
+  .guide-head {
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted); margin: 24px 0 6px;
+  }
+
+  .guide-sub {
+    font-size: 12.5px; color: #4E6B74; margin: 0 0 26px; line-height: 1.5;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 240px);
+    gap: 34px 28px;
+    justify-content: start;
+  }
+
+  .frame-cap {
+    font-size: 11px; color: var(--muted); margin-bottom: 10px;
+    letter-spacing: .06em;
+  }
+
+  .frame-cap b { color: var(--accent); font-weight: 600; margin-right: 6px; }
+
+  /* ---------- mapa ---------- */
+  .map {
+    border: 1px solid var(--line); border-radius: 14px;
+    background: var(--panel); overflow: hidden; font-size: 12.5px;
+  }
+
+  .map-row {
+    display: grid; grid-template-columns: minmax(0, 1fr) 62px 132px;
+    gap: 12px; align-items: center;
+    padding: 11px 18px; border-top: 1px solid var(--line);
+  }
+
+  .map-row:first-child { border-top: none; }
+  .map-row > span:nth-child(2) { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .map-head {
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); padding-top: 13px; padding-bottom: 11px;
+  }
+
+  .map-row .ok { color: #79D3E4; }
+  .map-row .warn { color: #D8B871; }
+  .map-row .miss { color: #C97D86; }
+  .map-row .off { color: #4E6B74; }
+
+  /* ---------- payload ---------- */
+  details {
+    border: 1px dashed var(--line); border-radius: 12px;
+    padding: 12px 16px; color: var(--muted); font-size: 12.5px;
+  }
+
+  details summary { cursor: pointer; }
+
+  pre {
+    margin: 12px 0 4px; padding: 12px; background: #0A1013; border-radius: 8px;
+    color: #9FD9E6; font-size: 12px; overflow-x: auto;
+  }
+
+  .note { font-size: 12px; color: var(--muted); line-height: 1.55; margin: 18px 0 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <main>
+    <div class="brand">
+      <div class="eye" aria-hidden="true"></div>
+      <h1>NOA</h1>
+      <span>Configuración</span>
+    </div>
+
+    <div class="status">
+      <span class="chip"><span class="dot" id="stateDot"></span> Estado: <b id="stateText">Despierto</b></span>
+      <span class="chip">Modo: <b id="modeText">Descanso automático</b></span>
+      <span class="chip">Red: <b>WiFi · 192.168.0.42</b></span>
+    </div>
+
+    <!-- ================= Descanso ================= -->
+    <section class="card">
+      <div class="card-title">Descanso <em>pantalla 10</em></div>
+
+      <div class="row col">
+        <div class="row-top">
+          <div class="row-text">
+            <div class="row-label">Automático por inactividad</div>
+            <div class="row-hint">Sin actividad, apaga la pantalla y pone cara dormida.</div>
+          </div>
+          <div class="switch">
+            <input type="checkbox" id="autoEnabled" checked>
+            <label for="autoEnabled" aria-label="Automático por inactividad"></label>
+          </div>
+        </div>
+
+        <div class="row-top" style="margin-top:12px">
+          <div class="row-text">
+            <div class="row-label" style="font-size:13.5px">Espera</div>
+          </div>
+          <div class="field">
+            <input type="number" id="autoSeconds" value="60" min="5" max="3600" step="5" inputmode="numeric">
+            <span>seg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Manual (voz / Telegram)</div>
+          <div class="row-hint">Pedírselo cuando quieras, sin esperar.</div>
+        </div>
+        <div class="switch">
+          <input type="checkbox" id="manualEnabled" checked>
+          <label for="manualEnabled" aria-label="Manual por voz o Telegram"></label>
+        </div>
+      </div>
+
+      <div class="row col">
+        <div class="pair">
+          <button type="button" id="sleepNow">Dormir ahora</button>
+          <button type="button" id="wakeNow">Despertar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Tareas ================= -->
+    <section class="card">
+      <div class="card-title">Tareas <em>pantalla 5</em></div>
+
+      <div class="row col">
+        <div class="row-top">
+          <div class="row-text">
+            <div class="row-label">Aviso periódico</div>
+            <div class="row-hint">Una tarea dura todo el día. Cada cuánto te la recuerda.</div>
+          </div>
+          <div class="field">
+            <input type="number" id="taskSeconds" value="3600" min="30" max="86400" step="30" inputmode="numeric">
+            <span>seg</span>
+          </div>
+        </div>
+        <p class="legend">
+          60 = 1 minuto · 3600 = 1 hora · 43200 = 12 horas · 86400 = 24 horas
+        </p>
+      </div>
+
+      <div class="row col">
+        <div class="row-text">
+          <div class="row-label">Por dónde te avisa</div>
+          <div class="row-hint">Podés elegir uno o los dos.</div>
+        </div>
+        <div class="pair triple" style="margin-top:10px">
+          <button type="button" data-channel="voice">Voz</button>
+          <button type="button" data-channel="telegram">Telegram</button>
+          <button type="button" data-channel="both">Ambos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Timer ================= -->
+    <section class="card">
+      <div class="card-title">Timer <em>pantallas 7 a 11</em></div>
+
+      <div class="row col">
+        <div class="row-top">
+          <div class="row-text">
+            <div class="row-label">Pomodoro</div>
+            <div class="row-hint">Minutos de trabajo y de descanso. Repite hasta que lo pares.</div>
+          </div>
+          <div class="field">
+            <input type="number" id="pomoWork" value="25" min="1" max="180" step="1" inputmode="numeric">
+            <span>min</span>
+          </div>
+          <div class="field">
+            <input type="number" id="pomoRest" value="5" min="1" max="60" step="1" inputmode="numeric">
+            <span>min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row col">
+        <div class="row-top">
+          <div class="row-text">
+            <div class="row-label">Cron</div>
+            <div class="row-hint">Cada cuánto late, y cuántas veces. 0 veces = para siempre.</div>
+          </div>
+          <div class="field">
+            <input type="number" id="cronEvery" value="1800" min="30" max="86400" step="30" inputmode="numeric">
+            <span>seg</span>
+          </div>
+          <div class="field">
+            <input type="number" id="cronRepeat" value="0" min="0" max="999" step="1" inputmode="numeric">
+            <span>veces</span>
+          </div>
+        </div>
+        <p class="legend">
+          60 = 1 minuto · 600 = 10 minutos · 3600 = 1 hora · 86400 = 24 horas
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Igual que por voz</div>
+          <div class="row-hint">
+            Esto es lo mismo que decir «poné un cron cada 30 minutos». Voz para lo rápido, esta
+            página para lo exacto.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Funciones ================= -->
+    <section class="card">
+      <div class="card-title">Funciones <em>pantalla 4 · acciones</em></div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Búsqueda web</div>
+          <div class="row-hint">Apagada, NOA no busca nada y la acción desaparece de la pantalla.</div>
+        </div>
+        <div class="switch">
+          <input type="checkbox" id="webEnabled" checked>
+          <label for="webEnabled" aria-label="Búsqueda web"></label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Música</div>
+          <div class="row-hint">Exclusivo de este equipo: reproduce en el A03 (YMusic) o por YouTube.</div>
+        </div>
+        <div class="switch">
+          <input type="checkbox" id="musicEnabled">
+          <label for="musicEnabled" aria-label="Música"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Dispositivo ================= -->
+    <section class="card">
+      <div class="card-title">Dispositivo <em>pantalla 11</em></div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Volumen</div>
+          <div class="row-hint">Parlante del dispositivo.</div>
+        </div>
+        <div class="stepper">
+          <button type="button" data-step="volume" data-dir="-1" aria-label="Bajar volumen">−</button>
+          <output id="volumeOut">60</output>
+          <button type="button" data-step="volume" data-dir="1" aria-label="Subir volumen">+</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Brillo</div>
+          <div class="row-hint">Pantalla, cuando está despierta.</div>
+        </div>
+        <div class="stepper">
+          <button type="button" data-step="brightness" data-dir="-1" aria-label="Bajar brillo">−</button>
+          <output id="brightnessOut">40</output>
+          <button type="button" data-step="brightness" data-dir="1" aria-label="Subir brillo">+</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Tema</div>
+          <div class="row-hint">Color base de la interfaz.</div>
+        </div>
+        <div class="pair" style="width:190px">
+          <button type="button" data-theme="light">Claro</button>
+          <button type="button" data-theme="dark">Oscuro</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Sistema ================= -->
+    <section class="card">
+      <div class="card-title">Sistema <em>acciones pesadas · solo desde acá</em></div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Reiniciar</div>
+          <div class="row-hint">Corta la conversación y arranca de nuevo. No se puede deshacer.</div>
+        </div>
+        <button type="button" class="btn danger" id="rebootBtn">Reiniciar</button>
+      </div>
+
+      <div class="row col">
+        <div class="row-text">
+          <div class="row-label">Actualizar firmware</div>
+          <div class="row-hint">Descarga el binario, lo instala y reinicia. Si la URL está mal, el equipo no cambia.</div>
+        </div>
+        <div class="row-top" style="margin-top:10px">
+          <div class="field wide">
+            <input type="url" id="firmwareUrl" placeholder="https://…/firmware.bin" aria-label="URL del firmware">
+          </div>
+          <button type="button" class="btn" id="upgradeBtn">Actualizar</button>
+        </div>
+      </div>
+
+      <div class="row col">
+        <div class="row-text">
+          <div class="row-label">URL de assets</div>
+          <div class="row-hint">De dónde baja sonidos y recursos. Vacío usa la de fábrica.</div>
+        </div>
+        <div class="row-top" style="margin-top:10px">
+          <div class="field wide">
+            <input type="url" id="assetsUrl" placeholder="https://…/assets.zip" aria-label="URL de assets">
+          </div>
+          <button type="button" class="btn" id="assetsBtn">Guardar</button>
+        </div>
+      </div>
+
+      <p class="note" id="sysNote" style="padding:0 20px 16px; margin:0"></p>
+    </section>
+
+    <details>
+      <summary>Ver el JSON que recibiría el dispositivo</summary>
+      <pre id="payload"></pre>
+    </details>
+
+    <p class="note">
+      Maqueta sin conexión. Los controles arman el JSON que después recibe el firmware.
+      Abajo están las siete pantallas reales de NOA, todas a 240×240 y en vivo.
+      Las acciones de <b>Sistema</b> no existen como tool de voz: solo se disparan desde esta página.
+    </p>
+  </main>
+
+  <aside class="device-col">
+    <div class="device-cap">Pantalla activa</div>
+    <div class="device" id="deviceActive"></div>
+  </aside>
+
+</div>
+
+<!-- ================= Guía de pantallas ================= -->
+<section class="guide">
+  <div class="guide-head">Pantallas de NOA · 240 × 240</div>
+  <p class="guide-sub">
+    Guía visual: así se ve cada pantalla, en orden, con los datos actuales.
+    En el HTML final nada de esto se muestra — la gente ve solo la configuración.
+    <br>
+    Por Telegram, <b>/h</b> lista los comandos y agrega la línea de configuración con el link al HTML.
+    <br>
+    En NOA no hay touch: «Volver atrás» se activa diciendo <b>«volver»</b> y retrocede una pantalla por vez,
+    hasta llegar a la cara.
+    <br>
+    <b>Funciones</b> no lista nada: agrupa. Cada grupo abre su propia pantalla, así entra siempre
+    sin scroll y se pueden sumar secciones sin que nada se corte.
+    <br>
+    Ninguna pantalla tiene controles: <b>todo se muestra</b>. Los cambios se piden por voz o se hacen
+    desde esta página. Por eso Dispositivo pasó a ser solo lectura.
+    <br>
+    La regla son <b>cuatro ítems a la vista</b>. Si una lista tiene más — hábitos, tareas,
+    recordatorios o el hardware de Info — <b>sube sola y despacio</b>, sin paginar. Nunca hay
+    «siguiente» ni «anterior»: se lee, se dice «borrá tal cosa» y se borra. Se sale con «volver».
+  </p>
+
+  <div class="guide-grid">
+    <div>
+      <div class="frame-cap"><b>1</b>Inicio</div>
+      <div class="device" data-guide="inicio"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>2</b>Funciones</div>
+      <div class="device" data-guide="funciones"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>3</b>Mi día</div>
+      <div class="device" data-guide="dia"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>4</b>Recordatorios</div>
+      <div class="device" data-guide="rec"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>5</b>Tareas</div>
+      <div class="device" data-guide="tareas"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>6</b>Hábitos</div>
+      <div class="device" data-guide="habitos"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>7</b>Timer</div>
+      <div class="device" data-guide="timer"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>8</b>Pomodoro</div>
+      <div class="device" data-guide="pomodoro"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>9</b>Alarma</div>
+      <div class="device" data-guide="alarma"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>10</b>Cron</div>
+      <div class="device" data-guide="cron"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>11</b>Cuenta regresiva</div>
+      <div class="device" data-guide="cuenta"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>12</b>Acciones</div>
+      <div class="device" data-guide="acciones"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>13</b>Configuración</div>
+      <div class="device" data-guide="menu"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>14</b>Descanso</div>
+      <div class="device" data-guide="descanso"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>15</b>Dispositivo</div>
+      <div class="device" data-guide="dispositivo"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>16</b>Info</div>
+      <div class="device" data-guide="info"></div>
+    </div>
+    <div>
+      <div class="frame-cap"><b>17</b>Estado</div>
+      <div class="device" data-guide="estado"></div>
+    </div>
+  </div>
+
+  <!-- ================= Mapa NOA vs Troko ================= -->
+  <div class="guide-head" style="margin-top:44px">Qué hay y qué falta</div>
+  <p class="guide-sub">
+    Troko trae 34 tools. NOA ya tiene 11 de ellas, 1 más que NOA agrega por su cuenta
+    (<b>web.search</b>) y 22 están pendientes. Además hay 7 nuevas que Troko no tenía:
+    las 3 de pantallas y las 4 de descanso.
+  </p>
+
+  <div class="map">
+    <div class="map-row map-head">
+      <span>Capacidad</span><span>Troko</span><span>NOA hoy</span>
+    </div>
+
+    <div class="map-row">
+      <span>Sistema · estado</span><span>1</span><span class="ok">✅ voz</span>
+    </div>
+    <div class="map-row">
+      <span>Sistema · sistema / reboot / firmware / assets</span><span>4</span><span class="warn">⚠️ solo /tool</span>
+    </div>
+    <div class="map-row">
+      <span>Pantalla · brillo y tema</span><span>2</span><span class="ok">✅ voz</span>
+    </div>
+    <div class="map-row">
+      <span>Pantalla · info / snapshot / preview</span><span>3</span><span class="warn">⚠️ solo /tool</span>
+    </div>
+    <div class="map-row">
+      <span>Pantalla · animación y clear</span><span>2</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Audio · volumen</span><span>1</span><span class="ok">✅ voz</span>
+    </div>
+    <div class="map-row">
+      <span>Audio · modo espera</span><span>1</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Web · búsqueda</span><span>—</span><span class="ok">✅ voz</span>
+    </div>
+    <div class="map-row">
+      <span>Mi día · timer / alarma / pomodoro</span><span>3</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Mi día · recordatorios</span><span>3</span><span class="miss">❌ falta (NVS ya existe)</span>
+    </div>
+    <div class="map-row">
+      <span>Mi día · tareas</span><span>3</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Mi día · hábitos</span><span>7</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Telegram · enviar</span><span>1</span><span class="miss">❌ falta</span>
+    </div>
+    <div class="map-row">
+      <span>Pantallas · funciones / config / volver</span><span>—</span><span class="miss">❌ nueva</span>
+    </div>
+    <div class="map-row">
+      <span>Descanso · estado / config / dormir / despertar</span><span>—</span><span class="miss">❌ nueva</span>
+    </div>
+    <div class="map-row">
+      <span>Cámara</span><span>1</span><span class="off">— sin hardware</span>
+    </div>
+  </div>
+
+  <p class="note">
+    <b>⚠️ solo /tool</b> significa que la tool existe pero el modelo no la ve: no se puede pedir por voz.
+    Las tres de sistema (reboot, firmware, assets) quedan así a propósito — se disparan solo desde esta página.
+  </p>
+
+</section>
+
+<script>
+  const state = {
+    screen: "inicio",
+    stack: ["inicio"],
+    autoEnabled: true,
+    autoSeconds: 60,
+    manualEnabled: true,
+    asleep: false,
+    volume: 60,
+    brightness: 40,
+    theme: "dark",
+    webEnabled: true,
+    musicEnabled: false,
+    taskSeconds: 3600,
+    taskChannel: "both",
+    pomoWork: 25,
+    pomoRest: 5,
+    cronEvery: 1800,
+    cronRepeat: 0,
+    firmwareUrl: "",
+    assetsUrl: "",
+  };
+
+  const $ = (id) => document.getElementById(id);
+
+  // Íconos de 12 px dibujados en línea: no hay textura ni fuente de íconos.
+  const ICONS = {
+    dia: '<circle cx="6" cy="6" r="2.4"/><path d="M6 .8v1.5M6 9.7v1.5M.8 6h1.5M9.7 6h1.5M2.3 2.3l1.1 1.1M8.6 8.6l1.1 1.1M9.7 2.3L8.6 3.4M3.4 8.6L2.3 9.7"/>',
+    acciones: '<path d="M7.2 1 3 6.8h2.8L5.4 11l4.2-5.8H6.8L7.2 1z"/>',
+    config: '<circle cx="6" cy="6" r="1.9"/><path d="M6 .9v1.5M6 9.6v1.5M.9 6h1.5M9.6 6h1.5M2.4 2.4l1.1 1.1M8.5 8.5l1.1 1.1M9.6 2.4L8.5 3.5M3.5 8.5l-1.1 1.1"/>',
+    timer: '<circle cx="6" cy="6.6" r="4.3"/><path d="M6 4.3v2.6l1.7 1.1M4.7 1h2.6"/>',
+    descanso: '<path d="M9.6 7.7A4.4 4.4 0 1 1 4.3 2.4a3.6 3.6 0 0 0 5.3 5.3z"/>',
+    dispositivo: '<rect x="3.2" y="3.2" width="5.6" height="5.6" rx="1"/><path d="M4.5 1v1.3M7.5 1v1.3M4.5 9.7V11M7.5 9.7V11M1 4.5h1.3M1 7.5h1.3M9.7 4.5H11M9.7 7.5H11"/>',
+    info: '<circle cx="6" cy="6" r="4.9"/><path d="M6 5.3v3.2M6 3.3v.3"/>',
+    estado: '<path d="M1.4 5.1a6.6 6.6 0 0 1 9.2 0M3.4 7.2a3.8 3.8 0 0 1 5.2 0"/><circle cx="6" cy="9.3" r=".9"/>',
+    tareas: '<path d="M1.8 3.1 3.2 4.5 5.8 1.9M1.8 8.1l1.4 1.4 2.6-2.6"/><path d="M7.6 3.6h2.6M7.6 8.6h2.6"/>',
+    rec: '<path d="M6 2.4A3.4 3.4 0 0 0 2.6 5.8c0 2.5-1 3.3-1 3.3h8.8s-1-.8-1-3.3A3.4 3.4 0 0 0 6 2.4z"/><path d="M5.1 10.6a1.1 1.1 0 0 0 1.8 0"/>',
+    habitual: '<path d="M1.9 6.2 4.5 8.8 10.1 3.2"/>'
+  };
+
+  function ico(name) {
+    return `<svg class="d-ico" viewBox="0 0 12 12" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+  }
+
+  function label(seconds) {
+    return seconds < 60 ? seconds + " s" : (seconds / 60) + " min";
+  }
+
+  function clamp(v, min, max) {
+    return Math.max(min, Math.min(max, v));
+  }
+
+  // ---------- pantallas ----------
+  function head(title) {
+    return `<div class="d-head">
+      <div class="d-title">${title}</div>
+    </div>`;
+  }
+
+  function renderScreen(name, nav) {
+    const back = (to) => nav
+      ? `<div class="d-back" data-back="1">‹ Volver atrás</div>`
+      : `<div class="d-back" style="cursor:default">‹ Volver atrás</div>`;
+
+    if (name === "inicio") {
+      return `<div class="screen">${head("NOA")}
+        <div class="eyes"><div class="d-eye"></div><div class="d-eye"></div></div>
+        <div class="d-hint" ${nav ? 'data-go="funciones"' : ""}>Decí <b>«funciones»</b></div>
+      </div>`;
+    }
+
+    if (name === "funciones") {
+      const hasActions = state.webEnabled || state.musicEnabled;
+
+      return `<div class="screen">${head("FUNCIONES")}
+        <div class="d-row" ${nav ? 'data-go="dia"' : ""}><span class="d-lead">${ico("dia")}Mi día</span><span class="caret">›</span></div>
+        ${hasActions ? `<div class="d-row" ${nav ? 'data-go="acciones"' : ""}><span class="d-lead">${ico("acciones")}Acciones</span><span class="caret">›</span></div>` : ""}
+        <div class="d-row" ${nav ? 'data-go="menu"' : ""}><span class="d-lead">${ico("config")}Configuración</span><span class="caret">›</span></div>
+        ${back("inicio")}
+      </div>`;
+    }
+
+    if (name === "dia") {
+      return `<div class="screen">${head("MI DÍA")}
+        <div class="d-row" ${nav ? 'data-go="rec"' : ""}><span class="d-lead">${ico("rec")}Recordatorios</span><span class="d-when">5</span></div>
+        <div class="d-row" ${nav ? 'data-go="tareas"' : ""}><span class="d-lead">${ico("tareas")}Tareas</span><span class="d-when">5</span></div>
+        <div class="d-row" ${nav ? 'data-go="habitos"' : ""}><span class="d-lead">${ico("habitual")}Hábitos</span><span class="d-when">3 de 6</span></div>
+        <div class="d-row" ${nav ? 'data-go="timer"' : ""}><span class="d-lead">${ico("timer")}Timer</span><span class="d-when">24:59</span></div>
+        ${back("funciones")}
+      </div>`;
+    }
+    if (name === "rec") {
+      return `<div class="screen">${head("RECORDATORIOS")}
+        <div class="d-body"><div class="d-scroll">
+          <div class="d-row static lead"><span class="d-when">18:30</span><span>Sacar la ropa</span></div>
+          <div class="d-row static lead"><span class="d-when">09:00</span><span>Llamar al gasista</span></div>
+          <div class="d-row static lead"><span class="d-when">11:15</span><span>Turno con el dentista</span></div>
+          <div class="d-row static lead"><span class="d-when">21:00</span><span>Tomar la pastilla</span></div>
+          <div class="d-row static lead"><span class="d-when">22:30</span><span>Sacar la basura</span></div>
+        </div></div>
+        ${back("dia")}
+      </div>`;
+    }
+    if (name === "tareas") {
+      return `<div class="screen">${head("TAREAS")}
+        <div class="d-body"><div class="d-scroll">
+          <div class="d-row static lead"><span class="d-check done">✓</span><span>Llamar al gasista</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Regar las plantas</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Pagar el internet</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Ordenar el escritorio</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Cambiar el foco del baño</span></div>
+        </div></div>
+        ${back("dia")}
+      </div>`;
+    }
+    if (name === "habitos") {
+      return `<div class="screen">${head("HÁBITOS")}
+        <div class="d-body"><div class="d-scroll">
+          <div class="d-row static lead"><span class="d-check done">✓</span><span>Leer</span><span class="d-when">5 días</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Caminar</span><span class="d-when">2 días</span></div>
+          <div class="d-row static lead"><span class="d-check done">✓</span><span>Agua</span><span class="d-when">8 vasos</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Meditar</span><span class="d-when">10 min</span></div>
+          <div class="d-row static lead"><span class="d-check">□</span><span>Estudiar</span><span class="d-when">30 min</span></div>
+          <div class="d-row static lead"><span class="d-check done">✓</span><span>Gimnasio</span><span class="d-when">1 día</span></div>
+        </div></div>
+        ${back("dia")}
+      </div>`;
+    }
+    if (name === "timer") {
+      return `<div class="screen">${head("TIMER")}
+        <div class="d-row" ${nav ? 'data-go="pomodoro"' : ""}><span>Pomodoro</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="alarma"' : ""}><span>Alarma</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="cron"' : ""}><span>Cron</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="cuenta"' : ""}><span>Cuenta regresiva</span><span class="caret">›</span></div>
+        ${back("dia")}
+      </div>`;
+    }
+
+    if (name === "pomodoro") {
+      return `<div class="screen">${head("POMODORO")}
+        <div class="d-big"><output>25:00</output><small>trabajo · 25 / 5</small></div>
+        ${back("timer")}
+      </div>`;
+    }
+
+    if (name === "alarma") {
+      return `<div class="screen">${head("ALARMA")}
+        <div class="d-big"><output>07:00</output><small>programada · suena en 6 h 12 min</small></div>
+        ${back("timer")}
+      </div>`;
+    }
+
+    if (name === "cron") {
+      return `<div class="screen">${head("CRON")}
+        <div class="d-big"><output>28:00</output><small>cada 30 min · próximo</small></div>
+        ${back("timer")}
+      </div>`;
+    }
+
+    if (name === "cuenta") {
+      return `<div class="screen">${head("CUENTA REGRESIVA")}
+        <div class="d-big"><output>09:59</output><small>cocina</small></div>
+        ${back("timer")}
+      </div>`;
+    }
+
+    if (name === "acciones") {
+      const items = [];
+      if (state.webEnabled) items.push("Buscar en la web");
+      if (state.musicEnabled) items.push("Música y volumen");
+
+      const rows = items.length
+        ? items.map((s) => `<div class="d-row static"><span>${s}</span></div>`).join("")
+        : `<div class="d-row static"><span class="d-empty">Sin acciones activas</span></div>`;
+
+      return `<div class="screen">${head("ACCIONES")}
+        ${rows}
+        ${back("funciones")}
+      </div>`;
+    }
+
+    if (name === "menu") {
+      return `<div class="screen">${head("CONFIGURACIÓN")}
+        <div class="d-row" ${nav ? 'data-go="descanso"' : ""}><span class="d-lead">${ico("descanso")}Descanso</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="dispositivo"' : ""}><span class="d-lead">${ico("dispositivo")}Dispositivo</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="info"' : ""}><span class="d-lead">${ico("info")}Info</span><span class="caret">›</span></div>
+        <div class="d-row" ${nav ? 'data-go="estado"' : ""}><span class="d-lead">${ico("estado")}Estado</span><span class="caret">›</span></div>
+        ${back("funciones")}
+      </div>`;
+    }
+    if (name === "descanso") {
+      return `<div class="screen">${head("DESCANSO")}
+        <div class="d-row static"><span>Automático</span>
+          <span class="d-chip${state.autoEnabled ? "" : " off"}">${state.autoEnabled ? label(state.autoSeconds) : "OFF"}</span></div>
+        <div class="d-row static"><span>Manual</span>
+          <span class="d-chip${state.manualEnabled ? "" : " off"}">${state.manualEnabled ? "ON" : "OFF"}</span></div>
+        <div class="d-row static"><span>Estado</span>
+          <span class="d-chip${state.asleep ? "" : " off"}">${state.asleep ? "descansando" : "despierto"}</span></div>
+        ${back("menu")}
+      </div>`;
+    }
+
+    if (name === "estado") {
+      return `<div class="screen">${head("ESTADO")}
+        <div class="d-row static"><span>WiFi</span><span class="bars"><b class="on"></b><b class="on"></b><b class="on"></b><b></b></span></div>
+        <div class="d-row static"><span>Señal</span><span class="d-when">−58 dBm</span></div>
+        <div class="d-row static"><span>Memoria</span><span class="d-when">1.8 MB libre</span></div>
+        <div class="d-row static"><span>Batería</span><span class="d-chip off">sin sensor</span></div>
+        ${back("menu")}
+      </div>`;
+    }
+    if (name === "info") {
+      return `<div class="screen">${head("INFO")}
+        <div class="d-body"><div class="d-scroll">
+          <div class="d-row static"><span>Placa</span><span class="d-when">WK-ESP32S3-DEV</span></div>
+          <div class="d-row static"><span>CPU</span><span class="d-when">ESP32-S3 · 240 MHz</span></div>
+          <div class="d-row static"><span>LCD</span><span class="d-when">ST7789 · 240 × 240</span></div>
+          <div class="d-row static"><span>Bus</span><span class="d-when">SPI · modo 3</span></div>
+          <div class="d-row static"><span>Micrófono</span><span class="d-chip">I2S · ok</span></div>
+          <div class="d-row static"><span>Altavoz</span><span class="d-chip">I2S · ok</span></div>
+          <div class="d-row static"><span>Audio</span><span class="d-when">16 / 24 kHz</span></div>
+          <div class="d-row static"><span>PSRAM</span><span class="d-when">octal · 80 MHz</span></div>
+          <div class="d-row static"><span>Flash</span><span class="d-when">16 MB</span></div>
+          <div class="d-row static"><span>WiFi</span><span class="d-chip">conectado</span></div>
+          <div class="d-row static"><span>Batería</span><span class="d-chip off">sin sensor</span></div>
+        </div></div>
+        ${back("menu")}
+      </div>`;
+    }
+    return `<div class="screen">${head("DISPOSITIVO")}
+      <div class="d-row static"><span>Volumen</span>
+        <span class="d-chip">${state.volume}</span></div>
+      <div class="d-row static"><span>Brillo</span>
+        <span class="d-chip">${state.brightness}</span></div>
+      <div class="d-row static"><span>Tema</span>
+        <span class="d-chip">${state.theme === "dark" ? "oscuro" : "claro"}</span></div>
+      ${back("menu")}
+    </div>`;
+  }
+
+  function paintDevices() {
+    $("deviceActive").innerHTML = renderScreen(state.screen, true);
+    document.querySelectorAll("[data-guide]").forEach((el) => {
+      el.innerHTML = renderScreen(el.dataset.guide, false);
+    });
+    fitScroll();
+  }
+
+  // Scroll automático, solo cuando el contenido no entra. Es el mismo
+  // mecanismo en Info, Recordatorios, Tareas y Hábitos.
+  function fitScroll() {
+    document.querySelectorAll(".d-scroll").forEach((el) => {
+      const box = el.parentElement;
+      const over = el.scrollHeight - box.clientHeight;
+      if (over > 4) {
+        el.style.animation = "none";
+        void el.offsetHeight;
+        el.style.setProperty("--scroll-by", "-" + over + "px");
+        el.style.animation = "infoScroll " + Math.max(12, over * 0.09) + "s linear infinite";
+      } else {
+        el.style.animation = "none";
+      }
+    });
+  }
+
+  function render() {
+    $("autoEnabled").checked = state.autoEnabled;
+    $("manualEnabled").checked = state.manualEnabled;
+    if (document.activeElement !== $("autoSeconds")) {
+      $("autoSeconds").value = state.autoSeconds;
+    }
+    $("autoSeconds").disabled = !state.autoEnabled;
+
+    $("sleepNow").setAttribute("aria-pressed", String(state.asleep));
+    $("wakeNow").setAttribute("aria-pressed", String(!state.asleep));
+
+    $("volumeOut").textContent = state.volume;
+    $("brightnessOut").textContent = state.brightness;
+
+    document.querySelectorAll("[data-theme]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(btn.dataset.theme === state.theme));
+    });
+
+    $("stateText").textContent = state.asleep ? "Descansando" : "Despierto";
+    $("stateDot").classList.toggle("off", state.asleep);
+    $("modeText").textContent = state.autoEnabled
+      ? "Descanso automático · " + label(state.autoSeconds)
+      : "Descanso solo manual";
+
+    $("webEnabled").checked = state.webEnabled;
+    $("musicEnabled").checked = state.musicEnabled;
+    if (document.activeElement !== $("taskSeconds")) $("taskSeconds").value = state.taskSeconds;
+    if (document.activeElement !== $("pomoWork")) $("pomoWork").value = state.pomoWork;
+    if (document.activeElement !== $("pomoRest")) $("pomoRest").value = state.pomoRest;
+    if (document.activeElement !== $("cronEvery")) $("cronEvery").value = state.cronEvery;
+    if (document.activeElement !== $("cronRepeat")) $("cronRepeat").value = state.cronRepeat;
+    if (document.activeElement !== $("firmwareUrl")) $("firmwareUrl").value = state.firmwareUrl;
+    if (document.activeElement !== $("assetsUrl")) $("assetsUrl").value = state.assetsUrl;
+
+    document.querySelectorAll("[data-channel]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(btn.dataset.channel === state.taskChannel));
+    });
+
+    $("payload").textContent = JSON.stringify({
+      rest_mode: {
+        auto_enabled: state.autoEnabled,
+        auto_seconds: state.autoSeconds,
+        manual_enabled: state.manualEnabled
+      },
+      features: {
+        web_search: state.webEnabled,
+        music: state.musicEnabled
+      },
+      tasks: {
+        nudge_seconds: state.taskSeconds,
+        channel: state.taskChannel
+      },
+      timer: {
+        pomodoro: { work_min: state.pomoWork, rest_min: state.pomoRest },
+        cron: { every_seconds: state.cronEvery, repeat: state.cronRepeat }
+      },
+      audio: { volume: state.volume },
+      screen: { brightness: state.brightness, theme: state.theme },
+      system: {
+        firmware_url: state.firmwareUrl || null,
+        assets_url: state.assetsUrl || null
+      }
+    }, null, 2);
+
+    paintDevices();
+  }
+
+  // ---------- panel ----------
+  $("autoEnabled").addEventListener("change", (e) => { state.autoEnabled = e.target.checked; render(); });
+  $("manualEnabled").addEventListener("change", (e) => { state.manualEnabled = e.target.checked; render(); });
+
+  $("autoSeconds").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) { state.autoSeconds = clamp(v, 5, 3600); paintDevices(); }
+  });
+
+  $("autoSeconds").addEventListener("blur", render);
+
+  $("sleepNow").addEventListener("click", () => { state.asleep = true; render(); });
+  $("wakeNow").addEventListener("click", () => { state.asleep = false; render(); });
+
+  $("webEnabled").addEventListener("change", (e) => {
+    state.webEnabled = e.target.checked;
+    if (!state.webEnabled && state.screen === "acciones" && !state.musicEnabled) {
+      state.screen = "funciones";
+      state.stack = ["inicio", "funciones"];
+    }
+    render();
+  });
+
+  $("musicEnabled").addEventListener("change", (e) => {
+    state.musicEnabled = e.target.checked;
+    if (!state.webEnabled && !state.musicEnabled && state.screen === "acciones") {
+      state.screen = "funciones";
+      state.stack = ["inicio", "funciones"];
+    }
+    render();
+  });
+
+  $("taskSeconds").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) state.taskSeconds = clamp(v, 30, 86400);
+  });
+
+  $("taskSeconds").addEventListener("blur", render);
+
+  $("pomoWork").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) state.pomoWork = clamp(v, 1, 180);
+  });
+
+  $("pomoRest").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) state.pomoRest = clamp(v, 1, 60);
+  });
+
+  $("cronEvery").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) state.cronEvery = clamp(v, 30, 86400);
+  });
+
+  $("cronRepeat").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (!Number.isNaN(v)) state.cronRepeat = clamp(v, 0, 999);
+  });
+
+  ["pomoWork", "pomoRest", "cronEvery", "cronRepeat"].forEach((id) => {
+    $(id).addEventListener("blur", render);
+  });
+
+  document.querySelectorAll("[data-channel]").forEach((btn) => {
+    btn.addEventListener("click", () => { state.taskChannel = btn.dataset.channel; render(); });
+  });
+
+  // ---------- sistema (acciones pesadas) ----------
+  const sysNote = $("sysNote");
+  const rebootBtn = $("rebootBtn");
+  let rebootArmed = false;
+
+  function disarmReboot() {
+    rebootArmed = false;
+    rebootBtn.textContent = "Reiniciar";
+    rebootBtn.classList.remove("confirm");
+  }
+
+  rebootBtn.addEventListener("click", () => {
+    if (!rebootArmed) {
+      rebootArmed = true;
+      rebootBtn.textContent = "¿Seguro?";
+      rebootBtn.classList.add("confirm");
+      sysNote.textContent = "Segundo toque para confirmar. Cualquier otro lado cancela.";
+      return;
+    }
+    disarmReboot();
+    sysNote.textContent = "Orden enviada: reiniciando…";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (rebootArmed && !e.target.closest("#rebootBtn")) disarmReboot();
+  });
+
+  $("upgradeBtn").addEventListener("click", () => {
+    const url = $("firmwareUrl").value.trim();
+    state.firmwareUrl = url;
+    if (!url) {
+      sysNote.textContent = "Falta la URL del firmware.";
+      return;
+    }
+    sysNote.textContent = "Orden enviada: descargando e instalando. El equipo va a reiniciar solo.";
+    render();
+  });
+
+  $("assetsBtn").addEventListener("click", () => {
+    const url = $("assetsUrl").value.trim();
+    state.assetsUrl = url;
+    sysNote.textContent = url
+      ? "URL de assets guardada. Se aplica en el próximo arranque."
+      : "URL de assets vacía: queda la de fábrica.";
+    render();
+  });
+
+  document.querySelectorAll("[data-step]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const dir = Number(btn.dataset.dir);
+      if (btn.dataset.step === "volume") {
+        state.volume = clamp(state.volume + dir * 10, 0, 100);
+      } else {
+        state.brightness = clamp(state.brightness + dir * 10, 1, 100);
+      }
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-theme]").forEach((btn) => {
+    btn.addEventListener("click", () => { state.theme = btn.dataset.theme; render(); });
+  });
+
+  // ---------- navegación de las pantallas (delegada) ----------
+  document.addEventListener("click", (e) => {
+    const back = e.target.closest("[data-back]");
+    if (back) {
+      if (state.stack.length > 1) {
+        state.stack.pop();
+      }
+      state.screen = state.stack[state.stack.length - 1];
+      render();
+      return;
+    }
+
+    const go = e.target.closest("[data-go]");
+    if (go) {
+      state.screen = go.dataset.go;
+      state.stack.push(state.screen);
+      render();
+      return;
+    }
+  });
+
+  render();
+</script>
+</body>
+</html>

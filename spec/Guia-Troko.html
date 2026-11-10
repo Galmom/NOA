@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía de Troko</title>
+<style>
+:root{--bg:#000;--card:#0d0f12;--line:#252a32;--text:#f4f5f7;--muted:#9aa1ab;--lime:#b5ff43;--purple:#a84cff;--amber:#ffb547;--cyan:#4cc9ff;--pink:#ff6fb1;--danger:#ff5d6c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 16px 64px}
+a{color:var(--lime)}
+h1{font-size:40px;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:26px;margin:56px 0 6px;display:flex;align-items:center;gap:12px}
+h2 .n{width:36px;height:36px;border-radius:12px;background:var(--lime);color:#000;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+h3{font-size:18px;margin:22px 0 8px}
+p,li{color:#d8dbe0}
+.lead{color:var(--muted);font-size:18px;margin-top:10px;max-width:640px}
+.sub{color:var(--muted);margin-bottom:18px}
+header{display:flex;gap:24px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--card)}
+.face{width:96px;height:96px;flex:none;border:4px solid var(--lime);border-radius:28px;display:flex;align-items:center;justify-content:center;gap:16px}
+.face i{width:13px;height:24px;background:var(--lime);border-radius:8px}
+.tag{color:var(--purple);font-weight:700;font-size:13px;letter-spacing:.12em}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+nav a{border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;color:var(--text);font-size:14px}
+nav a:hover{border-color:var(--lime)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.card b{display:block;margin-bottom:4px}
+.card small{color:var(--muted);font-size:14px;line-height:1.45;display:block}
+.diagram{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px;overflow-x:auto}
+.diagram svg{display:block;width:100%;min-width:640px;height:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+td code,p code,li code{background:#15181d;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14px}
+.gpio{font-weight:700;color:var(--lime);font-variant-numeric:tabular-nums}
+.tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.tables .card h3{margin-top:0;display:flex;align-items:center;gap:8px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.note{border-left:4px solid var(--purple);background:#120b1a;border-radius:0 14px 14px 0;padding:12px 16px;margin:14px 0}
+.warn{border-left-color:var(--amber);background:#1a1308}
+.ok{border-left-color:var(--lime);background:#0f1508}
+ol.steps{list-style:none;counter-reset:s}
+ol.steps>li{counter-increment:s;position:relative;padding:4px 0 14px 52px}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;border:2px solid var(--lime);color:var(--lime);font-weight:700;display:flex;align-items:center;justify-content:center}
+pre{background:#0a0b0d;border:1px solid var(--line);border-radius:14px;padding:14px;overflow-x:auto;font-size:14px;margin:10px 0;color:#e7e9ec}
+.phone{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.screen{width:200px;height:200px;margin:0 auto 12px;background:#000;border:3px solid #2b3038;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;font-size:12px}
+.screen .st{color:var(--purple);font-weight:700;letter-spacing:.08em;font-size:11px}
+.qr{width:84px;height:84px;background:#fff;border:3px solid var(--lime);border-radius:8px;padding:8px}
+.qr div{width:100%;height:100%;background:conic-gradient(#000 25%,#fff 0 50%,#000 0 75%,#fff 0) 0 0/12px 12px}
+.codebox{border:3px solid var(--lime);border-radius:12px;padding:8px 14px;color:var(--lime);font-weight:700;font-size:26px;letter-spacing:.18em}
+ul.check{list-style:none}
+ul.check li{padding:6px 0 6px 30px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:4px;color:var(--lime);font-weight:700}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:8px}
+footer{margin-top:64px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
+@media (max-width:600px){h1{font-size:30px}header{flex-direction:column;text-align:center}nav{justify-content:center}}
+@media print{body{background:#fff;color:#000}p,li,td{color:#222}.card,.diagram,header,details{background:#fff;border-color:#ccc}nav{display:none}}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="face"><i></i><i></i></div>
+  <div>
+    <div class="tag">GUÍA DE MONTAJE</div>
+    <h1>Arma tu propio Troko</h1>
+    <p class="lead">Todo lo necesario para montar la placa, conectar cada módulo, instalar el firmware y dejarlo hablando. Al final, cómo funcionan la búsqueda web con Tavily y el bot de Telegram.</p>
+    <nav>
+      <a href="#materiales">Materiales</a><a href="#esquema">Esquema</a><a href="#pines">Pines</a>
+      <a href="#montaje">Montaje</a><a href="#instalar">Instalar</a><a href="#arranque">Primer arranque</a>
+      <a href="#uso">Uso</a><a href="#extras">Tavily y Telegram</a><a href="#problemas">Problemas</a>
+    </nav>
+  </div>
+</header>
+
+<h2 id="materiales"><span class="n">1</span>Materiales</h2>
+<p class="sub">El firmware está hecho para estas piezas exactas. Otra pantalla u otra placa necesitan otro firmware.</p>
+<div class="grid">
+  <div class="card"><b>ESP32-S3 N16R8</b><small>Placa de desarrollo con 16 MB de flash y 8 MB de PSRAM, con USB-C nativo. Imprescindible que sea N16R8.</small></div>
+  <div class="card"><b>Pantalla ST7789 240×240</b><small>IPS de 1.3" o 1.54", SPI, de 7 pines (GND, VCC, SCL, SDA, RES, DC, BLK) o con pin CS.</small></div>
+  <div class="card"><b>Micrófono INMP441</b><small>Micrófono digital I2S. Pines SCK, WS, SD, L/R, VDD y GND.</small></div>
+  <div class="card"><b>Amplificador MAX98357A</b><small>Amplificador I2S de 3 W. Pines LRC, BCLK, DIN, GAIN, SD, GND y VIN.</small></div>
+  <div class="card"><b>Altavoz 4–8 Ω</b><small>De 2 a 3 W, unos 40 mm. Se conecta a los bornes + y − del amplificador.</small></div>
+  <div class="card"><b>2 pulsadores</b><small>Para subir y bajar el volumen. El botón BOOT de la placa sirve para hablar.</small></div>
+  <div class="card"><b>LED + resistencia 220 Ω</b><small>Opcional. Indica el estado de Troko.</small></div>
+  <div class="card"><b>Cables y protoboard</b><small>Cables dupont hembra-hembra o macho-hembra, cortos. Cable USB-C de datos (no solo de carga).</small></div>
+</div>
+
+<h2 id="esquema"><span class="n">2</span>Esquema de conexiones</h2>
+<p class="sub">Cada línea va de un pin del módulo al GPIO indicado de la ESP32-S3. Los colores agrupan cada módulo.</p>
+<div class="diagram">
+<svg viewBox="0 0 900 560" role="img" aria-label="Esquema de conexiones de Troko" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <style>
+      .box{fill:#0a0b0d;stroke:#2b3038;stroke-width:2}
+      .title{fill:#f4f5f7;font-size:15px;font-weight:700}
+      .meta{fill:#9aa1ab;font-size:11px}
+      .pin{fill:#f4f5f7;font-size:12px;font-weight:600}
+      .gp{fill:#b5ff43;font-size:12px;font-weight:700}
+      .w{stroke-width:2.5;fill:none}
+    </style>
+  </defs>
+
+  <!-- ESP32-S3 board -->
+  <rect x="330" y="70" width="240" height="440" rx="18" fill="#0f1d0f" stroke="#b5ff43" stroke-width="2.5"/>
+  <rect x="395" y="90" width="110" height="70" rx="6" fill="#1a1f24" stroke="#3a414b"/>
+  <text x="450" y="122" text-anchor="middle" class="title">ESP32-S3</text>
+  <text x="450" y="142" text-anchor="middle" class="meta">N16R8</text>
+  <rect x="420" y="490" width="60" height="30" rx="8" fill="#1a1f24" stroke="#3a414b"/>
+  <text x="450" y="540" text-anchor="middle" class="meta">USB-C (PC / 5V)</text>
+
+  <!-- Display (left top) -->
+  <rect x="30" y="110" width="200" height="188" rx="14" class="box"/>
+  <text x="46" y="134" class="title">Pantalla ST7789</text>
+  <text x="46" y="150" class="meta">VCC 3.3V · GND a GND</text>
+  <g stroke="#b5ff43" class="w">
+    <path d="M230 172H330"/><path d="M230 196H330"/><path d="M230 220H330"/>
+    <path d="M230 244H330"/><path d="M230 268H330"/><path d="M230 292H330" opacity="0"/>
+  </g>
+  <g class="pin">
+    <text x="214" y="176" text-anchor="end">SDA / MOSI</text><text x="214" y="200" text-anchor="end">SCL / CLK</text>
+    <text x="214" y="224" text-anchor="end">CS</text><text x="214" y="248" text-anchor="end">DC</text>
+    <text x="214" y="272" text-anchor="end">RES / RST</text>
+  </g>
+  <g class="gp">
+    <text x="342" y="176">GPIO 8</text><text x="342" y="200">GPIO 9</text><text x="342" y="224">GPIO 11</text>
+    <text x="342" y="248">GPIO 12</text><text x="342" y="272">GPIO 13</text>
+  </g>
+  <path d="M230 292H330" stroke="#b5ff43" class="w" stroke-dasharray="6 4"/>
+  <text x="214" y="296" text-anchor="end" class="pin">BLK (luz)</text>
+  <text x="342" y="296" class="gp">GPIO 10</text>
+
+  <!-- Microphone (left bottom) -->
+  <rect x="30" y="330" width="200" height="120" rx="14" class="box"/>
+  <text x="46" y="354" class="title">Micrófono INMP441</text>
+  <text x="46" y="370" class="meta">VDD 3.3V · GND y L/R a GND</text>
+  <g stroke="#a84cff" class="w"><path d="M230 392H330"/><path d="M230 416H330"/><path d="M230 440H330"/></g>
+  <g class="pin">
+    <text x="214" y="396" text-anchor="end">SCK</text><text x="214" y="420" text-anchor="end">WS</text>
+    <text x="214" y="444" text-anchor="end">SD</text>
+  </g>
+  <g class="gp"><text x="342" y="396">GPIO 42</text><text x="342" y="420">GPIO 40</text><text x="342" y="444">GPIO 41</text></g>
+
+  <!-- Amplifier (right top) -->
+  <rect x="670" y="110" width="200" height="140" rx="14" class="box"/>
+  <text x="686" y="134" class="title">Amplificador</text>
+  <text x="686" y="150" class="meta">MAX98357A · VIN 5V · GND</text>
+  <g stroke="#ffb547" class="w"><path d="M570 172H670"/><path d="M570 196H670"/><path d="M570 220H670"/></g>
+  <g class="pin"><text x="686" y="176">BCLK</text><text x="686" y="200">LRC</text><text x="686" y="224">DIN</text></g>
+  <g class="gp" text-anchor="end"><text x="558" y="176">GPIO 47</text><text x="558" y="200">GPIO 48</text><text x="558" y="224">GPIO 21</text></g>
+  <circle cx="830" cy="200" r="22" fill="none" stroke="#ffb547" stroke-width="2"/>
+  <circle cx="830" cy="200" r="9" fill="#ffb547"/>
+  <text x="830" y="240" text-anchor="middle" class="meta">altavoz +/−</text>
+
+  <!-- Buttons (right middle) -->
+  <rect x="670" y="280" width="200" height="110" rx="14" class="box"/>
+  <text x="686" y="304" class="title">Botones</text>
+  <text x="686" y="320" class="meta">la otra pata de cada botón a GND</text>
+  <g stroke="#4cc9ff" class="w"><path d="M570 344H670"/><path d="M570 368H670"/></g>
+  <g class="pin"><text x="686" y="348">Volumen +</text><text x="686" y="372">Volumen −</text></g>
+  <g class="gp" text-anchor="end"><text x="558" y="348">GPIO 38</text><text x="558" y="372">GPIO 39</text></g>
+
+  <!-- LED (right bottom) -->
+  <rect x="670" y="410" width="200" height="60" rx="14" class="box"/>
+  <text x="686" y="434" class="title">LED (opcional)</text>
+  <text x="686" y="452" class="meta">con resistencia 220 Ω a GND</text>
+  <path d="M570 440H670" stroke="#ff6fb1" class="w"/>
+  <text x="558" y="444" text-anchor="end" class="gp">GPIO 14</text>
+
+  <!-- Built-in -->
+  <text x="450" y="200" text-anchor="middle" class="meta">BOOT (GPIO 0)</text>
+  <text x="450" y="216" text-anchor="middle" class="meta">ya viene en la placa</text>
+  <rect x="380" y="456" width="140" height="24" rx="8" fill="#1a1f24" stroke="#3a414b"/>
+  <text x="450" y="472" text-anchor="middle" class="meta">5V · 3V3 · GND común</text>
+</svg>
+</div>
+<div class="note"><b>Alimentación:</b> la pantalla y el micrófono van a <code>3V3</code>; el amplificador a <code>5V</code>. Todos los <code>GND</code> deben unirse al GND de la ESP32-S3. Sin tierra común nada funciona bien.</div>
+
+<h2 id="pines"><span class="n">3</span>Tabla de pines</h2>
+<p class="sub">La misma información del esquema, pin por pin.</p>
+<div class="tables">
+  <div class="card"><h3><span class="dot" style="background:var(--lime)"></span>Pantalla ST7789</h3>
+    <table><tr><th>Pantalla</th><th>ESP32-S3</th></tr>
+      <tr><td>SDA / MOSI</td><td class="gpio">GPIO 8</td></tr><tr><td>SCL / CLK</td><td class="gpio">GPIO 9</td></tr>
+      <tr><td>CS</td><td class="gpio">GPIO 11</td></tr><tr><td>DC</td><td class="gpio">GPIO 12</td></tr>
+      <tr><td>RES / RST</td><td class="gpio">GPIO 13</td></tr><tr><td>BLK</td><td class="gpio">GPIO 10</td></tr>
+      <tr><td>VCC</td><td>3V3</td></tr><tr><td>GND</td><td>GND</td></tr></table>
+    <p style="font-size:14px;margin-top:8px;color:var(--muted)">Si tu pantalla de 7 pines no tiene CS, deja GPIO 11 sin conectar.</p></div>
+  <div class="card"><h3><span class="dot" style="background:var(--purple)"></span>Micrófono INMP441</h3>
+    <table><tr><th>Micrófono</th><th>ESP32-S3</th></tr>
+      <tr><td>SCK</td><td class="gpio">GPIO 42</td></tr><tr><td>WS</td><td class="gpio">GPIO 40</td></tr>
+      <tr><td>SD</td><td class="gpio">GPIO 41</td></tr><tr><td>L/R</td><td>GND</td></tr>
+      <tr><td>VDD</td><td>3V3</td></tr><tr><td>GND</td><td>GND</td></tr></table></div>
+  <div class="card"><h3><span class="dot" style="background:var(--amber)"></span>Amplificador MAX98357A</h3>
+    <table><tr><th>Amplificador</th><th>ESP32-S3</th></tr>
+      <tr><td>BCLK</td><td class="gpio">GPIO 47</td></tr><tr><td>LRC</td><td class="gpio">GPIO 48</td></tr>
+      <tr><td>DIN</td><td class="gpio">GPIO 21</td></tr><tr><td>VIN</td><td>5V</td></tr>
+      <tr><td>GND</td><td>GND</td></tr><tr><td>SD, GAIN</td><td>sin conectar</td></tr>
+      <tr><td>+ / −</td><td>altavoz</td></tr></table></div>
+  <div class="card"><h3><span class="dot" style="background:var(--cyan)"></span>Botones y LED</h3>
+    <table><tr><th>Elemento</th><th>ESP32-S3</th></tr>
+      <tr><td>BOOT (hablar)</td><td class="gpio">GPIO 0</td></tr><tr><td>Volumen +</td><td class="gpio">GPIO 38</td></tr>
+      <tr><td>Volumen −</td><td class="gpio">GPIO 39</td></tr><tr><td>LED</td><td class="gpio">GPIO 14</td></tr></table>
+    <p style="font-size:14px;margin-top:8px;color:var(--muted)">Botón: una pata al GPIO y la otra a GND. No hacen falta resistencias.</p></div>
+</div>
+<div class="note warn"><b>No uses estos pines para otra cosa:</b> GPIO 19 y 20 (USB), 26 a 37 (memoria flash y PSRAM) y 43–44 (puerto serie).</div>
+
+<h2 id="montaje"><span class="n">4</span>Consejos de montaje</h2>
+<ul class="check">
+  <li>Suelda los pines de cada módulo. Los pines solo apoyados en la protoboard son la causa número uno de fallos.</li>
+  <li>Usa cables cortos, sobre todo en la pantalla (8 y 9): con cables largos la imagen sale con rayas o no aparece.</li>
+  <li>No cruces <b>BCLK</b> y <b>LRC</b> del amplificador ni <b>SCK</b> y <b>WS</b> del micrófono: con cualquiera de esos dos cruces no hay sonido.</li>
+  <li>Deja el pin <b>SD</b> del amplificador sin conectar. Si lo conectas a GND, el amplificador se apaga.</li>
+  <li>El pin <b>L/R</b> del micrófono va a GND: Troko escucha por el canal izquierdo.</li>
+  <li>El altavoz va a los bornes <b>+ y −</b> del amplificador, nunca a GND.</li>
+  <li>Revisa todo con la placa desconectada antes de enchufarla por primera vez.</li>
+</ul>
+
+<h2 id="instalar"><span class="n">5</span>Instalar el firmware</h2>
+<p class="sub">Necesitas el archivo <code>troko-wk-esp32s3-dev-es.bin</code> del ZIP y Chrome o Edge en un computador.</p>
+<ol class="steps">
+  <li>Conecta la ESP32-S3 al computador con el cable USB-C.</li>
+  <li>Abre <a href="https://espressif.github.io/esptool-js/">espressif.github.io/esptool-js</a>, la herramienta oficial de Espressif.</li>
+  <li>Pulsa <b>Connect</b> y elige el puerto de la placa. Si no aparece: mantén <b>BOOT</b>, pulsa <b>RESET</b>, suelta BOOT y vuelve a intentarlo.</li>
+  <li>La primera vez, pulsa <b>Erase Flash</b> y espera a que termine.</li>
+  <li>En <b>Flash Address</b> escribe <code>0x0</code> y elige el archivo <code>.bin</code>.</li>
+  <li>Pulsa <b>Program</b>. Cuando termine, pulsa <b>RESET</b> en la placa.</li>
+</ol>
+<details><summary>Con línea de comandos (esptool)</summary>
+<pre>pip install esptool
+esptool --chip esp32s3 -b 460800 write-flash 0x0 troko-wk-esp32s3-dev-es.bin</pre></details>
+
+<h2 id="arranque"><span class="n">6</span>Primer arranque</h2>
+<p class="sub">Troko te guía en la pantalla. Son dos pasos.</p>
+<div class="phone">
+  <div class="card">
+    <div class="screen"><div class="st">PASO 1 DE 2</div><div>Escanea con la cámara</div><div class="qr"><div></div></div><div style="color:var(--lime)">Red: Xiaozhi-XXXX</div></div>
+    <h3>Conecta el WiFi</h3>
+    <p>Escanea el QR con la cámara del celular. Se unirá a la red de Troko y abrirá su página. Elige tu WiFi, escribe la contraseña y toca <b>Conectar</b>.</p>
+    <p style="color:var(--muted);font-size:14px;margin-top:6px">¿No se abre? Entra a <code>http://192.168.4.1</code>. Usa una red de 2.4 GHz.</p>
+  </div>
+  <div class="card">
+    <div class="screen"><div class="st">PASO 2 DE 2</div><div>Registra a Troko</div><div class="codebox">123456</div><div style="color:var(--muted);padding:0 10px">Entra a xiaozhi.me</div></div>
+    <h3>Registra a Troko</h3>
+    <p>Troko dice y muestra un código de 6 dígitos. Entra a <a href="https://xiaozhi.me">xiaozhi.me</a>, inicia sesión, toca <b>Agregar dispositivo</b> y escribe el código.</p>
+    <p style="color:var(--muted);font-size:14px;margin-top:6px">En xiaozhi.me también eliges la voz, el idioma y la personalidad.</p>
+  </div>
+</div>
+
+<h2 id="uso"><span class="n">7</span>Usar a Troko</h2>
+<div class="grid">
+  <div class="card"><b>“Troko”</b><small>Dilo para que empiece a escucharte.</small></div>
+  <div class="card"><b>Botón BOOT</b><small>Una pulsación para hablar o interrumpir.</small></div>
+  <div class="card"><b>Volumen + / −</b><small>Una pulsación sube o baja un poco. Mantén pulsado para el máximo o para silencio.</small></div>
+  <div class="card"><b>Cambiar de WiFi</b><small>Pulsa RESET y enseguida BOOT mientras arranca. Vuelve a aparecer el paso 1.</small></div>
+</div>
+<p style="margin-top:14px">Pídele recordatorios, alarmas, temporizadores o un modo de concentración, o simplemente conversa con él.</p>
+
+<h2 id="extras"><span class="n">8</span>Búsqueda web y Telegram</h2>
+<p class="sub">Dos funciones extra que necesitan claves personales.</p>
+<div class="note warn"><b>Importante:</b> el firmware del ZIP no las trae activadas. Las claves se graban dentro del firmware al compilarlo, así que para usarlas hay que compilar una versión propia con tus claves (abajo se explica). Nunca compartas un firmware compilado con tus claves.</div>
+
+<h3>🔎 Tavily: búsqueda en internet</h3>
+<p>Permite que Troko busque información actual en internet (noticias, resultados, datos del día).</p>
+<ol class="steps">
+  <li>Crea una cuenta en <a href="https://app.tavily.com">app.tavily.com</a>. Tiene un plan gratuito con créditos mensuales.</li>
+  <li>En el panel, copia tu <b>API Key</b>. Empieza por <code>tvly-</code>.</li>
+  <li>Guárdala para el archivo <code>.env</code> como <code>XIAOZHI_TAVILY_API_KEY</code>.</li>
+</ol>
+
+<h3>✈️ Bot de Telegram: avisos en tu celular</h3>
+<p>Troko te envía al celular sus recordatorios, alarmas y temporizadores, y puedes darle órdenes desde el chat.</p>
+<ol class="steps">
+  <li>En Telegram, abre <b>@BotFather</b>, envía <code>/newbot</code> y sigue los pasos (nombre y usuario del bot).</li>
+  <li>BotFather te da un <b>token</b> del tipo <code>123456789:AA…</code>. Es la contraseña de tu bot: no la compartas.</li>
+  <li>Para saber tu <b>chat_id</b>: compila primero solo con el token, escríbele a tu bot y Troko te responderá “Tu chat_id es …”.</li>
+  <li>Agrega ambos al <code>.env</code> y vuelve a compilar. Solo tu chat podrá controlar a Troko.</li>
+</ol>
+<table style="margin-top:8px">
+  <tr><th>Comando</th><th>Qué hace</th></tr>
+  <tr><td><code>/recordar 10m Sacar la ropa</code></td><td>Recordatorio en 10 minutos (también <code>2h</code> o <code>18:30</code>)</td></tr>
+  <tr><td><code>/recordatorios</code></td><td>Lista los pendientes</td></tr>
+  <tr><td><code>/cancelar 3</code></td><td>Borra el recordatorio número 3</td></tr>
+  <tr><td><code>/aviso Hola</code></td><td>Muestra el mensaje en la pantalla de Troko</td></tr>
+  <tr><td><code>/estado</code></td><td>Hora, estado y recordatorios pendientes</td></tr>
+  <tr><td><code>/ayuda</code></td><td>Lista de comandos</td></tr>
+</table>
+
+<h3>🛠️ Compilar con tus claves</h3>
+<p>Requiere el código fuente del proyecto y ESP-IDF 6.1 instalado. En la carpeta del proyecto crea un archivo <code>.env</code>:</p>
+<pre>XIAOZHI_TAVILY_API_KEY=tvly-tu-clave
+XIAOZHI_TELEGRAM_BOT_TOKEN=123456789:AA-tu-token
+XIAOZHI_TELEGRAM_CHAT_ID=tu-chat-id</pre>
+<p>Y compila e instala:</p>
+<pre>source ~/.espressif/v6.1/esp-idf/export.sh
+python3 scripts/build.py wk-esp32s3-dev --name wk-esp32s3-dev --custom-wake-word troko --language es-ES
+cd build && esptool --chip esp32s3 -b 460800 write-flash $(cat flash_args | tr '\n' ' ')</pre>
+<div class="note"><b>Seguridad:</b> el archivo <code>.env</code> y el firmware que compiles con él contienen tus claves. Guárdalos solo para ti.</div>
+
+<h2 id="problemas"><span class="n">9</span>Solución de problemas</h2>
+<details><summary>No se escucha nada</summary><ul class="check">
+  <li>Revisa que BCLK vaya a GPIO 47, LRC a GPIO 48 y DIN a GPIO 21, sin cruzarlos.</li>
+  <li>VIN del amplificador a 5V y su GND al GND de la placa.</li>
+  <li>El pin SD del amplificador sin conectar.</li>
+  <li>Sube el volumen con el botón Volumen + o diciendo “sube el volumen”.</li></ul></details>
+<details><summary>No me escucha o no reacciona a “Troko”</summary><ul class="check">
+  <li>Revisa SCK a GPIO 42, WS a GPIO 40 y SD a GPIO 41.</li>
+  <li>L/R del micrófono a GND y VDD a 3V3 (no a 5V).</li>
+  <li>Habla a menos de un metro y sin mucho ruido de fondo.</li></ul></details>
+<details><summary>La pantalla está negra o se ve rara</summary><ul class="check">
+  <li>Si está totalmente negra, revisa BLK en GPIO 10 y VCC a 3V3.</li>
+  <li>Si tiene rayas o ruido, acorta los cables de GPIO 8 y GPIO 9.</li>
+  <li>Si los colores salen invertidos o la imagen corrida, tu pantalla es de otro modelo.</li></ul></details>
+<details><summary>No aparece la página del WiFi</summary><ul class="check">
+  <li>Conéctate a mano a la red “Xiaozhi-XXXX” y abre <code>http://192.168.4.1</code>.</li>
+  <li>Si el celular pregunta si quieres mantener la conexión sin internet, responde que sí.</li>
+  <li>Desactiva temporalmente los datos móviles si la página no carga.</li></ul></details>
+<details><summary>No se conecta a mi WiFi</summary><ul class="check">
+  <li>Troko solo usa redes de 2.4 GHz. Si tu router tiene una sola red mixta, activa la banda de 2.4 GHz.</li>
+  <li>Revisa la contraseña con el botón “Ver” de la página.</li></ul></details>
+<details><summary>El computador no detecta la placa</summary><ul class="check">
+  <li>Usa un cable USB-C de datos; muchos cables solo cargan.</li>
+  <li>Conéctala al puerto USB nativo de la placa (a veces marcado “USB”, no “UART/COM”).</li>
+  <li>Entra en modo descarga: mantén BOOT, pulsa RESET y suelta BOOT.</li></ul></details>
+
+<footer>
+  Troko está basado en el proyecto de código abierto XiaoZhi ESP32 (licencia MIT; ver el archivo LICENSE).
+  La conversación con la IA la presta el servicio xiaozhi.me, de terceros. Tavily y Telegram son servicios externos con sus propias condiciones.
+</footer>
+</main>
+</body>
+</html>

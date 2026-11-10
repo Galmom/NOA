@@ -1,0 +1,41 @@
+E (%lu) %s: ip lost timer: failed to post lost ip event (%x)
+Cannot set a reminder until the device clock is synchronized.
+esp_timer_create(&timer_args, &startup_wake_word_hint_timer_)
+Set the theme of the screen. The theme can be `light` or `dark`.
+List all scheduled reminders, including their IDs and recurrence.
+E (%lu) %s: %s: Failed to create the task to delete the current task
+!(xTaskGetSchedulerState() == taskSCHEDULER_NOT_STARTED && cpuid != 0)
+W (%lu) %s: Brightness value (%d) is too small, setting to default (10)
+E (%lu) %s: %s(%d): Bad core number for task! Maximum core number is %d
+W (%lu) %s: Cannot restore alarm before the device clock is synchronized
+E (%lu) %s: %s(%d): timer clock conflict, already is %d but attempt to %d
+W (%lu) %s: Output volume value (%d) is too small, setting to default (10)
+esp_timer_create(&create_args, (esp_timer_handle_t*) & (ptimer->timer_arg))
+E (%lu) %s: Failed to create AFE processing task, internal free=%u largest=%u
+E (%lu) %s: Deep sleep requests are not allowed from tasks with stacks in PSRAM
+Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+inactive timer: now=%x last_rx_time=%x diff=%x, aid[%d]%02x:%02x:%02x:%02x:%02x:%02x leave
+Stop, silence or cancel an active or ringing clock alarm, countdown timer, reminder, or alert.
+I (%lu) %s: WiFi attempt %d/%d after %d ms delay (waiting for AP comeback timer + state settle)
+Start or stop a 25-minute Pomodoro concentration session. Parameter: action ('start' or 'stop').
+Stop, silence or cancel an alert or reminder. If an ID is provided, cancels that scheduled reminder.
+1. Answering questions about current condition (e.g. what is the current volume of the audio speaker?)
+2. As the first step to control the device (e.g. turn up / down the volume of the audio speaker, etc.)
+E (%lu) %s: %s(%d): timer hasn't been configured, or it is still running, please stop it with ledc_timer_pause first
+Always remember you have a camera. If the user asks you to see something, use this tool to take a photo and then explain it.
+Mark a task as completed or delete it by its ID. Parameter: id (required), delete (optional boolean, if true deletes the task).
+Controla una luz de Home Assistant. Usa action turn_on, turn_off o toggle. brightness_pct es opcional y va de 1 a 100 al encender.
+Set the volume of the audio speaker. If the current volume is unknown, you must call `self.get_device_status` tool first and then call this tool.
+Mark a daily habit as completed for today by ID or title keyword. Also call this when the user says 'completé', 'hice', 'marcar hábito' or similar.
+Set a one-time local alarm using the device's synchronized clock. The hour uses 24-hour format; an alarm set for the current minute is scheduled for tomorrow.
+Muestra una animación de Troko en la pantalla. name: '240' (cuando el usuario diga 'troko 240' o '240'), 'pelota', 'ovejas' (también 'dormido' o 'a dormir') o 'descubre'.
+Send a text message to the user's phone through Telegram. Use it when the user asks to send, forward or notify something to their phone or Telegram, for example a list, a note or a summary.
+Close and dismiss the habits interface or tracking panel immediately on screen. ALWAYS call this when the user says 'cerrar hábitos', 'cierra los hábitos', 'cerrar tracking', 'salir de hábitos'.
+Toggle (mark done OR unmark/undo) a daily habit for today. ALWAYS call this when the user says 'desmarcar', 'deshacer', 'no hice', 'quitar', 'borrar el check', 'no completé', 'toggle' a habit, or when they want to uncheck a habit they already marked. Uses id OR title keyword.
+Delete a habit permanently by its ID or title keyword. ALWAYS call this tool when the user says: 'eliminar hábito', 'borra el hábito', 'quitar hábito', 'elimina meditar', 'borrar hábito ejercicio', etc. Parameters: id (optional integer ID), title (optional name or keyword of the habit).
+Set a one-time countdown timer. Use this tool ONLY when the user explicitly says 'temporizador', 'timer' or 'cuenta regresiva' and gives a duration. Never use this tool for a task, reminder, alarm, or phrases such as 'recuérdame en un minuto'. Those requests must use self.reminder.add instead. Duration is in seconds (up to 24 hours).
+Show and display the full-screen list of habits (cards with icons, title, detail/goal, time and checkboxes). ALWAYS call this tool when the user says: 'ver hábitos', 'mostrar hábitos', 'lista de hábitos', 'enséñame mis hábitos', 'abre la lista de hábitos', 'ver lista', 'cuáles son mis hábitos'. Do NOT call self.habits.tracking for these requests.
+Show the habits tracking dashboard with the circular progress arc, completed percentage, star and tabs. Parameter: 'tab' can be 'hoy' (daily), 'semana' (weekly), or 'todos' (all). ALWAYS call this tool when the user asks for: 'tracking de hábitos', 'progreso', 'estadísticas', 'muestra el tracking', 'progreso semanal', 'cómo voy esta semana', 'muéstrame semanal', 'semanal', 'resumen semanal'. Set tab='semana' whenever the user mentions 'semana', 'semanal' or 'weekly'.
+Add a task to the persistent task list. When the user asks to add a task, first obtain the time at which it should be remembered: if no time is given, ask the user for it and wait. After the time is provided, call this tool to save the task and also call self.reminder.add with the same title and due_at so it notifies at that time. Parameters: title (required), time (optional HH:MM), day (optional 'Hoy' or 'Mañana'), category (optional 'Trabajo', 'Estudio', 'Personal').
+Schedule a reminder using an ISO-8601 datetime with an explicit timezone, such as 2026-10-22T09:00:00-03:00. Recurrence is none, daily, or weekly; repeating schedules follow a fixed UTC interval. This is the tool for any reminder or task that must notify the user at a specific time, including relative times such as 'en un minuto'. If the user asks to add a task or reminder without saying when, ask for the desired time and do not call any tool until the user provides it. Convert relative times to an ISO-8601 due_at using the device's current date and timezone. Never use a countdown timer for these requests.
+Add or configure a new habit. ALWAYS call this when the user says 'crea un hábito', 'agregar hábito', 'nuevo hábito', 'configurar un hábito', 'configura un hábito', 'configurar hábito' or similar. Ask the user for the habit name and time if not provided, then call this tool. Parameters: title (habit name), time (HH:MM 24h format, reminder time), detail (objective/goal note like '30 min', '8 vasos', '10 min', '2 horas'), icon (optional: 'book', 'exercise', 'water', 'heart', 'study'), periodicity (optional: 'daily', 'weekly', 'monthly'). This saves the habit, sets reminder, and immediately opens the full-screen habit list display.
