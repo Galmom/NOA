@@ -1,3 +1,15 @@
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "shell",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
         "resource": "*",
         "effect": "deny"
       },
@@ -8972,17 +8984,5 @@
   }
 ]
 
-=== RUTAS RESUELTAS ===
-home       C:\Users\lord_
-data       C:\Users\lord_\.local\share\opencode
-cache      C:\Users\lord_\.cache\opencode
-config     C:\Users\lord_\.config\opencode-local
-state      C:\Users\lord_\.local\state\opencode
-tmp        C:\Users\lord_\AppData\Local\Temp\opencode
-bin        C:\Users\lord_\.cache\opencode\bin
-log        C:\Users\lord_\.local\share\opencode\log
-repos      C:\Users\lord_\.local\share\opencode\repos
-db         C:\Users\lord_\.local\share\opencode\opencode.db
-
-░▒▓ 󰍲  ~\ \Prueba   v24.18.1   17:38 
+░▒▓ 󰍲  ~\ \Prueba   v24.18.1   17:41 
 ❯
