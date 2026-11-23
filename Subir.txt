@@ -1,6 +1,6 @@
 
-░▒▓ 󰍲  …\firmware   noa-backup-20261118 !+?   15:26 
-❯ xtensa-esp32-elf-objdump.exe -dr -C --disassemble=cam_verify_jpeg_eoi $lib
+░▒▓ 󰍲  …\firmware   noa-backup-20261118 !+?   15:27 
+❯ xtensa-esp32-elf-objdump.exe -dr -C --disassemble=cam_take $lib
 In archive C:\Users\lord_\AppData\Local\Arduino15\packages\esp32\tools\esp32-libs\4.0.0\lib\libespressif__esp32-camera.a:
 
 yuv.c.obj:     file format elf32-xtensa-le
@@ -324,113 +324,6 @@ Disassembly of section .text.allocate_dma_descriptors:
 
 Disassembly of section .text.cam_verify_jpeg_eoi:
 
-00000000 <cam_verify_jpeg_eoi>:
-   0:   008136          entry   a1, 64
-   3:   026d            mov.n   a6, a2
-   5:   032d            mov.n   a2, a3
-   7:   0623f6          bgeui   a3, 2, 11 <cam_verify_jpeg_eoi+0x11>
-                        7: R_XTENSA_SLOT0_OP    .text.cam_verify_jpeg_eoi+0x11
-   a:   f27c            movi.n  a2, -1
-   c:   0020c0          memw
-   f:   f01d            retw.n
-  11:   090456          bnez    a4, a5 <cam_verify_jpeg_eoi+0xa5>
-                        11: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa5
-  14:   fec392          addi    a9, a3, -2
-  17:   269a            add.n   a2, a6, a9
-  19:   ed3267          bltu    a2, a6, a <cam_verify_jpeg_eoi+0xa>
-                        19: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa
-  1c:   0000b1          l32r    a11, fffc001c <cam_verify_jpeg_eoi+0xfffc001c>
-                        1c: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x8
-  1f:   2c0c            movi.n  a12, 2
-  21:   02ad            mov.n   a10, a2
-  23:   000081          l32r    a8, fffc0024 <cam_verify_jpeg_eoi+0xfffc0024>
-                        23: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0xc
-                        23: R_XTENSA_ASM_EXPAND memcmp
-  26:   0008e0          callx8  a8
-  29:   085a56          bnez    a10, b2 <cam_verify_jpeg_eoi+0xb2>
-                        29: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xb2
-  2c:   c02260          sub     a2, a2, a6
-  2f:   fff646          j       c <cam_verify_jpeg_eoi+0xc>
-                        2f: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xc
-  32:   4c0c            movi.n  a12, 4
-  34:   b64a            add.n   a11, a6, a4
-  36:   07ad            mov.n   a10, a7
-  38:   000081          l32r    a8, fffc0038 <cam_verify_jpeg_eoi+0xfffc0038>
-                        38: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x10
-                        38: R_XTENSA_ASM_EXPAND memcpy
-  3b:   0008e0          callx8  a8
-  3e:   0788            l32i.n  a8, a7, 0
-  40:   000051          l32r    a5, fffc0040 <cam_verify_jpeg_eoi+0xfffc0040>
-                        40: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi
-  43:   c05580          sub     a5, a5, a8
-  46:   105580          and     a5, a5, a8
-  49:   000081          l32r    a8, fffc004c <cam_verify_jpeg_eoi+0xfffc004c>
-                        49: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x4
-  4c:   105580          and     a5, a5, a8
-  4f:   05ec            bnez.n  a5, 73 <cam_verify_jpeg_eoi+0x73>
-                        4f: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x73
-  51:   3148            l32i.n  a4, a1, 12
-  53:   844b            addi.n  a8, a4, 4
-  55:   3189            s32i.n  a8, a1, 12
-  57:   d7b287          bgeu    a2, a8, 32 <cam_verify_jpeg_eoi+0x32>
-                        57: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x32
-  5a:   842b            addi.n  a8, a4, 2
-  5c:   aa3287          bltu    a2, a8, a <cam_verify_jpeg_eoi+0xa>
-                        5c: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa
-  5f:   0000b1          l32r    a11, fffc0060 <cam_verify_jpeg_eoi+0xfffc0060>
-                        5f: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x8
-  62:   2c0c            movi.n  a12, 2
-  64:   a64a            add.n   a10, a6, a4
-  66:   000081          l32r    a8, fffc0068 <cam_verify_jpeg_eoi+0xfffc0068>
-                        66: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x14
-                        66: R_XTENSA_ASM_EXPAND memcmp
-  69:   0008e0          callx8  a8
-  6c:   dafc            bnez.n  a10, ad <cam_verify_jpeg_eoi+0xad>
-                        6c: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xad
-  6e:   042d            mov.n   a2, a4
-  70:   ffe606          j       c <cam_verify_jpeg_eoi+0xc>
-                        70: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xc
-  73:   608050          neg     a8, a5
-  76:   108850          and     a8, a8, a5
-  79:   40f880          nsau    a8, a8
-  7c:   e1c882          addi    a8, a8, -31
-  7f:   608080          neg     a8, a8
-  82:   218380          srai    a8, a8, 3
-  85:   384a            add.n   a3, a8, a4
-  87:   832b            addi.n  a8, a3, 2
-  89:   133287          bltu    a2, a8, a0 <cam_verify_jpeg_eoi+0xa0>
-                        89: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa0
-  8c:   0000b1          l32r    a11, fffc008c <cam_verify_jpeg_eoi+0xfffc008c>
-                        8c: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x8
-  8f:   2c0c            movi.n  a12, 2
-  91:   a63a            add.n   a10, a6, a3
-  93:   000081          l32r    a8, fffc0094 <cam_verify_jpeg_eoi+0xfffc0094>
-                        93: R_XTENSA_SLOT0_OP   .literal.cam_verify_jpeg_eoi+0x18
-                        93: R_XTENSA_ASM_EXPAND memcmp
-  96:   0008e0          callx8  a8
-  99:   3acc            bnez.n  a10, a0 <cam_verify_jpeg_eoi+0xa0>
-                        99: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa0
-  9b:   032d            mov.n   a2, a3
-  9d:   ffdac6          j       c <cam_verify_jpeg_eoi+0xc>
-                        9d: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xc
-  a0:   850b            addi.n  a8, a5, -1
-  a2:   ffe986          j       4c <cam_verify_jpeg_eoi+0x4c>
-                        a2: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x4c
-  a5:   040c            movi.n  a4, 0
-  a7:   1cc172          addi    a7, a1, 28
-  aa:   ffe946          j       53 <cam_verify_jpeg_eoi+0x53>
-                        aa: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x53
-  ad:   441b            addi.n  a4, a4, 1
-  af:   ffe9c6          j       5a <cam_verify_jpeg_eoi+0x5a>
-                        af: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x5a
-  b2:   029267          bne     a2, a6, b8 <cam_verify_jpeg_eoi+0xb8>
-                        b2: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xb8
-  b5:   ffd446          j       a <cam_verify_jpeg_eoi+0xa>
-                        b5: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0xa
-  b8:   220b            addi.n  a2, a2, -1
-  ba:   ffd6c6          j       19 <cam_verify_jpeg_eoi+0x19>
-                        ba: R_XTENSA_SLOT0_OP   .text.cam_verify_jpeg_eoi+0x19
-
 Disassembly of section .text.cam_verify_jpeg_soi:
 
 Disassembly of section .text.cam_start_frame:
@@ -452,6 +345,156 @@ Disassembly of section .text.cam_give:
 Disassembly of section .text.cam_task:
 
 Disassembly of section .text.cam_take:
+
+00000000 <cam_take>:
+   0:   008136          entry   a1, 64
+   3:   080c            movi.n  a8, 0
+   5:   7189            s32i.n  a8, a1, 28
+   7:   000081          l32r    a8, fffc0008 <cam_take+0xfffc0008>
+                        7: R_XTENSA_SLOT0_OP    .literal.cam_take+0x4
+                        7: R_XTENSA_ASM_EXPAND  xTaskGetTickCount
+   a:   0008e0          callx8  a8
+   d:   1cc172          addi    a7, a1, 28
+  10:   024d            mov.n   a4, a2
+  12:   0a5d            mov.n   a5, a10
+  14:   3a2a            add.n   a3, a10, a2
+  16:   000081          l32r    a8, fffc0018 <cam_take+0xfffc0018>
+                        16: R_XTENSA_SLOT0_OP   .literal.cam_take+0x8
+                        16: R_XTENSA_ASM_EXPAND xTaskGetTickCount
+  19:   0008e0          callx8  a8
+  1c:   c08a50          sub     a8, a10, a5
+  1f:   023847          bltu    a8, a4, 25 <cam_take+0x25>
+                        1f: R_XTENSA_SLOT0_OP   .text.cam_take+0x25
+  22:   003786          j       104 <cam_take+0x104>
+                        22: R_XTENSA_SLOT0_OP   .text.cam_take+0x104
+  25:   000061          l32r    a6, fffc0028 <cam_take+0xfffc0028>
+                        25: R_XTENSA_SLOT0_OP   .literal.cam_take
+  28:   c0c3a0          sub     a12, a3, a10
+  2b:   07bd            mov.n   a11, a7
+  2d:   0688            l32i.n  a8, a6, 0
+  2f:   b8a8            l32i.n  a10, a8, 44
+  31:   000081          l32r    a8, fffc0034 <cam_take+0xfffc0034>
+                        31: R_XTENSA_SLOT0_OP   .literal.cam_take+0xc
+                        31: R_XTENSA_ASM_EXPAND xQueueReceive
+  34:   0008e0          callx8  a8
+  37:   fdba16          beqz    a10, 16 <cam_take+0x16>
+                        37: R_XTENSA_SLOT0_OP   .text.cam_take+0x16
+  3a:   0788            l32i.n  a8, a7, 0
+  3c:   98cc            bnez.n  a8, 49 <cam_take+0x49>
+                        3c: R_XTENSA_SLOT0_OP   .text.cam_take+0x49
+  3e:   1a0c            movi.n  a10, 1
+  40:   000081          l32r    a8, fffc0040 <cam_take+0xfffc0040>
+                        40: R_XTENSA_SLOT0_OP   .literal.cam_take+0x10
+                        40: R_XTENSA_ASM_EXPAND vTaskDelay
+  43:   0008e0          callx8  a8
+  46:   fff306          j       16 <cam_take+0x16>
+                        46: R_XTENSA_SLOT0_OP   .text.cam_take+0x16
+  49:   06a8            l32i.n  a10, a6, 0
+  4b:   400ab2          l8ui    a11, a10, 64
+  4e:   4d0a92          l8ui    a9, a10, 77
+  51:   07fb16          beqz    a11, d4 <cam_take+0xd4>
+                        51: R_XTENSA_SLOT0_OP   .text.cam_take+0xd4
+  54:   18b8            l32i.n  a11, a8, 4
+  56:   06a916          beqz    a9, c4 <cam_take+0xc4>
+                        56: R_XTENSA_SLOT0_OP   .text.cam_take+0xc4
+  59:   4a28            l32i.n  a2, a10, 16
+  5b:   221b            addi.n  a2, a2, 1
+  5d:   6322b0          minu    a2, a2, a11
+  60:   6522b6          bltui   a2, 2, c9 <cam_take+0xc9>
+                        60: R_XTENSA_SLOT0_OP   .text.cam_take+0xc9
+  63:   08a8            l32i.n  a10, a8, 0
+  65:   c0bb20          sub     a11, a11, a2
+  68:   aaba            add.n   a10, a10, a11
+  6a:   02bd            mov.n   a11, a2
+  6c:   31a9            s32i.n  a10, a1, 12
+  6e:   000081          l32r    a8, fffc0070 <cam_take+0xfffc0070>
+                        6e: R_XTENSA_SLOT0_OP   .literal.cam_take+0x14
+                        6e: R_XTENSA_ASM_EXPAND .text.cam_drop_psram_cache
+  71:   0008e0          callx8  a8
+  74:   02bd            mov.n   a11, a2
+  76:   1c0c            movi.n  a12, 1
+  78:   31a8            l32i.n  a10, a1, 12
+  7a:   000081          l32r    a8, fffc007c <cam_take+0xfffc007c>
+                        7a: R_XTENSA_SLOT0_OP   .literal.cam_take+0x18
+                        7a: R_XTENSA_ASM_EXPAND .text.cam_verify_jpeg_eoi
+  7d:   0008e0          callx8  a8
+  80:   0788            l32i.n  a8, a7, 0
+  82:   18b8            l32i.n  a11, a8, 4
+  84:   007a96          bltz    a10, 8f <cam_take+0x8f>
+                        84: R_XTENSA_SLOT0_OP   .text.cam_take+0x8f
+  87:   c02b20          sub     a2, a11, a2
+  8a:   a2aa            add.n   a10, a2, a10
+  8c:   018ad6          bgez    a10, a8 <cam_take+0xa8>
+                        8c: R_XTENSA_SLOT0_OP   .text.cam_take+0xa8
+  8f:   08a8            l32i.n  a10, a8, 0
+  91:   000081          l32r    a8, fffc0094 <cam_take+0xfffc0094>
+                        91: R_XTENSA_SLOT0_OP   .literal.cam_take+0x1c
+                        91: R_XTENSA_ASM_EXPAND .text.cam_drop_psram_cache
+  94:   0008e0          callx8  a8
+  97:   0c0c            movi.n  a12, 0
+  99:   0788            l32i.n  a8, a7, 0
+  9b:   18b8            l32i.n  a11, a8, 4
+  9d:   08a8            l32i.n  a10, a8, 0
+  9f:   000081          l32r    a8, fffc00a0 <cam_take+0xfffc00a0>
+                        9f: R_XTENSA_SLOT0_OP   .literal.cam_take+0x20
+                        9f: R_XTENSA_ASM_EXPAND .text.cam_verify_jpeg_eoi
+  a2:   0008e0          callx8  a8
+  a5:   020a96          bltz    a10, c9 <cam_take+0xc9>
+                        a5: R_XTENSA_SLOT0_OP   .text.cam_take+0xc9
+  a8:   ba2b            addi.n  a11, a10, 2
+  aa:   0698            l32i.n  a9, a6, 0
+  ac:   0788            l32i.n  a8, a7, 0
+  ae:   4d0992          l8ui    a9, a9, 77
+  b1:   18b9            s32i.n  a11, a8, 4
+  b3:   698c            beqz.n  a9, bd <cam_take+0xbd>
+                        b3: R_XTENSA_SLOT0_OP   .text.cam_take+0xbd
+  b5:   08a8            l32i.n  a10, a8, 0
+  b7:   000081          l32r    a8, fffc00b8 <cam_take+0xfffc00b8>
+                        b7: R_XTENSA_SLOT0_OP   .literal.cam_take+0x24
+                        b7: R_XTENSA_ASM_EXPAND .text.cam_drop_psram_cache
+  ba:   0008e0          callx8  a8
+  bd:   0728            l32i.n  a2, a7, 0
+  bf:   0020c0          memw
+  c2:   f01d            retw.n
+  c4:   0c0c            movi.n  a12, 0
+  c6:   fff4c6          j       9d <cam_take+0x9d>
+                        c6: R_XTENSA_SLOT0_OP   .text.cam_take+0x9d
+  c9:   07a8            l32i.n  a10, a7, 0
+  cb:   000081          l32r    a8, fffc00cc <cam_take+0xfffc00cc>
+                        cb: R_XTENSA_SLOT0_OP   .literal.cam_take+0x28
+                        cb: R_XTENSA_ASM_EXPAND cam_give
+  ce:   0008e0          callx8  a8
+  d1:   ffd046          j       16 <cam_take+0x16>
+                        d1: R_XTENSA_SLOT0_OP   .text.cam_take+0x16
+  d4:   fe5916          beqz    a9, bd <cam_take+0xbd>
+                        d4: R_XTENSA_SLOT0_OP   .text.cam_take+0xbd
+  d7:   520ab2          l8ui    a11, a10, 82
+  da:   530a92          l8ui    a9, a10, 83
+  dd:   069b97          bne     a11, a9, e7 <cam_take+0xe7>
+                        dd: R_XTENSA_SLOT0_OP   .text.cam_take+0xe7
+  e0:   0788            l32i.n  a8, a7, 0
+  e2:   18b8            l32i.n  a11, a8, 4
+  e4:   fff346          j       b5 <cam_take+0xb5>
+                        e4: R_XTENSA_SLOT0_OP   .text.cam_take+0xb5
+  e7:   08b8            l32i.n  a11, a8, 0
+  e9:   0bcd            mov.n   a12, a11
+  eb:   18d8            l32i.n  a13, a8, 4
+  ed:   3189            s32i.n  a8, a1, 12
+  ef:   000081          l32r    a8, fffc00f0 <cam_take+0xfffc00f0>
+                        ef: R_XTENSA_SLOT0_OP   .literal.cam_take+0x2c
+                        ef: R_XTENSA_ASM_EXPAND ll_cam_memcpy
+  f2:   0008e0          callx8  a8
+  f5:   3188            l32i.n  a8, a1, 12
+  f7:   18a9            s32i.n  a10, a8, 4
+  f9:   0688            l32i.n  a8, a6, 0
+  fb:   4d0882          l8ui    a8, a8, 77
+  fe:   fbb816          beqz    a8, bd <cam_take+0xbd>
+                        fe: R_XTENSA_SLOT0_OP   .text.cam_take+0xbd
+ 101:   fff6c6          j       e0 <cam_take+0xe0>
+                        101: R_XTENSA_SLOT0_OP  .text.cam_take+0xe0
+ 104:   020c            movi.n  a2, 0
+ 106:   ffed46          j       bf <cam_take+0xbf>
+                        106: R_XTENSA_SLOT0_OP  .text.cam_take+0xbf
 
 Disassembly of section .text.cam_give_all:
 
@@ -2550,5 +2593,5 @@ Disassembly of section .text.SCCB_Read_Addr16_Val16:
 
 Disassembly of section .text.SCCB_Write_Addr16_Val16:
 
-░▒▓ 󰍲  …\firmware   noa-backup-20261118 !+?   15:26 
+░▒▓ 󰍲  …\firmware   noa-backup-20261118 !+?   15:27 
 ❯
